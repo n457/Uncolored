@@ -1,0 +1,249 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #757575;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+
+  [data-hint]:before {
+    display: none; }
+  [data-hint]:after {
+    background-color: rgba(150, 150, 150, 0.9);
+    border-radius: 2px; }
+
+  .emoji {
+    margin-bottom: 0; }
+
+
+  h1 {
+    font-size: 26px;
+    font-weight: 300;
+    color: black;
+    line-height: normal;
+    margin-top: 0; }
+
+  p, li {
+    line-height: 24px; }
+
+  a {
+    color: #4078c0; }
+    a:hover {
+      text-decoration: none; }
+    a:not([href]) {
+      cursor: default; }
+
+
+  .remove-list-style {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+
+  .italic {
+    font-style: italic; }
+  .highlighted {
+    color: #3a3a3a; }
+
+  .full-width {
+    width: 100%; }
+
+
+
+  .github-button {
+    position: absolute;
+    top: 28px;
+    right: 28px; }
+    .github-button .mega-octicon {
+      color: #464646;
+      transition: color 0.6s; }
+    .github-button:hover .mega-octicon {
+      color: black; }
+
+  .app-logo {
+    max-width: 355px;
+    margin-top: 140px;
+    margin-bottom: 30px }
+
+  .app-desc {
+    margin: 0; }
+
+
+
+  .app-large-img {
+    max-width: 1031px;
+    margin-top: 106px;
+    margin-bottom: 54px; }
+
+
+  .multi-download-button {
+    display: inline-block;
+    max-width: 280px;
+    color: white;
+    background-color: #1947ac;
+    margin-bottom: 106px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px blue;
+    transition: background-color 0.3s, box-shadow 0.3s; }
+
+    .multi-download-button a {
+      display: block;
+      color: inherit;
+      text-decoration: none; }
+
+    .multi-download-button .main-button {
+      position: relative;
+      height: 90px;
+      transition: background-color 0.3s; }
+      .multi-download-button .main-button:hover,
+      .multi-download-button .toggle-buttons:hover {
+        background-color: #2665ec; }
+      .multi-download-button .main-button:active,
+      .multi-download-button .toggle-buttons:active {
+        background-color: #132d67; }
+      .multi-download-button .titles {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 100%;
+        font-size: 22px;
+        font-weight: 300; }
+        .multi-download-button .titles .download,
+        .multi-download-button .titles .choose {
+          display: none; }
+        .multi-download-button.os-known .titles .download,
+        .multi-download-button.os-unknown .titles .choose {
+          display: block; }
+      .multi-download-button .version {
+        position: absolute;
+        top: 39px;
+        left: 0;
+        width: 100%;
+        font-size: 11px;
+        line-height: 11px; }
+      .multi-download-button .main-button .file-label-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 58px 0 12px 0;
+        z-index: 1; }
+
+    .multi-download-button .file-label-container img {
+      width: 20px;
+      margin-right: 6px;
+      vertical-align: middle; }
+    .multi-download-button .file-label {
+      font-size: 14px;
+      vertical-align: middle; }
+
+    .list-more {
+      height: 0;
+      text-align: left;
+      background-color: #133788;
+      overflow: hidden;
+      transition: height 0.8s, padding 0.8s, background-color 0.3s; }
+      .multi-download-button.opened .list-more {
+        height: 222px;
+        padding: 8px 0; }
+      .list-more .file-label-container {
+        padding: 6px 16px;
+        transition: background-color 0.3s; }
+        .list-more .file-label-container:hover {
+          background-color: #1947ac; }
+        .list-more .file-label-container:active {
+          background-color: #0c2458; }
+
+    .multi-download-button .toggle-buttons {
+      font-size: 12px;
+      font-weight: 300;
+      padding: 6px 0;
+      cursor: default;
+      transition: background-color 0.3s; }
+      .multi-download-button .less-button {
+        display: none; }
+        .multi-download-button.opened .less-button {
+          display: block; }
+      .multi-download-button.opened .more-button {
+        display: none; }
+      .multi-download-button .arrow {
+        font-size: 10px;
+        vertical-align: middle; }
+
+
+
+  .text-row {
+    margin: 100px 0; }
+
+
+  .focus-img {
+    max-width: 694px;
+    margin-top: -22px; }
+
+  .rich-content-img {
+    max-width: 575px; }
+
+  .themes-img {
+    max-width: 846px; }
+
+  .markdown-img {
+    max-width: 922px; }
+
+
+  .donate-button-container {
+    text-align: center;
+    margin-top: 32px; }
+    .donate-button-container a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #3a85d4;
+      padding: 12px 14px;
+      border-radius: 4px;
+      transition: background-color 1s; }
+      .donate-button-container a:hover {
+        background-color: #0dd683; }
+      .donate-button-container a:active {
+        background-color: #10a545; }
+
+
+
+  footer {
+    text-align: center;
+    padding: 34px 0 28px 0;
+    margin-top: 80px;
+    background-color: #dcdcdc; }
+    footer .author-avatar img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; }
+    footer p {
+      margin: 10px 0 0 0; }
+      footer .heart {
+        color: #d00633; }
+
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    margin-top: 0; }
+
+  .app-large-img {
+    margin-top: 50px; }
+
+  .multi-download-button {
+    margin-bottom: 0; }
+
+  .text-row {
+    margin: 80px 0; }
+    .text-row.center-xs {
+      text-align: left; }
+
+  .focus-img {
+    margin-top: 0; }
+
+  .markdown-img {
+    margin-bottom: 52px; }
+}
