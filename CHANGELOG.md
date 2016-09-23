@@ -1,6 +1,10 @@
 ## Release Notes
 <!-- (for in-app update check) -->
-<!-- - currentversion: 0.7.1 - -->
+<!-- - currentversion: 0.7.2 - -->
+
+##### 0.7.2
+- Fixed empty priority info dialog
+- Fixed empty paragraphs in editor
 
 ##### 0.7.1
 - Quickfix update check system

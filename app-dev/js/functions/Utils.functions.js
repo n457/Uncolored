@@ -60,7 +60,7 @@ N.Functions.Utils.funcPurifyHTML = (Parameters) => {
   };
 
   if ( ! Parameters.boolPasteMode) {
-    PurifyParameters.ALLOWED_TAGS.push('p');
+    PurifyParameters.ALLOWED_TAGS.push('p', 'br');
   }
 
   return DOMPurify.sanitize(Parameters.strHTML, PurifyParameters);

@@ -11,20 +11,22 @@ N.Functions.Remote.funcGetUpdateInfo = (Parameters) => {
       // Remotly, strResponse.response doesn't work, use strResponse instead
       let strRemoteContent = N.Functions.Utils.funcMarkdownToHTML({ strContent: strResponse });
 
-      const strRemoteLastestVersion = strRemoteContent.match('- currentversion: (.*) -')[1];
-      const arrRemoteLastestVersionNumbers = strRemoteLastestVersion.split('.');
+      if (strRemoteContent) {
+        const strRemoteLastestVersion = strRemoteContent.match('- currentversion: (.*) -')[1];
+        const arrRemoteLastestVersionNumbers = strRemoteLastestVersion.split('.');
 
-      for (let intI = 0; intI < arrRemoteLastestVersionNumbers.length; intI++) {
-        if (parseInt(arrRemoteLastestVersionNumbers[intI]) > parseInt(N.arrAppVersionNumbers[intI])) {
-          boolUpdateAvailable = true;
+        for (let intI = 0; intI < arrRemoteLastestVersionNumbers.length; intI++) {
+          if (parseInt(arrRemoteLastestVersionNumbers[intI]) > parseInt(N.arrAppVersionNumbers[intI])) {
+            boolUpdateAvailable = true;
+          }
         }
-      }
 
-      Parameters.funcOnSuccess.call(null, {
-        boolUpdateAvailable: boolUpdateAvailable,
-        strRemoteLastestVersion: strRemoteLastestVersion,
-        strRemoteReleaseNotesHTML: strRemoteContent
-      });
+        Parameters.funcOnSuccess.call(null, {
+          boolUpdateAvailable: boolUpdateAvailable,
+          strRemoteLastestVersion: strRemoteLastestVersion,
+          strRemoteReleaseNotesHTML: strRemoteContent
+        });
+      }
     },
     error: (Error) => {
       console.error(Error);
@@ -42,9 +44,11 @@ N.Functions.Remote.funcGetPriorityInfo = (Parameters) => {
       // Remotly, strResponse.response doesn't work, use strResponse instead
       let strRemoteContent = N.Functions.Utils.funcMarkdownToHTML({ strContent: strResponse });
 
-      Parameters.funcOnSuccess.call(null, {
-        strRemotePriorityInfoHTML: strRemoteContent
-      });
+      if (strRemoteContent) {
+        Parameters.funcOnSuccess.call(null, {
+          strRemotePriorityInfoHTML: strRemoteContent
+        });
+      }
     },
     error: (Error) => {
       console.error(Error);

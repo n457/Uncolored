@@ -1,7 +1,7 @@
 ![](project/docs/assets/uncolored-logo.png)
 
 Next generation **desktop rich content editor** that saves documents with **themes**. **HTML & Markdown** compatible. For **Windows, OS X & Linux**.
-#### version 0.7.1 — Beta
+#### version 0.7.2 — Beta
 
 ![](project/docs/assets/uncolored-large-screenshot.png)
 
@@ -35,7 +35,7 @@ Here is what **is planed** for future releases of (Un)colored. These lists **can
 
 If you want more details about what was done, see [the Changelog](CHANGELOG.md).
 
-##### version 0.7.2
+##### version 0.7.3
 - [ ] *Open application folder* button in *About* dialog
 - [ ] *Open settings file folder* button in *Settings* dialog
 
