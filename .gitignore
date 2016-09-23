@@ -2,13 +2,3 @@
 **/.DS_Store
 **/._.DS_Store
 **/Thumbs.db
-
-# Exclude NPM packages and build files
-node_modules/**
-app/**
-dist/**
-
-# But keep folders
-!node_modules/.keep
-!app/.keep
-!dist/.keep
