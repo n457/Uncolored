@@ -46,7 +46,7 @@ N.Functions.Editor.funcClearHTML = (Parameter) => {
     });
   }
 
-  // The to-markdown lib returns id attributes for titles, which is good for markdown docs, but we don't want that for version 0.7.0. Full support in next releases.
+  // The to-markdown lib returns id attributes for titles, which is good for markdown docs, but we don't want that for this version. Full support in next releases.
   // It happens that the editor outputs some element with [style], we don't want this attribute.
   forEach(Parameter.Document.$ContentEditable.querySelectorAll('[id], [style]'), ($Element) => {
     $Element.removeAttribute('id');

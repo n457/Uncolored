@@ -1,6 +1,9 @@
 ## Release Notes
 <!-- (for in-app update check) -->
-<!-- - currentversion: 0.7.0 - -->
+<!-- - currentversion: 0.7.1 - -->
+
+##### 0.7.1
+- Quickfix update check system
 
 ##### 0.7.0
 - **Multiple document tabs** management
