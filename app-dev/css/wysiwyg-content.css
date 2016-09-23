@@ -1,0 +1,111 @@
+.wysiwyg-content > :first-child {
+  padding-top: 0 !important;
+  margin-top: 0 !important; }
+.wysiwyg-content > :last-child {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important; }
+
+.wysiwyg-content h1,
+.wysiwyg-content h2,
+.wysiwyg-content h3,
+.wysiwyg-content h4,
+.wysiwyg-content h5,
+.wysiwyg-content h6,
+.wysiwyg-content p,
+.wysiwyg-content blockquote,
+.wysiwyg-content ul,
+.wysiwyg-content ol,
+.wysiwyg-content iframe,
+.wysiwyg-content table,
+.wysiwyg-content pre {
+  margin: 16px 0; }
+
+
+.wysiwyg-content h1,
+.wysiwyg-content h2,
+.wysiwyg-content h3,
+.wysiwyg-content h4,
+.wysiwyg-content h5,
+.wysiwyg-content h6 {
+  /* Selected CSS properties from MDL .mdl-card__title & .mdl-card__title-text */
+  font-weight: 300;
+  line-height: normal; }
+  .wysiwyg-content h1 {
+    font-size: 26px; }
+  .wysiwyg-content h2 {
+    font-size: 24px; }
+  .wysiwyg-content h3 {
+    font-size: 22px; }
+  .wysiwyg-content h4 {
+    font-size: 20px; }
+  .wysiwyg-content h5 {
+    font-size: 18px; }
+  .wysiwyg-content h6 {
+    font-size: 16px; }
+
+.wysiwyg-content p {
+  font-size: 14px;
+  line-height: 24px; }
+
+/* For the most part from material.min.css */
+.wysiwyg-content blockquote {
+  position: relative;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: .08em;
+  margin-left: 30px; }
+  blockquote:before {
+    position: absolute;
+    left: -0.5em;
+    content: '“'; }
+  blockquote:after {
+    content: '”';
+    margin-left: -0.05em; }
+
+.wysiwyg-content ul,
+.wysiwyg-content ol {
+  padding-left: 20px; }
+
+.wysiwyg-content img {
+  max-width: 100%;
+  cursor: move; }
+
+.wysiwyg-content iframe {
+  display: block;
+  max-width: 100%;
+  border: 0; }
+
+.wysiwyg-content a {}
+  .wysiwyg-content a[contenteditable="false"] {
+    cursor: pointer; }
+
+
+
+/* From https://github.com/yabwe/medium-editor-tables/blob/master/dist/css/medium-editor-tables.css */
+/* Not fully implemented yet */
+.wysiwyg-content table {
+  border-collapse: collapse;
+  resize: both;
+  table-layout: fixed;
+  border-width: 1px;
+  border-style: solid; }
+  .wysiwyg-content table td {
+    padding: 6px 10px;
+    border-width: 1px;
+    border-style: solid; }
+
+
+/* Most of styles here from https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css */
+/* Not fully implemented yet */
+.wysiwyg-content pre {
+  line-height: 1.45;
+  padding: 16px;
+  border-radius: 3px;
+  overflow: auto; }
+
+
+
+.wysiwyg-content .emoji .emoji-text {
+  font-size: 0; }

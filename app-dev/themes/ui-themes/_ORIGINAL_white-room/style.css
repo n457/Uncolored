@@ -1,0 +1,224 @@
+/* - __themename: White Room - */
+
+/* Libraries styles overwriting (Material Design Lite, etc.) */
+
+body {
+  color: #757575; }
+
+  .mdl-menu__item {
+    /* By default, a menu item text is black. */
+    color: #757575; }
+
+  .mdl-textfield {
+    color: #757575; }
+    .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+    .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+    .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+      color: black; }
+      .mdl-textfield__label:after {
+        background-color: black; }
+
+  .mdl-switch.is-checked .mdl-switch__track {
+    /* #4baf4f */
+    background-color: rgba(75, 175, 79, 0.5); }
+  .mdl-switch.is-checked .mdl-switch__thumb {
+    background-color: #4baf4f; }
+  .mdl-switch__ripple-container .mdl-ripple {
+    background-color: #4baf4f; }
+
+  .mdl-button.mdl-button--colored {
+    color: black; }
+    .mdl-button--raised.mdl-button--colored {
+      color: black;
+      background-color: transparent; }
+
+
+  .mdl-tooltip {
+    background: rgba(150, 150, 150, 0.9); }
+
+
+
+/* Global */
+
+a {
+  color: #757575; }
+
+kbd {
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #f7f7f7;
+  border-color: #ccc;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset; }
+
+.hover-effects:hover {
+  background-color: rgba(158, 158, 158, 0.2) !important; }
+.hover-effects:active {
+  background-color: rgba(158, 158, 158, 0.4) !important; }
+
+.disabled {
+  color: #e0e0e0 !important; }
+
+.fake-link {
+  color: #757575; }
+
+::selection {
+  background-color: #ededed; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2; }
+
+
+
+/* Header */
+
+.tab-bar {
+  background-color: white; }
+
+  .tabs-list {
+    background-color: white; }
+    .tabs-list::-webkit-scrollbar-thumb {
+      background-color: #e2e2e2; }
+
+      .tab {
+        color: #757575 !important; }
+        .tab:after {
+          background-color: #f9c11d; }
+        .tab.active {
+          background-color: rgba(158, 158, 158, 0.2); }
+        /*.sortable-chosen {
+          background-color: rgba(255, 255, 255, 0.20); }*/
+
+        .close-tab {
+          background-color: rgba(0, 0, 0, 0.04); }
+          .close-tab:hover {
+            background-color: rgba(0, 0, 0, 0.08); }
+          .close-tab:active {
+            background-color: rgba(0, 0, 0, 0.14); }
+
+        .close-tab-cancel {
+          background-color: rgba(0, 0, 0, 0.04); }
+          .close-tab-cancel:hover {
+            background-color: rgba(0, 0, 0, 0.08); }
+          .close-tab-cancel:active {
+            background-color: rgba(0, 0, 0, 0.14); }
+
+        .close-tab-confirm {
+          color: white;
+          background-color: #cc4d51; }
+          .close-tab-confirm:hover {
+            background-color: #e2565a; }
+          .close-tab-confirm:active {
+            background-color: #c1494d; }
+
+  .tab-bar-button {
+    color: #949494; }
+
+.main-menu {
+  background-color: white; }
+  .main-menu li {
+    color: #949494; }
+
+
+#global-unsaved-mark {
+  background-color: #f9c11d; }
+
+
+
+/* Workspace */
+
+searchresult {
+  color: white;
+  background-color: #155fff; }
+
+
+
+/* WYSIWYG Content */
+
+.wysiwyg-content h1,
+.wysiwyg-content h2,
+.wysiwyg-content h3,
+.wysiwyg-content h4,
+.wysiwyg-content h5,
+.wysiwyg-content h6 {
+  /* Selected CSS properties from MDL .mdl-card__title & .mdl-card__title-text */
+  color: black; }
+
+.wysiwyg-content a {
+  color: #4078c0; }
+
+.wysiwyg-content table,
+.wysiwyg-content table td {
+  border-color: #e3e3e3; }
+
+.wysiwyg-content pre {
+  color: #657b83;
+  background-color: #f7f7f7; }
+
+
+
+/* Toolbar */
+
+#toolbar {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  #toolbar .toolbar-button.active {
+    background-color: rgba(158, 158, 158, 0.4); }
+  #toolbar .form input.invalid {
+    color: white;
+    background-color: #ed6c63; }
+
+
+
+/* Context Info */
+
+#minor-info-bar {
+  color: white;
+  background-color: rgba(150, 150, 150, 0.9); }
+
+#context-menu {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  #context-menu .label {
+    color: black; }
+
+
+
+/* Dialogs */
+
+.mdl-card__supporting-text a {
+  color: inherit !important; }
+
+.preview-list .mdl-list__item:active,
+.preview-list .mdl-list__item.active {
+  background-color: #eee; }
+
+#shortcuts-dialog h6 {
+  color: black; }
+#shortcuts-dialog .mdl-list__item:nth-child(even) {
+  background-color: #eee; }
+
+#about-dialog .ajax-error {
+  color: white;
+  background-color: #e27266; }
+  #about-dialog .ajax-error a {
+    color: white; }
+
+#about-dialog .donate {
+  color: white;
+  background-color: #3a85d4; }
+  #about-dialog .donate:hover {
+    background-color: #0dd683; }
+  #about-dialog .donate:active {
+    background-color: #10a545; }
+
+
+
+/* Context Info */
+
+#preview-large {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+#preview-large .label {
+  color: black;
+  text-align: center;
+  background-color: #eee; }

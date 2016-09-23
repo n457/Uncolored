@@ -1,0 +1,23 @@
+{
+  "name": "uncolored",
+  "productName": "Uncolored",
+  "version": "0.7.0",
+  "description": "(Un)colored — Next generation desktop rich content editor.",
+  "homepage": "http://n457.github.io/Uncolored/",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n457/Uncolored.git"
+  },
+
+  "bugs": "https://github.com/n457/Uncolored/issues",
+  "license": "Apache License 2.0",
+
+  "author": {
+    "name": "n457 / Bertrand Vignaud-Lerouge",
+    "email": "n457.contact@gmail.com",
+    "url": "https://github.com/n457"
+  },
+
+  "main": "main-process.js"
+}

@@ -1,0 +1,17 @@
+.content-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto; }
+  .content-container.active {
+    display: block; }
+
+  .content-container .wysiwyg-content {
+    min-height: calc(100% - 336px);
+    padding: 104px 70px 232px 70px;
+    cursor: auto;
+    -webkit-user-select: auto; }
+    searchresult {}
