@@ -22,9 +22,9 @@ $(function () {
   if (platform.os.family === 'Windows') {
     $AppVersion.after($DownloadButton.find('.win-setup').clone());
   }
-  // else if (platform.os.family === 'OS X') {
-  //   $AppVersion.after($DownloadButton.find('.osx-dmg').clone());
-  // }
+  else if (platform.os.family === 'OS X') {
+    $AppVersion.after($DownloadButton.find('.osx-dmg').clone());
+  }
   // OS family detection on Debian returns 'Linux'
   else if (platform.os.family === 'Ubuntu') {
     $AppVersion.after($DownloadButton.find('.deb').clone());
