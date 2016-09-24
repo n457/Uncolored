@@ -51,3 +51,6 @@ For future updates of this full doc.
 - https://github.com/electron-userland/electron-builder/wiki/Options
 - https://github.com/electron-userland/electron-builder/issues/239#issuecomment-224365515
 - https://github.com/electron-userland/electron-builder/issues/239#issuecomment-224495871
+- https://github.com/LinusU/node-appdmg#example
+- https://www.gimp.org/
+- https://github.com/lemonmojo/IconComposer2x
