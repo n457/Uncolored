@@ -76,6 +76,10 @@ body {
     margin-bottom: 54px; }
 
 
+  .not-signed-warning {
+    margin: 0 0 24px 0; }
+
+
   .multi-download-button {
     display: inline-block;
     max-width: 280px;
