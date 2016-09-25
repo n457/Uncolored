@@ -1,0 +1,12 @@
+main {
+  display: none;
+  margin-top: 60px; }
+  body.valid-hash main {
+    display: block; }
+
+a {
+  display: none; }
+  body.win-setup .win-setup, body.win-zip .win-zip,
+  body.osx-dmg .osx-dmg, body.osx-zip .osx-zip,
+  body.deb .deb, body.linux-zip .linux-zip {
+    display: inline; }

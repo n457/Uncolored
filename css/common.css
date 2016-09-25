@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #757575;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+
+  h1 {
+    font-size: 26px;
+    font-weight: 300;
+    color: black;
+    line-height: normal;
+    margin-top: 0; }
+
+  p, li {
+    line-height: 24px; }
+
+  a {
+    color: #4078c0; }
+    a:hover {
+      text-decoration: none; }
+    a:not([href]) {
+      cursor: default; }
