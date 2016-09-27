@@ -2,7 +2,7 @@
 <!-- (for in-app update check) -->
 <!-- currentversion: 0.8.1 -->
 
-##### 0.8.1
+##### 0.8.1 : New Features + Major & minor bug fixes
 - Additional ***Embed Content*** tool : insert SoundCloud tracks, Vine videos, and **any kind of other embed content**
 - *Open application folder* button in *About* dialog ([topic #10](https://github.com/n457/Uncolored/issues/10))
 - *Open settings file folder* button in *Settings* dialog ([topic #10](https://github.com/n457/Uncolored/issues/10))
@@ -17,14 +17,14 @@
 - Wrong toolbar positioning when a link is added via the *Apply Link* tool
 - Duplicate file name extension when using *"Save As"* on an already saved document
 
-##### 0.7.2
+##### 0.7.2 : Bug fixes & Added OS X versions
 - Fixed empty priority info dialog
 - Fixed empty paragraphs in editor
 
-##### 0.7.1
+##### 0.7.1 : Quickfix
 - Quickfix update check system
 
-##### 0.7.0
+##### 0.7.0 : Features
 - **Multiple document tabs** management
 - Standard word processor **inline tools** (bold, italic, underline, strikethrough, add link to selection, superscript, subscript, clear format)
 - 6 levels **title tools**
