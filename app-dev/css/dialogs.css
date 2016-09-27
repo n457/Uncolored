@@ -111,6 +111,8 @@
       #about-dialog[data-state="up-to-date"] .up-to-date,
       #about-dialog[data-state="new-update"] .new-update {
         display: block; }
+    #about-dialog .new-update {
+      color: #f1c40f; }
   #about-dialog .ajax-error {
     display: none;
     /* Because .ajax-error contains URL */

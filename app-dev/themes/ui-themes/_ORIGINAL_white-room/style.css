@@ -58,11 +58,8 @@ kbd {
 .disabled {
   color: #e0e0e0 !important; }
 
-.fake-link {
-  color: #757575; }
-
 ::selection {
-  background-color: #ededed; }
+  background-color: #e2e2e2; }
 
 ::-webkit-scrollbar-thumb {
   background-color: #c2c2c2; }

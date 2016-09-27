@@ -45,58 +45,9 @@ N.Functions.Utils.funcEscapeStringRegexp = (Parameter) => {
 };
 
 
-N.Functions.Utils.funcPurifyHTML = (Parameters) => {
-  const PurifyParameters = {
-    ALLOWED_TAGS: [
-                    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-                    'blockquote', 'ul', 'ol', 'li', 'img', 'iframe',
-                    'b', 'i', 'u', 'strike', 'a', 'sup', 'sub'
-                  ],
-    ALLOWED_ATTR: [
-                    'src', 'href',
-                    // For iframe only :
-                    'width', 'height', 'allowfullscreen'
-                  ]
-  };
-
-  if ( ! Parameters.boolPasteMode) {
-    PurifyParameters.ALLOWED_TAGS.push('p', 'br');
-  }
-
-  return DOMPurify.sanitize(Parameters.strHTML, PurifyParameters);
-};
-
-
 N.Functions.Utils.funcNoCacheSuffix = () => {
   // http://stackoverflow.com/questions/728616/disable-cache-for-some-images/6116854#6116854
   return '?nocache2650=' + new Date().getTime();
-};
-
-
-N.Functions.Utils.funcClearHTMLForHTMLExport = (Parameter) => {
-
-  forEach(Parameter.$ContentEditable.querySelectorAll('a, .emoji'), ($Element) => {
-    if ($Element.tagName === 'A') {
-      $Element.target = '_blank';
-    }
-    if ($Element.classList.contains('emoji')) {
-      $Element.removeAttribute('contenteditable');
-      $Element.title = $Element.getElementsByClassName('emoji-text')[0].textContent;
-    }
-  });
-
-  // Not deleting &nbsp; because user may write some in <pre> elements in a future release of the app.
-};
-
-
-N.Functions.Utils.funcClearHTMLForMarkdownExport = (Parameter) => {
-  while (Parameter.$ContentEditable.getElementsByClassName('emoji').length) {
-    forEach(Parameter.$ContentEditable.getElementsByClassName('emoji'), ($Emoji) => {
-      if ($Emoji) {
-        $Emoji.outerHTML = $Emoji.getElementsByClassName('emoji-text')[0].textContent;
-      }
-    });
-  }
 };
 
 

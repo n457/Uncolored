@@ -63,8 +63,13 @@
   N.$MenuQuickGuide.addEventListener('click', () => {
     N.Functions.Documents.funcOpen({ arrPaths: [`${N.strAppPath}/documents/quick-guide-${N.Settings.strUILangSlug}.html`] });
   });
+
+
   document.getElementById('menu-about').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'about' });
+  });
+  N.$AboutDialog.getElementsByClassName('app-folder-button')[0].addEventListener('click', () => {
+    N.ElectronFramework.Shell.showItemInFolder(N.strAppExePath);
   });
 
 

@@ -24,13 +24,12 @@ class Document {
     if (Options) {
       ThisDoc.methSetTabData(Options);
 
-      ThisDoc.$ContentEditable.innerHTML = N.Functions.Utils.funcPurifyHTML({
+      ThisDoc.$ContentEditable.innerHTML = N.Functions.Content.funcPurifyHTML({
         strHTML: Options.strContent,
-        boolPasteMode: false
+        strAllowedContentMode: 'document'
       });
-      N.Functions.Editor.funcClearHTML({ Document: ThisDoc });
-      N.Functions.Editor.funcDisplayEmojis({ Document: ThisDoc });
-      N.Functions.Editor.funcEditLinkTags({ Document: ThisDoc });
+      N.Functions.Content.funcClearHTML({ Document: ThisDoc });
+      N.Functions.Content.funcDisplayEmojis({ Document: ThisDoc });
 
       if (Options.boolLockedDoc) {
         ThisDoc.boolLocked = true;
@@ -117,7 +116,7 @@ class Document {
 
       // Space key
       if (Event.keyCode === 32) {
-        N.Functions.Editor.funcDisplayEmojis({ Document: ThisDoc });
+        N.Functions.Content.funcDisplayEmojis({ Document: ThisDoc });
       }
       else if (Event.altKey) {
         N.$Toolbar.classList.add('active');
@@ -127,14 +126,6 @@ class Document {
     });
 
     ThisDoc.$ContentEditable.addEventListener('input', () => {
-
-      clearTimeout(N.timerClearContent);
-      N.timerClearContent = setTimeout(() => {
-        ThisDoc.LastSelection = lightrange.saveSelection();
-        N.Functions.Editor.funcClearHTML({ Document: ThisDoc });
-        lightrange.restoreSelection(ThisDoc.LastSelection);
-        clearTimeout(N.timerClearContent);
-      }, 500);
 
       if ( ! ThisDoc.$ContentEditable.innerHTML) {
         ThisDoc.$ContentEditable.innerHTML = '<p><br></p>';
@@ -152,30 +143,75 @@ class Document {
       ThisDoc.methMenuCheck();
     });
 
-    ThisDoc.$ContentEditable.addEventListener('paste', (Event) => {
+    ThisDoc.$ContentEditable.addEventListener('copy', () => {
+      clearTimeout(N.timerCopy);
+      N.timerCopy = setTimeout(() => {
+        N.strLastHTMLCopied = N.ElectronFramework.Clipboard.readHTML();
+        clearTimeout(N.timerCopy);
+      }, 50);
+    });
+    ThisDoc.$ContentEditable.addEventListener('cut', () => {
+      clearTimeout(N.timerCopy);
+      N.timerCopy = setTimeout(() => {
+        N.strLastHTMLCopied = N.ElectronFramework.Clipboard.readHTML();
+        clearTimeout(N.timerCopy);
+      }, 50);
+    });
+
+    ThisDoc.$ContentEditable.addEventListener('paste', () => {
       let strClipboardHTML = N.ElectronFramework.Clipboard.readHTML();
 
-      if (N.strLastHTMLPasted === strClipboardHTML) {
-
-        clearTimeout(N.timerPaste);
-        N.timerPaste = setTimeout(() => {
-          N.Functions.Editor.funcDisplayEmojis({ Document: ThisDoc });
-          N.Functions.Editor.funcEditLinkTags({ Document: ThisDoc });
-          clearTimeout(N.timerPaste);
-        }, 100);
-
-      } else {
-        strClipboardHTML = N.Functions.Utils.funcPurifyHTML({
+      if (strClipboardHTML !== N.strLastHTMLCopied && strClipboardHTML !== N.strLastHTMLPasted) {
+        strClipboardHTML = N.Functions.Content.funcPurifyHTML({
           strHTML: strClipboardHTML,
-          boolPasteMode: true
+          strAllowedContentMode: 'paste'
         });
+
         N.ElectronFramework.Clipboard.writeHTML(strClipboardHTML);
         N.strLastHTMLPasted = strClipboardHTML;
-        // Once the paste event is triggered, there's no way to modify the content before pasting.
-        // So here we modify the clipboard content, prevent the event and trigger it again to paste the modified clipboard content.
-        Event.preventDefault();
-        document.execCommand('paste');
       }
+      // Set capture mode to "true" to execute paste instructions before the content is actually pasted.
+      // http://stackoverflow.com/questions/7398290/unable-to-understand-usecapture-attribute-in-addeventlistener/7398447#7398447
+    }, true);
+
+
+    ThisDoc.$ContentEditable.addEventListener('paste', () => {
+      clearTimeout(N.timerPaste);
+      N.timerPaste = setTimeout(() => {
+        N.Functions.Content.funcClearHTML({ Document: ThisDoc });
+        N.Functions.Content.funcDisplayEmojis({ Document: ThisDoc });
+        clearTimeout(N.timerPaste);
+      }, 100);
+    });
+
+
+    ThisDoc.$ContentEditable.addEventListener('dragstart', (Event) => {
+      N.strLastHTMLDragged = Event.target;
+    });
+
+    ThisDoc.$ContentEditable.addEventListener('drag', (Event) => {
+      if (Event.target === N.strLastHTMLDragged) {
+        N.boolCanDrop = true;
+      } else {
+        Event.preventDefault();
+        return false;
+      }
+    });
+
+    ThisDoc.$ContentEditable.addEventListener('dragover', (Event) => {
+      if ( ! N.boolCanDrop) {
+        Event.preventDefault();
+        return false;
+      }
+    });
+
+    ThisDoc.$ContentEditable.addEventListener('drop', (Event) => {
+      if ( ! N.boolCanDrop) {
+        Event.preventDefault();
+        return false;
+      }
+      // N.boolCanDrop always "false" by default
+      N.boolCanDrop = false;
     });
 
 

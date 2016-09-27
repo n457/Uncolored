@@ -7,7 +7,7 @@ N.Functions.Documents.funcDocActiveChange = () => {
     N.DocActive.$Tab.classList.remove('active');
     N.DocActive.$ContentContainer.classList.remove('active');
 
-    N.Functions.Editor.funcCleanSearch({ Document: N.DocActive });
+    N.Functions.Content.funcCleanSearch({ Document: N.DocActive });
   }
 };
 

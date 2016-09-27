@@ -52,6 +52,7 @@ body {
     font-style: italic; }
 
   .fake-link {
+    color: inherit;
     text-decoration: underline;
     cursor: default; }
     .fake-link:hover {

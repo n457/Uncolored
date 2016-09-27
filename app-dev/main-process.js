@@ -148,6 +148,13 @@ const funcCreateWindow = () => {
     'height': 660
   });
 
+
+  // http://stackoverflow.com/questions/31670803/prevent-electron-app-from-redirecting-when-dragdropping-items-in-window
+  MainWindow.webContents.on('will-navigate', (Event) => {
+    Event.preventDefault();
+    return false;
+  });
+
   // From http://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
   MainWindow.webContents.on('new-window', (Event, strURL) => {
     Event.preventDefault();

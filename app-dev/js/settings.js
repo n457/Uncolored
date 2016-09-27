@@ -5,9 +5,9 @@
   const $UIThemeSheet = document.getElementById('ui-theme-sheet');
 
   // For populating UI language select list
+  const $SelectUILangInput = document.getElementById('select-ui-lang');
   const $SelectUILang = $SettingsDialog.querySelector('.mdl-menu[for="select-ui-lang"]');
   const $SelectUILangItem = $SelectUILang.getElementsByClassName('mdl-menu__item')[0];
-  let timerSelectUILang;
 
   const $SwitchAutoUpdate = $SettingsDialog.querySelector('[for="switch-auto-update-check"]');
   const $SwitchAutoUpdateInput = $SwitchAutoUpdate.getElementsByTagName('input')[0];
@@ -69,16 +69,13 @@
         }
       });
 
+      if ($SelectUILangItemClone.dataset.slug === N.Settings.strUILangSlug) {
+        $SelectUILangInput.value = $SelectUILangItemClone.textContent;
+      }
+
       $SelectUILang.appendChild($SelectUILangItemClone);
     }
   });
-
-  // Selecting the corresponding UI lang in the list
-  // We have to let a little bit of time for mdl-select to bind the select events
-  timerSelectUILang = setTimeout(() => {
-    $SelectUILang.querySelector(`[data-slug="${N.Settings.strUILangSlug}"]`).click();
-    clearTimeout(timerSelectUILang);
-  }, 1000);
 
 
 
@@ -135,6 +132,10 @@
 
   $SettingsDialog.getElementsByClassName('reset-button')[0].addEventListener('click', () => {
     funcResetSettings();
+  });
+
+  $SettingsDialog.getElementsByClassName('settings-folder-button')[0].addEventListener('click', () => {
+    N.ElectronFramework.Shell.showItemInFolder(N.strSettingsFilePath);
   });
 
 

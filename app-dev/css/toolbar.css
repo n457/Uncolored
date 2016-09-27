@@ -27,7 +27,7 @@
     #toolbar li {
       outline: 0; }
       #toolbar li:nth-child(7),
-      #toolbar li:nth-child(13) {
+      #toolbar li:nth-child(14) {
         clear: left; }
         #tool-paragraph .material-icons {
           font-size: 15px !important; }
@@ -46,6 +46,7 @@
     display: none; }
     #toolbar[data-view="remote-image"] .remote-image-view,
     #toolbar[data-view="remote-video"] .remote-video-view,
+    #toolbar[data-view="remote-embed"] .remote-embed-view,
     #toolbar[data-view="apply-link"] .apply-link-view {
       display: block; }
     #toolbar .form input {

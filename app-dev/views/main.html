@@ -38,7 +38,7 @@
         <div class="tab-bar">
           <ul hidden>
             <li class="tab " id="tab-model" data-id="">
-              <span class="file-name">Unnamed-</span>
+              <span class="file-name">Document-</span>
               <i class="material-icons close-tab">close</i>
               <i class="material-icons close-tab-cancel">reply</i>
               <i class="material-icons close-tab-confirm">close</i>
@@ -196,6 +196,7 @@
           <li class="toolbar-button hover-effects " id="tool-ordered-list" data-cmd="insertList" data-cmdparam="true" data-cmdcheck="insertOrderedList"><i class="material-icons">format_list_numbered</i></li>
           <li class="toolbar-button hover-effects" id="tool-remote-image"><i class="material-icons">compare</i></li>
           <li class="toolbar-button hover-effects" id="tool-remote-video"><i class="material-icons">play_circle_outline</i></li>
+          <li class="toolbar-button hover-effects" id="tool-remote-embed"><i class="material-icons">queue</i></li>
 
           <li class="toolbar-button hover-effects " id="tool-bold" data-cmd="bold"><i class="material-icons">format_bold</i></li>
           <li class="toolbar-button hover-effects " id="tool-italic" data-cmd="italic"><i class="material-icons">format_italic</i></li>
@@ -268,6 +269,9 @@
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Alt+V</span>
           <span class="main-menu-shortcut osx-os">⌘⌥V</span>
         </div>
+        <div class="mdl-tooltip" for="tool-remote-embed">
+          <span class="main-menu-label">Embed Content</span>
+        </div>
 
         <div class="mdl-tooltip" for="tool-bold">
           <span class="main-menu-label">Bold</span> —
@@ -321,6 +325,13 @@
       <div class="form remote-video-view">
         <div class="toolbar-button icon"><i class="material-icons">play_circle_outline</i></div>
         <input type="text" placeholder="Video URL">
+        <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">close</i></div>
+        <div class="toolbar-button hover-effects validate-tool"><i class="material-icons">check</i></div>
+      </div>
+
+      <div class="form remote-embed-view">
+        <div class="toolbar-button icon"><i class="material-icons">queue</i></div>
+        <input type="text" placeholder="Embed code : <iframe...">
         <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">close</i></div>
         <div class="toolbar-button hover-effects validate-tool"><i class="material-icons">check</i></div>
       </div>
@@ -586,7 +597,7 @@
             <span class="mdl-list__item-primary-content">
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                <input class="mdl-textfield__input" type="text" id="select-ui-lang" value=" " readonly tabIndex="-1">
+                <input class="mdl-textfield__input" type="text" id="select-ui-lang" value="" readonly tabIndex="-1">
                 <label for="select-ui-lang">
                   <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                 </label>
@@ -634,6 +645,9 @@
         </span>
         <span class="mdl-button mdl-button--colored reset-button">
           Reset
+        </span>
+        <span class="mdl-button mdl-button--colored settings-folder-button">
+          Open Settings Folder
         </span>
       </div>
     </section>
@@ -1013,7 +1027,12 @@
         </div>
 
         <div class="mdl-card__supporting-text wysiwyg-content">
-          <p class="bold">Thanks to creators and contributors of these open source projects that (Un)colored proudly uses :</p>
+          <p>
+            <span class="bold">Special thanks to :</span>
+            Thomas Guilleminot (OS X packages creation)
+          </p>
+
+          <p class="bold">Thanks to creators and contributors of these projects that (Un)colored uses :</p>
           <p>
             <a class="no-context-menu" href="https://sacha.me/Countable/" target="_blank">Countable.js</a> •
             <a class="no-context-menu" href="https://cure53.de/purify" target="_blank">DOMPurify</a> •
@@ -1034,6 +1053,7 @@
             <a class="no-context-menu" href="https://github.com/ded/reqwest" target="_blank">reqwest</a> •
             <a class="no-context-menu" href="http://rubaxa.github.io/Sortable/" target="_blank">Sortable</a> •
             <a class="no-context-menu" href="http://domchristie.github.io/to-markdown/" target="_blank">to-markdown</a> •
+            <a class="no-context-menu" href="https://gist.github.com/alexey-bass/1115557" target="_blank">versions-compare</a> •
             <a class="no-context-menu" href="http://wysiwygjs.github.io/" target="_blank">wysiwyg.js</a>
           </p>
         </div>
@@ -1056,6 +1076,9 @@
         </a>
         <span class="mdl-button mdl-button--colored recheck">
           Update recheck
+        </span>
+        <span class="mdl-button mdl-button--colored app-folder-button">
+          Open App Folder
         </span>
       </div>
     </section>
@@ -1138,7 +1161,7 @@
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
             <span class="bold">A new version of <span class="app-name"></span> is released (version <span class="last-version"></span>)</span><br>
-            <a class="no-context-menu" target="_blank" href="#">Download the latest version here</a>
+            <a class="no-context-menu" target="_blank" href="https://n457.github.io/Uncolored/">Download the latest version here</a>
           </p>
         </div>
 
@@ -1241,6 +1264,7 @@
     <!-- Libraries -->
     <script src="../lib/material.min.js"></script>
     <script src="../lib/getmdl-select.min.js"></script>
+    <script src="../lib/versions-compare.js"></script>
     <script src="../lib/foreach.min.js"></script>
     <script src="../lib/LightRange.ES6.js"></script>
     <script src="../lib/wysiwyg.min.js"></script>
@@ -1261,7 +1285,7 @@
     <script src="../js/functions/Window.functions.js"></script>
     <script src="../js/functions/Utils.functions.js"></script>
     <script src="../js/functions/Documents.functions.js"></script>
-    <script src="../js/functions/Editor.functions.js"></script>
+    <script src="../js/functions/Content.functions.js"></script>
     <script src="../js/functions/Toolbar.functions.js"></script>
     <script src="../js/functions/Dialogs.functions.js"></script>
     <script src="../js/functions/Remote.functions.js"></script>

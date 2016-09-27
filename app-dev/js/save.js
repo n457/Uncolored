@@ -106,8 +106,15 @@
 
 
   $PathField.addEventListener('click', () => {
+    const strExtensionLowerCase = N.ElectronFramework.Path.extname(N.DocActive.$FileName.textContent).toLowerCase();
+    let strDefaultPathExtension = '';
+
+    if (['.html', '.htm', '.md', '.markdown'].indexOf(strExtensionLowerCase) === -1) {
+      strDefaultPathExtension = '.html';
+    }
+
     N.ElectronFramework.Dialog.showSaveDialog({
-      defaultPath: N.DocActive.$FileName.textContent + '.html',
+      defaultPath: N.DocActive.$FileName.textContent + strDefaultPathExtension,
       filters: [
         {name: 'HTML document', extensions: ['html', 'htm']},
         {name: 'Markdown document', extensions: ['md', 'markdown']}

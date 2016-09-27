@@ -13,12 +13,9 @@ N.Functions.Remote.funcGetUpdateInfo = (Parameters) => {
 
       if (strRemoteContent) {
         const strRemoteLastestVersion = strRemoteContent.match('- currentversion: (.*) -')[1];
-        const arrRemoteLastestVersionNumbers = strRemoteLastestVersion.split('.');
 
-        for (let intI = 0; intI < arrRemoteLastestVersionNumbers.length; intI++) {
-          if (parseInt(arrRemoteLastestVersionNumbers[intI]) > parseInt(N.arrAppVersionNumbers[intI])) {
-            boolUpdateAvailable = true;
-          }
+        if (versionCompare(strRemoteLastestVersion, N.strAppVersion) > 0) {
+          boolUpdateAvailable = true;
         }
 
         Parameters.funcOnSuccess.call(null, {

@@ -28,7 +28,7 @@ N.Functions.IO.funcLoadSettings = () => {
   N.Settings;
 
   try {
-    N.Settings = JSON.parse( N.ElectronFramework.Fs.readFileSync(`${N.strAppUserData}/settings.min.json`, 'utf8') );
+    N.Settings = JSON.parse( N.ElectronFramework.Fs.readFileSync(N.strSettingsFilePath, 'utf8') );
   }
   catch (Error) {
     N.Settings = {
@@ -46,7 +46,7 @@ N.Functions.IO.funcLoadSettings = () => {
 
 N.Functions.IO.funcSaveSettings = () => {
   N.Functions.IO.funcIOErrorCheck({ funcToExec: () => {
-    N.ElectronFramework.Fs.writeFileSync(`${N.strAppUserData}/settings.min.json`, JSON.stringify(N.Settings), 'utf8');
+    N.ElectronFramework.Fs.writeFileSync(N.strSettingsFilePath, JSON.stringify(N.Settings), 'utf8');
   } });
 };
 
@@ -87,7 +87,7 @@ N.Functions.IO.funcSaveDoc = (Parameters) => {
     let strDocContent = '';
 
     if (Parameters.strFormat === 'HTML') {
-      N.Functions.Utils.funcClearHTMLForHTMLExport({ $ContentEditable: $ContentEditableClone });
+      N.Functions.Content.funcClearHTMLForHTMLExport({ $ContentEditable: $ContentEditableClone });
 
       strDocContent = N.ElectronFramework.Fs.readFileSync(`${strDocThemePath}/template.html`, 'utf8');
 
@@ -129,7 +129,7 @@ N.Functions.IO.funcSaveDoc = (Parameters) => {
 
 
     else if (Parameters.strFormat === 'Markdown') {
-      N.Functions.Utils.funcClearHTMLForMarkdownExport({ $ContentEditable: $ContentEditableClone });
+      N.Functions.Content.funcClearHTMLForMarkdownExport({ $ContentEditable: $ContentEditableClone });
       strDocContent = N.Functions.Utils.funcHTMLToMarkdown({ strContent: $ContentEditableClone.innerHTML });
     }
 

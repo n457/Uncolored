@@ -51,14 +51,14 @@
       $SearchInputContainer.classList.remove('is-invalid');
 
       if (Parameter.strMode === 'find-all') {
-        N.Functions.Editor.funcCleanSearch({ Document: N.DocActive });
+        N.Functions.Content.funcCleanSearch({ Document: N.DocActive });
         funcMakeSearchRegExp();
         funcFindAll();
         N.$SearchResultsTotal.textContent = Search.reverts.length;
       }
 
       else if (Parameter.strMode === 'replace-all') {
-        N.Functions.Editor.funcCleanSearch({ Document: N.DocActive });
+        N.Functions.Content.funcCleanSearch({ Document: N.DocActive });
         funcMakeSearchRegExp();
         funcReplaceAll();
 

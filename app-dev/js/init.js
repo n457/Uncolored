@@ -1,8 +1,11 @@
 N.strAppName = N.ElectronFramework.App.getName();
 N.strAppVersion = N.ElectronFramework.App.getVersion();
-N.arrAppVersionNumbers = N.strAppVersion.split('.');
+
 N.strAppPath = N.ElectronFramework.App.getAppPath();
+N.strAppExePath = N.ElectronFramework.App.getPath('exe');
+
 N.strAppUserData = N.ElectronFramework.App.getPath('userData');
+N.strSettingsFilePath = `${N.strAppUserData}/settings.min.json`;
 
 
 N.Functions.IO.funcLoadSettings();
@@ -48,6 +51,8 @@ N.$DocInfoWords = N.$DocInfoDialog.getElementsByClassName('words-number')[0];
 N.$DocInfoCharacters = N.$DocInfoDialog.getElementsByClassName('characters-number')[0];
 N.$DocInfoCharactersSpaces = N.$DocInfoDialog.getElementsByClassName('characters-spaces-number')[0];
 
+N.$AboutDialog = document.getElementById('about-dialog');
+
 N.$UnsavedDocsDialog = document.getElementById('unsaved-docs-dialog');
 
 
@@ -57,9 +62,13 @@ N.DocActive;
 N.intDocIDsCount = -1;
 N.intCurrentDocs = 0;
 
-N.timerClearContent;
+N.strLastHTMLCopied = '';
 N.strLastHTMLPasted = '';
+N.strLastHTMLDragged = '';
+N.timerCopy;
 N.timerPaste;
+// N.boolCanDrop always "false" by default
+N.boolCanDrop = false;
 
 N.LastContextMenuElementInfo;
 

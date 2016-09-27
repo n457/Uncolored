@@ -3,6 +3,7 @@
   const $ToolParagraph = document.getElementById('tool-paragraph');
   const $ToolRemoteImage = document.getElementById('tool-remote-image');
   const $ToolRemoteVideo = document.getElementById('tool-remote-video');
+  const $ToolRemoteEmbed = document.getElementById('tool-remote-embed');
 
   const $ToolBold = document.getElementById('tool-bold');
   const $ToolItalic = document.getElementById('tool-italic');
@@ -21,6 +22,10 @@
   const $InputRemoteVideo = N.$Toolbar.querySelector('.remote-video-view input');
   const $CancelRemoteVideo = N.$Toolbar.querySelector('.remote-video-view .cancel-tool');
   const $ValidateRemoteVideo = N.$Toolbar.querySelector('.remote-video-view .validate-tool');
+
+  const $InputRemoteEmbed = N.$Toolbar.querySelector('.remote-embed-view input');
+  const $CancelRemoteEmbed = N.$Toolbar.querySelector('.remote-embed-view .cancel-tool');
+  const $ValidateRemoteEmbed = N.$Toolbar.querySelector('.remote-embed-view .validate-tool');
 
   const $InputApplyLink = N.$Toolbar.querySelector('.apply-link-view input');
   const $CancelApplyLink = N.$Toolbar.querySelector('.apply-link-view .cancel-tool');
@@ -85,6 +90,9 @@
           else if ($Button === $ToolRemoteVideo) {
             $InputRemoteVideo.select();
           }
+          else if ($Button === $ToolRemoteEmbed) {
+            $InputRemoteEmbed.select();
+          }
           else if ($Button === $ToolApplyLink) {
             $InputApplyLink.select();
           }
@@ -111,6 +119,7 @@
       lightrange.restoreSelection(N.DocActive.LastSelection);
       N.DocActive.Editor.insertImage($InputRemoteImage.value + N.Functions.Utils.funcNoCacheSuffix());
       N.Functions.Toolbar.funcResetView();
+      N.Functions.Toolbar.funcAutoPosition();
     } else {
       $InputRemoteImage.classList.add('invalid');
     }
@@ -145,9 +154,35 @@
       }
 
       N.Functions.Toolbar.funcResetView();
+      N.Functions.Toolbar.funcAutoPosition();
     }
     else {
       $InputRemoteVideo.classList.add('invalid');
+    }
+  });
+
+
+  $ValidateRemoteEmbed.addEventListener('click', () => {
+    let strEmbedCode = $InputRemoteEmbed.value;
+    const RegExpEmbed = new RegExp(/^<iframe.+><\/iframe>$/, 'i');
+
+    if (RegExpEmbed.test(strEmbedCode)) {
+      $InputRemoteEmbed.classList.remove('invalid');
+
+      lightrange.restoreSelection(N.DocActive.LastSelection);
+
+      strEmbedCode = N.Functions.Content.funcPurifyHTML({
+        strHTML: strEmbedCode,
+        strAllowedContentMode: 'embed'
+      });
+
+      N.DocActive.Editor.insertHTML(strEmbedCode);
+
+      N.Functions.Toolbar.funcResetView();
+      N.Functions.Toolbar.funcAutoPosition();
+    }
+    else {
+      $InputRemoteEmbed.classList.add('invalid');
     }
   });
 
@@ -157,8 +192,8 @@
       $InputApplyLink.classList.remove('invalid');
       lightrange.restoreSelection(N.DocActive.LastSelection);
       N.DocActive.Editor.insertLink($InputApplyLink.value);
-      // N.Functions.Editor.funcEditLinkTags() is not needed here for the moment, but may be in a future release.
       N.Functions.Toolbar.funcResetView();
+      N.Functions.Toolbar.funcAutoPosition();
     } else {
       $InputApplyLink.classList.add('invalid');
     }
@@ -184,6 +219,17 @@
     // Escape
     else if (Event.keyCode === 27) {
       $CancelRemoteVideo.click();
+    }
+  });
+
+  $InputRemoteEmbed.addEventListener('keyup', (Event) => {
+    // Enter
+    if (Event.keyCode === 13) {
+      $ValidateRemoteEmbed.click();
+    }
+    // Escape
+    else if (Event.keyCode === 27) {
+      $CancelRemoteEmbed.click();
     }
   });
 

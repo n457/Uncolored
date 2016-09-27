@@ -1,7 +1,6 @@
 (() => {
 
-  const $AboutDialog = document.getElementById('about-dialog');
-  const $AppCurrentVersion = $AboutDialog.getElementsByClassName('app-version')[0];
+  const $AppCurrentVersion = N.$AboutDialog.getElementsByClassName('app-version')[0];
 
   const $NewUpdateDialog = document.getElementById('new-update-dialog');
   const $AppRemoteVersion = $NewUpdateDialog.getElementsByClassName('last-version')[0];
@@ -11,21 +10,21 @@
 
 
   const funcUpdateCheck = () => {
-    $AboutDialog.dataset.state = 'loading';
+    N.$AboutDialog.dataset.state = 'loading';
 
     N.Functions.Remote.funcGetUpdateInfo({
       funcOnSuccess: (UpdateCheckResult) => {
         if (UpdateCheckResult.boolUpdateAvailable) {
           $AppRemoteVersion.textContent = UpdateCheckResult.strRemoteLastestVersion;
           $RemoteReleaseNotes.innerHTML = UpdateCheckResult.strRemoteReleaseNotesHTML;
-          $AboutDialog.dataset.state = 'new-update';
+          N.$AboutDialog.dataset.state = 'new-update';
           N.Functions.Dialogs.funcShow({ strDialogSlug: 'new-update' });
         } else {
-          $AboutDialog.dataset.state = 'up-to-date';
+          N.$AboutDialog.dataset.state = 'up-to-date';
         }
       },
       funcOnError: (Error) => {
-        $AboutDialog.dataset.state = 'error';
+        N.$AboutDialog.dataset.state = 'error';
       }
     });
   };
@@ -43,11 +42,11 @@
   };
 
 
-  $AboutDialog.getElementsByClassName('show-update-dialog')[0].addEventListener('click', () => {
+  N.$AboutDialog.getElementsByClassName('show-update-dialog')[0].addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'new-update' });
   });
 
-  $AboutDialog.getElementsByClassName('recheck')[0].addEventListener('click', () => {
+  N.$AboutDialog.getElementsByClassName('recheck')[0].addEventListener('click', () => {
     funcUpdateCheck();
   });
 

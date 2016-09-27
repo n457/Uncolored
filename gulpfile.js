@@ -60,6 +60,7 @@ gulp.task('js-app', ['empty-app-folder'], function () {
 
     'app-dev/lib/material.min.js',
     'app-dev/lib/getmdl-select.min.js',
+    'app-dev/lib/versions-compare.js',
     'app-dev/lib/foreach.min.js',
     'app-dev/lib/LightRange.ES6.js',
     'app-dev/lib/wysiwyg.min.js',
@@ -79,7 +80,7 @@ gulp.task('js-app', ['empty-app-folder'], function () {
     'app-dev/js/functions/Window.functions.js',
     'app-dev/js/functions/Utils.functions.js',
     'app-dev/js/functions/Documents.functions.js',
-    'app-dev/js/functions/Editor.functions.js',
+    'app-dev/js/functions/Content.functions.js',
     'app-dev/js/functions/Toolbar.functions.js',
     'app-dev/js/functions/Dialogs.functions.js',
     'app-dev/js/functions/Remote.functions.js',

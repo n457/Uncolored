@@ -3,7 +3,7 @@ N.Functions.Dialogs = {};
 
 N.Functions.Dialogs.funcShow = (Parameter) => {
   if (N.strDialogActiveSlug === 'search') {
-    N.Functions.Editor.funcCleanSearch({ Document: N.DocActive });
+    N.Functions.Content.funcCleanSearch({ Document: N.DocActive });
   }
 
   document.body.dataset.dialog = Parameter.strDialogSlug;
