@@ -1,6 +1,21 @@
 ## Release Notes
 <!-- (for in-app update check) -->
-<!-- - currentversion: 0.7.2 - -->
+<!-- currentversion: 0.8.1 -->
+
+##### 0.8.1
+- [x] Additional ***Embed Content*** tool : insert SoundCloud tracks, Vine videos, and **any kind of other embed content**
+- [x] *Open application folder* button in *About* dialog ([topic #10](https://github.com/n457/Uncolored/issues/10))
+- [x] *Open settings file folder* button in *Settings* dialog ([topic #10](https://github.com/n457/Uncolored/issues/10))
+- [x] Changed default document tab names *Unnamed-X* to a more explicit one *Document-X* ([topic #1](https://github.com/n457/Uncolored/issues/1))
+- [x] Darken the background-color of the selected text/content for more visibility ([topic #6](https://github.com/n457/Uncolored/issues/6))
+- [x] Special thanks to Thomas Guilleminot in the *About* dialog ([topic #9](https://github.com/n457/Uncolored/issues/9))
+- minor UI changes
+- **Major issues fixes :**
+- [x] Sometimes the paste command doesn't work ([topic #4](https://github.com/n457/Uncolored/issues/4))
+- [x] Dropping external assets in the app change app view ([topic #5](https://github.com/n457/Uncolored/issues/5))
+- **minor issues fixes :**
+- [x] Wrong toolbar positioning when a link is added via the *Apply Link* tool
+- [x] Duplicate file name extension when using *"Save As"* on an already saved document
 
 ##### 0.7.2
 - Fixed empty priority info dialog

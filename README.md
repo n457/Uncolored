@@ -1,7 +1,7 @@
 ![](project/docs/assets/uncolored-logo.png)
 
 Next generation **desktop rich content editor** that saves documents with **themes**. **HTML & Markdown** compatible. For **Windows, OS X & Linux**.
-#### version 0.7.2 — Beta
+#### version 0.8.1 — Beta
 
 ![](project/docs/assets/uncolored-large-screenshot.png)
 
@@ -17,13 +17,14 @@ With (Un)colored, the user focuses on the **text** & **content types** (titles, 
 - **Multiple document tabs** management
 - Standard word processor **inline tools** (bold, italic, underline, strikethrough, add link to selection, superscript, subscript, clear format)
 - 6 levels **title tools**
-- **Block tools** (paragraph, quote, unordered & ordered list, image insertion via URL, **YouTube / Vimeo / Dailymotion / Twitch video** insertion via URL)
+- **Block tools** (paragraph, quote, unordered & ordered list, image insertion via URL)
+- **Web-oriented tools** (**YouTube / Vimeo / Dailymotion / Twitch video** insertion via URL, or **ANY embedded content** (SoundCloud tracks, Vines, ...))
 - Real-time **emojis** *(from http://www.emoji-cheat-sheet.com/ for now)*
 - Export to **HTML documents** with 2 **themes** : GitHub Style & White Room *(more to come)*
 - Export to **Markdown documents**
 - **Interface themes** system *(1 interface theme for now, but more to come)*
 - 41 **mouse & keyboard shortcuts**
-- Basic **search / replace** system *(need improvements)*
+- Basic **search / replace** system *(needs improvements)*
 - Document information display (number of paragraphs, words, etc.)
 - Minimalist interface that let you focus on what matters : **the content**
 - Update auto-check system (enable / disable in settings)
@@ -33,26 +34,20 @@ With (Un)colored, the user focuses on the **text** & **content types** (titles, 
 ### :checkered_flag: Roadmap
 Here is what **is planed** for future releases of (Un)colored. These lists **can change** at any time and tasks can be added, moved, modified or deleted for several reasons, including **feasibility** and **performance impact**.
 
+This **public repository** contains released versions of (Un)colored and their source code, **the latest development/test** version of the (Un)colored source code **is on a private repository**, **checked checkboxes are only for your information** but concerned features **are not testable** with the source code of this public repository.
+
 If you want more details about what was done, see [the Changelog](CHANGELOG.md).
 
-##### version 0.7.3
-- [ ] *Open application folder* button in *About* dialog
-- [ ] *Open settings file folder* button in *Settings* dialog
-
-- **minor issues fixes** *(see the [Known Issues section](#known-issues) for more details)* :
-- [ ] Wrong toolbar positioning with the *Apply Link* tool. ***(id : KI004m)***
-- [ ] Duplicate file name extension on *"Save As"*. ***(id : KI005m)***
-
-##### version 0.8.0
+##### version 0.9.0
+- [ ] Additional ***Tweet*** tool : **insert a tweet** from Twitter in documents
 - [ ] **Anchor links** (links starting with "#") full support (fixing issue ***KI001M***)
 - [ ] **GitHub Flavored Markdown** documents import/export full support (tools will come progressively) (fixing issue ***KI002M***)
 - [ ] Additional ***Insert Image from File*** tool (fixing issue ***KI003M*** at the same time)
-- [ ] Additional ***Custom Embed Content*** tool : insert SoundCloud tracks, Vine videos, and any kind of other embed content
 - [ ] Additional **document themes**
 - [ ] **Code highlighting** in saved themed document (supported languages : CSS, JavaScript, Ruby, CoffeeScript, PHP, SQL, C#, Diff, JSON, Markdown, C++, HTML, XML, Java, Python)
 - **Other potential issue fixes**
 
-##### version 0.9.0
+##### version 0.10.0
 - [ ] Additional **table tools** : insert table & add, remove, move row & column
 - [ ] Additional ***Incorporate image from file*** tool
 - **Potential issue fixes**
@@ -82,12 +77,12 @@ For the complete list of used projects, see below the [Related Projects section]
 - *[Major issue]* Anchor links (links starting with "#") doesn't work. ***(id : KI001M)***
 - *[Major issue]* GitHub Flavored Markdown documents import/export not fully supported (and missing tools for it). ***(id : KI002M)***
 - *[Major issue]* When entering a local image relative path in the *Image via URL* tool field, the image in the exported document is not visible in-browser. ***(id : KI003M)***
-- *[minor issue]* Wrong toolbar positioning when a link is added via the *Apply Link* tool. ***(id : KI004m)***
-- *[minor issue]* Duplicate file name extension when using *"Save As"* on an already saved document. ***(id : KI005m)***
 
 
 ### :busts_in_silhouette: Contribute
-If you have any **question** about the project, noticed a performance **issue** or a **bug** that is not in the [Known Issues section](#known-issues) above, you can let me know by posting on [the GitHub issue section](https://github.com/n457/Uncolored/issues). I will be glad to answer :octocat:
+If you have any **question** about the project, noticed a performance **issue** or a **bug**, you can let me know by posting on [the GitHub issues section](https://github.com/n457/Uncolored/issues?utf8=%E2%9C%93&q=). I will be glad to answer :octocat:
+
+Before creating a new issue topic, be careful to check if your question/issue is not in the [Known Issues section](#known-issues) above or already in [the GitHub issues section](https://github.com/n457/Uncolored/issues?utf8=%E2%9C%93&q=).
 
 
 ### :wrench: Technical Documentation *(not ready yet)*
@@ -127,6 +122,7 @@ If you don't know how much to give, 6 € is a reasonnable amount (will be autom
 [reqwest](https://github.com/ded/reqwest) •
 [Sortable](http://rubaxa.github.io/Sortable/) •
 [to-markdown](http://domchristie.github.io/to-markdown/) •
+[versions-compare](https://gist.github.com/alexey-bass/1115557) •
 [wysiwyg.js](http://wysiwygjs.github.io/)
 
 
