@@ -22,16 +22,25 @@
   width: 100%; }
 
 
-
-.github-button {
+.right-info-col {
   position: absolute;
   top: 28px;
   right: 28px; }
-  .github-button .mega-octicon {
-    color: #464646;
-    transition: color 0.6s; }
-  .github-button:hover .mega-octicon {
-    color: black; }
+  .right-info-col a {
+    display: block;
+    max-width: 78px; }
+
+  .github-button {
+    margin-left: 27px; }
+    .github-button .mega-octicon {
+      color: #464646;
+      transition: color 0.6s; }
+    .github-button:hover .mega-octicon {
+      color: black; }
+
+  .softpedia-certificate {
+    margin-top: 20px; }
+
 
 .app-logo {
   max-width: 355px;
