@@ -90,7 +90,7 @@ To know how to **create a document theme** or a **interface theme**, how to **la
 
 
 ### :gift: Donation
-[— Donate Link —](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=n457%2econtact%40gmail%2ecom&lc=FR&item_name=n457%20%2f%20Bertrand%20Vignaud%2dLerouge&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+[— Support (Un)colored —](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=n457%2econtact%40gmail%2ecom&lc=FR&item_name=n457%20%2f%20Bertrand%20Vignaud%2dLerouge&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 **(Un)colored is free and open source**. Making applications like this **takes time**. If you like this app, please consider to donate to **support my work** :wink:
 If you don't know how much to give, 6 € is a reasonnable amount (will be automatically converted into your currency). Have a nice day !
