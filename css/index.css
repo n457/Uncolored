@@ -39,7 +39,7 @@
       color: black; }
 
   .softpedia-certificate {
-    margin-top: 20px; }
+    margin-top: 14px; }
 
 
 .app-logo {
@@ -215,6 +215,17 @@ footer {
 @media screen and (max-width: 768px) {
   h1 {
     margin-top: 0; }
+
+  .right-info-col {
+    position: static;
+    text-align: center;
+    margin-top: 14px; }
+    .right-info-col li {
+      display: inline-block;
+      margin: 4px 6px;
+      vertical-align: middle; }
+      .right-info-col a {
+        margin: 0; }
 
   .app-large-img {
     margin-top: 50px; }

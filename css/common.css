@@ -23,3 +23,10 @@ body {
       text-decoration: none; }
     a:not([href]) {
       cursor: default; }
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 19px; }
+}
