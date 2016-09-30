@@ -38,6 +38,11 @@
     .github-button:hover .mega-octicon {
       color: black; }
 
+  .stars-count {
+    width: 78px;
+    height: 20px;
+    margin-top: 4px; }
+
   .softpedia-certificate {
     margin-top: 14px; }
 

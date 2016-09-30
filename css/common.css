@@ -17,6 +17,9 @@ body {
   p, li {
     line-height: 24px; }
 
+  iframe {
+    border: 0; }
+
   a {
     color: #4078c0; }
     a:hover {
