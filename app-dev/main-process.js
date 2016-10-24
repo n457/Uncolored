@@ -7,6 +7,27 @@ const BrowserWindow = Electron.BrowserWindow;
 const Menu = Electron.Menu;
 // Module to execute native commands.
 const Shell = Electron.shell;
+// "fs" for "File System" : used to read and write files on disks.
+const Fs = require('fs');
+
+const strAppUserData = App.getPath('userData');
+
+let Settings;
+try {
+  // Accessing settings here for window related settings
+  Settings = JSON.parse( Fs.readFileSync(`${strAppUserData}/settings.min.json`, 'utf8') );
+} catch (Error) {}
+
+
+let boolWindowFrame = false;
+
+if (Settings) {
+  if (Settings.boolWindowFrame) {
+    boolWindowFrame = true;
+  }
+}
+
+
 
 // Keep a global reference of the window object, if you don't, the window will be closed automatically when the JavaScript object is garbage collected.
 let MainWindow;
@@ -90,21 +111,21 @@ const funcCreateWindow = () => {
             }
           }
         },
-        {
-          label: 'Toggle Full Screen',
-          accelerator: (() => {
-            if (process.platform == 'darwin') {
-              return 'Ctrl+Command+F';
-            } else {
-              return 'F11';
-            }
-          })(),
-          click(Item, FocusedWindow) {
-            if (FocusedWindow) {
-              FocusedWindow.setFullScreen( ! FocusedWindow.isFullScreen());
-            }
-          }
-        },
+        // {
+        //   label: 'Toggle Full Screen',
+        //   accelerator: (() => {
+        //     if (process.platform == 'darwin') {
+        //       return 'Ctrl+Command+F';
+        //     } else {
+        //       return 'F11';
+        //     }
+        //   })(),
+        //   click(Item, FocusedWindow) {
+        //     if (FocusedWindow) {
+        //       FocusedWindow.setFullScreen( ! FocusedWindow.isFullScreen());
+        //     }
+        //   }
+        // },
         {
           label: 'Toggle Developer Tools',
           accelerator: 'CmdOrCtrl+Shift+Alt+D',
@@ -145,7 +166,8 @@ const funcCreateWindow = () => {
   // Create the browser window.
   MainWindow = new BrowserWindow({
     'width': 960,
-    'height': 660
+    'height': 660,
+    'frame': boolWindowFrame
   });
 
 
@@ -181,9 +203,9 @@ App.on('ready', () => {
 // Quit when all windows are closed.
 App.on('window-all-closed', () => {
   // On OS X it is common for applications and their menu bar to stay active until the user quits explicitly with Cmd + Q.
-  if (process.platform !== 'darwin') {
-    App.quit();
-  }
+  // Here we choose to close the app completely in all cases.
+  App.quit();
+  // Original OS X specific code here : https://github.com/electron/electron/blob/master/docs/tutorial/quick-start.md#write-your-first-electron-app
 });
 
 // In this file you can include the rest of your app's specific main process code. You can also put them in separate files and require them here.

@@ -2,11 +2,11 @@
 
   const $AppCurrentVersion = N.$AboutDialog.getElementsByClassName('app-version')[0];
 
-  const $NewUpdateDialog = document.getElementById('new-update-dialog');
+  const $NewUpdateDialog = document.getElementById('new-update-dialog_unc2741');
   const $AppRemoteVersion = $NewUpdateDialog.getElementsByClassName('last-version')[0];
   const $RemoteReleaseNotes = $NewUpdateDialog.getElementsByClassName('release-notes')[0];
 
-  const $RemotePriorityInfo = document.getElementById('priority-info-dialog').getElementsByClassName('mdl-card__supporting-text')[0];
+  const $RemotePriorityInfo = document.getElementById('priority-info-dialog_unc2741').getElementsByClassName('mdl-card__supporting-text')[0];
 
 
   const funcUpdateCheck = () => {

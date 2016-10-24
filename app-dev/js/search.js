@@ -2,7 +2,7 @@
 
   const $SearchInputContainer = N.$SearchInput.parentNode;
   const $ReplaceInputContainer = N.$ReplaceInput.parentNode;
-  const $SwitchCaseSensitive = N.$SearchDialog.querySelector('[for="switch-search-case-sensitive"]');
+  const $SwitchCaseSensitive = N.$SearchDialog.querySelector('[for="switch-search-case-sensitive_unc2741"]');
 
   let LastSearchRegExp;
   let Search = {};

@@ -1,7 +1,7 @@
 /* From GitHub markdown view style */
 body {
   max-width: 980px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   color: #757575; }
   main {
     padding: 45px; }
@@ -44,8 +44,8 @@ body {
 
   .wysiwyg-content p,
   .wysiwyg-content li {
-    font-size: 14px;
-    line-height: 24px; }
+    font-size: 15px;
+    line-height: 30px; }
 
   /* For the most part from material.min.css */
   .wysiwyg-content blockquote {

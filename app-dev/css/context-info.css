@@ -1,4 +1,4 @@
-#minor-info-bar {
+#minor-info-bar_unc2741.protected-id {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -11,47 +11,51 @@
   pointer-events: none;
   z-index: 2;
   transition: opacity 0.2s; }
-  #minor-info-bar.active {
+  #minor-info-bar_unc2741.protected-id.active {
     opacity: 1; }
 
 
-/* top & left via JS */
-#context-menu {
+.menu-list {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  z-index: 5;
   transition: opacity 0.2s; }
-  #context-menu.active {
+  .menu-list.active {
     opacity: 1;
     pointer-events: auto; }
-
-  #context-menu .options {
+  .menu-list .options {
     display: none; }
-    #context-menu[data-target="tab"] .tab-view,
-    #context-menu[data-target="a"] .a-view,
-    #context-menu[data-target="img"] .img-view,
-    #context-menu[data-target="emoji"] .emoji-view {
+  .menu-list .label {
+    text-align: center;
+    padding: 4px 0; }
+  .menu-list .menu-list-item {
+    padding: 2px 8px; }
+    .menu-list a.menu-list-item {
+      display: block;
+      text-decoration: none;
+      cursor: default; }
+
+/* top & left via JS */
+#context-menu_unc2741.protected-id {
+  z-index: 5; }
+    #context-menu_unc2741.protected-id[data-target="tab"] .tab-view,
+    #context-menu_unc2741.protected-id[data-target="text"] .text-view,
+    #context-menu_unc2741.protected-id[data-target="a"] .a-view,
+    #context-menu_unc2741.protected-id[data-target="anchor-link"] .anchor-link-view,
+    #context-menu_unc2741.protected-id[data-target="anchor"] .anchor-view,
+    #context-menu_unc2741.protected-id[data-target="img"] .img-view,
+    #context-menu_unc2741.protected-id[data-target="emoji"] .emoji-view {
       display: block; }
-    #context-menu .label {
-      text-align: center;
-      padding: 4px 0; }
-    #context-menu .inner-container {
-      padding: 2px 8px; }
-      #context-menu a {
-        display: block;
-        text-decoration: none;
-        cursor: default; }
 
 
 /* top & left via JS */
-#preview-large {
+#preview-large_unc2741.protected-id {
   position: absolute;
   opacity: 0;
   pointer-events: none;
   z-index: 10;
   transition: opacity 0.2s; }
-  #preview-large.active {
+  #preview-large_unc2741.protected-id.active {
     opacity: 1; }
-  #preview-large .label {
+  #preview-large_unc2741.protected-id .label {
     padding: 4px 6px; }

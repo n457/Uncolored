@@ -29,6 +29,7 @@ class Document {
         strAllowedContentMode: 'document'
       });
       N.Functions.Content.funcClearHTML({ Document: ThisDoc });
+      N.Functions.Content.funcSetHeadingsIDs({ Document: ThisDoc });
       N.Functions.Content.funcDisplayEmojis({ Document: ThisDoc });
 
       if (Options.boolLockedDoc) {
@@ -38,10 +39,7 @@ class Document {
       ThisDoc.$FileName.textContent += N.intDocIDsCount + 1;
     }
 
-    ThisDoc.$Tab.removeAttribute('id');
     ThisDoc.$Tab.dataset.id = ThisDoc.intID;
-
-    ThisDoc.$ContentContainer.removeAttribute('id');
 
     ThisDoc.LastSelection;
 
@@ -122,40 +120,46 @@ class Document {
         N.$Toolbar.classList.add('active');
       }
 
-      ThisDoc.methMenuCheck();
+      N.Functions.Documents.funcMenuAvailabilityCheck();
     });
 
     ThisDoc.$ContentEditable.addEventListener('input', () => {
-
       if ( ! ThisDoc.$ContentEditable.innerHTML) {
         ThisDoc.$ContentEditable.innerHTML = '<p><br></p>';
       }
 
-      if (ThisDoc.$ContentEditable.innerHTML === ThisDoc.strLastSavedContent) {
-        N.$GlobalUnsavedMark.classList.remove('active');
-        ThisDoc.$Tab.classList.remove('doc-unsaved');
-      } else {
-        N.$GlobalUnsavedMark.classList.add('active');
-        ThisDoc.$Tab.classList.add('doc-unsaved');
-      }
+      clearTimeout(N.timerInput);
+      N.timerInput = setTimeout(() => {
+        N.Functions.Content.funcClearHTML({ Document: ThisDoc });
 
-      // keydown is not triggered with some command like 'undo', so we have to check here as well
-      ThisDoc.methMenuCheck();
+        if (ThisDoc.$ContentEditable.innerHTML === ThisDoc.strLastSavedContent) {
+          N.$GlobalUnsavedMark.classList.remove('active');
+          ThisDoc.$Tab.classList.remove('doc-unsaved');
+        } else {
+          N.$GlobalUnsavedMark.classList.add('active');
+          ThisDoc.$Tab.classList.add('doc-unsaved');
+        }
+
+        // keydown is not triggered with some command like 'undo', so we have to check here as well
+        N.Functions.Documents.funcMenuAvailabilityCheck();
+
+        clearTimeout(N.timerInput);
+      }, 400);
     });
 
     ThisDoc.$ContentEditable.addEventListener('copy', () => {
-      clearTimeout(N.timerCopy);
-      N.timerCopy = setTimeout(() => {
+      clearTimeout(N.timerClipboard);
+      N.timerClipboard = setTimeout(() => {
         N.strLastHTMLCopied = N.ElectronFramework.Clipboard.readHTML();
-        clearTimeout(N.timerCopy);
-      }, 50);
+        clearTimeout(N.timerClipboard);
+      }, 30);
     });
     ThisDoc.$ContentEditable.addEventListener('cut', () => {
-      clearTimeout(N.timerCopy);
-      N.timerCopy = setTimeout(() => {
+      clearTimeout(N.timerClipboard);
+      N.timerClipboard = setTimeout(() => {
         N.strLastHTMLCopied = N.ElectronFramework.Clipboard.readHTML();
-        clearTimeout(N.timerCopy);
-      }, 50);
+        clearTimeout(N.timerClipboard);
+      }, 30);
     });
 
     ThisDoc.$ContentEditable.addEventListener('paste', () => {
@@ -176,12 +180,13 @@ class Document {
 
 
     ThisDoc.$ContentEditable.addEventListener('paste', () => {
-      clearTimeout(N.timerPaste);
-      N.timerPaste = setTimeout(() => {
+      clearTimeout(N.timerClipboard);
+      N.timerClipboard = setTimeout(() => {
         N.Functions.Content.funcClearHTML({ Document: ThisDoc });
+        N.Functions.Content.funcSetHeadingsIDs({ Document: ThisDoc });
         N.Functions.Content.funcDisplayEmojis({ Document: ThisDoc });
-        clearTimeout(N.timerPaste);
-      }, 100);
+        clearTimeout(N.timerClipboard);
+      }, 50);
     });
 
 
@@ -249,10 +254,10 @@ class Document {
   methShow() {
     const ThisDoc = this;
 
-    ThisDoc.methMenuCheck();
-
-    N.Functions.Dialogs.funcCloseContext();
     N.Functions.Documents.funcDocActiveChange();
+
+    ThisDoc.$Tab.classList.add('active');
+    ThisDoc.$ContentContainer.classList.add('active');
 
     if (ThisDoc.$Tab.classList.contains('doc-unsaved')) {
       N.$GlobalUnsavedMark.classList.add('active');
@@ -260,8 +265,7 @@ class Document {
       N.$GlobalUnsavedMark.classList.remove('active');
     }
 
-    ThisDoc.$Tab.classList.add('active');
-    ThisDoc.$ContentContainer.classList.add('active');
+    N.DocActive = ThisDoc;
 
     if (ThisDoc.LastSelection) {
       lightrange.restoreSelection(ThisDoc.LastSelection);
@@ -270,31 +274,11 @@ class Document {
     }
     N.Functions.Toolbar.funcView();
 
-    ThisDoc.methSetInfoDialog();
+    N.Functions.Dialogs.funcCloseContext();
+    N.Functions.Documents.funcMenuAvailabilityCheck();
 
-    N.DocActive = ThisDoc;
-  }
-
-
-  methMenuCheck() {
-    const ThisDoc = this;
-
-    if (ThisDoc.strPath) {
-      N.$MenuOpenDocFolder.classList.remove('disabled');
-
-      if (ThisDoc.$Tab.classList.contains('doc-unsaved')) {
-        N.$MenuSave.classList.remove('disabled');
-      } else {
-        N.$MenuSave.classList.add('disabled');
-      }
-    } else {
-      N.$MenuOpenDocFolder.classList.add('disabled');
-      N.$MenuSave.classList.add('disabled');
-    }
-
-    if (ThisDoc.boolLocked) {
-      N.$MenuSave.classList.add('disabled');
-    }
+    N.Functions.Dialogs.funcUpdateTableContent();
+    N.Functions.Dialogs.funcUpdateDocInfo();
   }
 
 
@@ -348,25 +332,6 @@ class Document {
     if (ThisDoc.strPath) {
       N.ElectronFramework.Shell.showItemInFolder(ThisDoc.strPath);
     }
-  }
-
-
-  methSetInfoDialog() {
-    const ThisDoc = this;
-
-    if (ThisDoc.strDocThemeName) {
-      N.$DocInfoThemeName.textContent = ThisDoc.strDocThemeName;
-    } else {
-      N.$DocInfoThemeName.textContent = '—';
-    }
-
-    Countable.once(ThisDoc.$ContentEditable, (Counter) => {
-      N.$DocInfoParagraphs.textContent = Counter.paragraphs;
-      N.$DocInfoSentences.textContent = Counter.sentences;
-      N.$DocInfoWords.textContent = Counter.words;
-      N.$DocInfoCharacters.textContent = Counter.characters;
-      N.$DocInfoCharactersSpaces.textContent = Counter.all;
-    });
   }
 
 }

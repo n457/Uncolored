@@ -1,16 +1,22 @@
 (() => {
 
-  const $SettingsDialog = document.getElementById('settings-dialog');
+  const $SettingsDialog = document.getElementById('settings-dialog_unc2741');
 
-  const $UIThemeSheet = document.getElementById('ui-theme-sheet');
+  const $UIThemeSheet = document.getElementById('ui-theme-sheet_unc2741');
 
   // For populating UI language select list
-  const $SelectUILangInput = document.getElementById('select-ui-lang');
-  const $SelectUILang = $SettingsDialog.querySelector('.mdl-menu[for="select-ui-lang"]');
+  const $SelectUILangInput = document.getElementById('select-ui-lang_unc2741');
+  const $SelectUILang = $SettingsDialog.querySelector('.mdl-menu[for="select-ui-lang_unc2741"]');
   const $SelectUILangItem = $SelectUILang.getElementsByClassName('mdl-menu__item')[0];
 
-  const $SwitchAutoUpdate = $SettingsDialog.querySelector('[for="switch-auto-update-check"]');
+  const $SwitchAutoUpdate = $SettingsDialog.querySelector('[for="switch-auto-update-check_unc2741"]');
   const $SwitchAutoUpdateInput = $SwitchAutoUpdate.getElementsByTagName('input')[0];
+
+  const $SwitchWindowFrame = $SettingsDialog.querySelector('[for="switch-window-frame_unc2741"]');
+  const $SwitchWindowFrameInput = $SwitchWindowFrame.getElementsByTagName('input')[0];
+
+  const $SwitchLinuxControlsRight = $SettingsDialog.querySelector('[for="switch-linux-controls-right_unc2741"]');
+  const $SwitchLinuxControlsRightInput = $SwitchLinuxControlsRight.getElementsByTagName('input')[0];
 
   // For populating UI themes select list
   const $UIThemesList = $SettingsDialog.getElementsByClassName('preview-list')[0];
@@ -25,6 +31,12 @@
     }
     if ( ! N.Settings.boolAutoUpdateCheck) {
       $SwitchAutoUpdateInput.click();
+    }
+    if (N.Settings.boolWindowFrame) {
+      $SwitchWindowFrameInput.click();
+    }
+    if (N.Settings.boolLinuxControlsRight) {
+      $SwitchLinuxControlsRightInput.click();
     }
     if (N.Settings.strUIThemeSlug !== '_ORIGINAL_white-room') {
       $UIThemesList.querySelector('[data-slug="_ORIGINAL_white-room"]').click();
@@ -129,6 +141,25 @@
     N.Functions.IO.funcSaveSettings();
   });
 
+  // Handling app window frame
+  $SwitchWindowFrameInput.addEventListener('click', () => {
+    N.Settings.boolWindowFrame = ! $SwitchWindowFrame.classList.contains('is-checked');
+    N.Functions.IO.funcSaveSettings();
+  });
+
+  // Handling Linux controls side
+  $SwitchLinuxControlsRightInput.addEventListener('click', () => {
+    N.Settings.boolLinuxControlsRight = ! $SwitchLinuxControlsRight.classList.contains('is-checked');
+
+    if (N.Settings.boolLinuxControlsRight) {
+      document.body.dataset.linuxcontrolsside = 'right';
+    } else {
+      document.body.dataset.linuxcontrolsside = 'left';
+    }
+
+    N.Functions.IO.funcSaveSettings();
+  });
+
 
   $SettingsDialog.getElementsByClassName('reset-button')[0].addEventListener('click', () => {
     funcResetSettings();
@@ -142,6 +173,19 @@
   // First init of the auto update switch
   if ($SwitchAutoUpdate.classList.contains('is-checked') !== N.Settings.boolAutoUpdateCheck) {
     $SwitchAutoUpdateInput.click();
+  }
+
+  // First init of the window frame switch
+  if ($SwitchWindowFrame.classList.contains('is-checked') !== N.Settings.boolWindowFrame) {
+    $SwitchWindowFrameInput.click();
+  }
+  if ( ! N.Settings.boolWindowFrame) {
+    document.body.classList.add('no-frame');
+  }
+
+  // First init of the Linux controls side switch
+  if ($SwitchLinuxControlsRight.classList.contains('is-checked') !== N.Settings.boolLinuxControlsRight) {
+    $SwitchLinuxControlsRightInput.click();
   }
 
 

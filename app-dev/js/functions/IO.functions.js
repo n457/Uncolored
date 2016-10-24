@@ -1,14 +1,18 @@
 N.Functions.IO = {};
 
 
-N.Functions.IO.funcIOErrorCheck = (Parameter) => {
+N.Functions.IO.funcIOErrorCheck = (Parameters) => {
   try {
-    // Execute and return whatever funcToExec returns
-    return Parameter.funcToExec();
+    // Execute and return whatever funcToTry returns
+    return Parameters.funcToTry();
   }
   catch (Error) {
-    console.error(Error);
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'io-error' });
+    if (Parameters.funcCatch) {
+      Parameters.funcCatch();
+    }
+
+    console.error(Error);
     return false;
   }
 };
@@ -16,8 +20,8 @@ N.Functions.IO.funcIOErrorCheck = (Parameter) => {
 
 
 N.Functions.IO.funcReadFile = (Parameter) => {
-  // Return whatever funcToExec returns
-  return N.Functions.IO.funcIOErrorCheck({ funcToExec: () => {
+  // Return whatever funcToTry returns
+  return N.Functions.IO.funcIOErrorCheck({ funcToTry: () => {
     return N.ElectronFramework.Fs.readFileSync(Parameter.strPath, 'utf8');
   } });
 };
@@ -29,13 +33,16 @@ N.Functions.IO.funcLoadSettings = () => {
 
   try {
     N.Settings = JSON.parse( N.ElectronFramework.Fs.readFileSync(N.strSettingsFilePath, 'utf8') );
+    N.Functions.IO.funcSettingsLegacy();
   }
   catch (Error) {
     N.Settings = {
+      boolWindowFrame: false,
       boolFirstStart: true,
       strUIThemeSlug: '_ORIGINAL_white-room',
       strUILangSlug: 'english',
-      boolAutoUpdateCheck: true
+      boolAutoUpdateCheck: true,
+      boolLinuxControlsRight: false
     };
 
     N.Functions.IO.funcSaveSettings();
@@ -45,15 +52,35 @@ N.Functions.IO.funcLoadSettings = () => {
 
 
 N.Functions.IO.funcSaveSettings = () => {
-  N.Functions.IO.funcIOErrorCheck({ funcToExec: () => {
+  N.Functions.IO.funcIOErrorCheck({ funcToTry: () => {
     N.ElectronFramework.Fs.writeFileSync(N.strSettingsFilePath, JSON.stringify(N.Settings), 'utf8');
   } });
 };
 
 
 
+// Settings object compatibility with previous versions of the app
+N.Functions.IO.funcSettingsLegacy = () => {
+  let boolModified = false;
+
+  if( ! N.Settings.hasOwnProperty('boolWindowFrame')) {
+    N.Settings.boolWindowFrame = false;
+    boolModified = true;
+  }
+  if( ! N.Settings.hasOwnProperty('boolLinuxControlsRight')) {
+    N.Settings.boolLinuxControlsRight = false;
+    boolModified = true;
+  }
+
+  if (boolModified) {
+    N.Functions.IO.funcSaveSettings();
+  }
+};
+
+
+
 N.Functions.IO.funcLoadDocThemesLibs = () => {
-  N.Functions.IO.funcIOErrorCheck({ funcToExec: () => {
+  N.Functions.IO.funcIOErrorCheck({ funcToTry: () => {
     const strDocThemesLibrariesPath = `${N.strAppPath}/themes/doc-themes/lib`;
     N.DocThemesLibraries = {};
 
@@ -73,14 +100,24 @@ N.Functions.IO.funcLoadDocThemesLibs = () => {
 
 
 
+N.Functions.IO.funcLoadEmojis = () => {
+  // Return whatever funcToTry returns
+  return N.Functions.IO.funcIOErrorCheck({ funcToTry: () => {
+    // https://github.com/github/gemoji/blob/master/db/emoji.json
+    return JSON.parse( N.ElectronFramework.Fs.readFileSync(`${N.strAppPath}/json/emojis-list.json`, 'utf8') );
+  } });
+};
+
+
+
 // Parameters :
 // - strSavePath
 // - strFormat
 // - strDocThemeSlug
 // - $ContentEditable
 N.Functions.IO.funcSaveDoc = (Parameters) => {
-  // Return whatever funcToExec returns
-  return N.Functions.IO.funcIOErrorCheck({ funcToExec: () => {
+  // Return whatever funcToTry returns
+  return N.Functions.IO.funcIOErrorCheck({ funcToTry: () => {
     const $ContentEditableClone = Parameters.$ContentEditable.cloneNode(true);
 
     const strDocThemePath = `${N.strAppPath}/themes/doc-themes/themes-dir/${Parameters.strDocThemeSlug}`;
@@ -145,8 +182,8 @@ N.Functions.IO.funcSaveDoc = (Parameters) => {
 // - strPath
 // - strFormat
 N.Functions.IO.funcLoadDoc = (Parameters) => {
-  // Return whatever funcToExec returns
-  return N.Functions.IO.funcIOErrorCheck({ funcToExec: () => {
+  // Return whatever funcToTry returns
+  return N.Functions.IO.funcIOErrorCheck({ funcToTry: () => {
     let strDocContent = N.ElectronFramework.Fs.readFileSync(Parameters.strPath, 'utf8');
 
     if (Parameters.strFormat === 'HTML') {

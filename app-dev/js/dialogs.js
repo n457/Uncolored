@@ -16,7 +16,7 @@
   });
 
 
-  document.getElementById('menu-save-as').addEventListener('click', () => {
+  document.getElementById('menu-save-as_unc2741').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'save-as' });
   });
   Mousetrap.bindGlobal('mod+shift+s', () => {
@@ -24,7 +24,7 @@
   });
 
 
-  document.getElementById('menu-search').addEventListener('click', () => {
+  document.getElementById('menu-search_unc2741').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'search' });
     N.$SearchInput.select();
   });
@@ -34,12 +34,24 @@
   });
 
 
-  document.getElementById('menu-doc-info').addEventListener('click', () => {
-    N.DocActive.methSetInfoDialog();
-    N.Functions.Dialogs.funcShow({ strDialogSlug: 'doc-info' });
+  document.getElementById('menu-table-content_unc2741').addEventListener('click', () => {
+    N.Functions.Dialogs.funcShow({ strDialogSlug: 'table-content' });
+    N.Functions.Dialogs.funcUpdateTableContent();
+  });
+  N.$TableContentDialog.getElementsByClassName('refresh-button')[0].addEventListener('click', () => {
+    N.Functions.Dialogs.funcUpdateTableContent();
   });
 
-  document.getElementById('menu-print').addEventListener('click', () => {
+
+  document.getElementById('menu-doc-info_unc2741').addEventListener('click', () => {
+    N.Functions.Dialogs.funcShow({ strDialogSlug: 'doc-info' });
+    N.Functions.Dialogs.funcUpdateDocInfo();
+  });
+  N.$DocInfoDialog.getElementsByClassName('recount-button')[0].addEventListener('click', () => {
+    N.Functions.Dialogs.funcUpdateDocInfo();
+  });
+
+  document.getElementById('menu-print_unc2741').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'print' });
   });
   Mousetrap.bindGlobal('mod+p', () => {
@@ -47,12 +59,12 @@
   });
 
 
-  document.getElementById('menu-settings').addEventListener('click', () => {
+  document.getElementById('menu-settings_unc2741').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'settings' });
   });
 
 
-  document.getElementById('menu-shortcuts').addEventListener('click', () => {
+  document.getElementById('menu-shortcuts_unc2741').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'shortcuts' });
   });
   Mousetrap.bindGlobal('ctrl+space', () => {
@@ -65,7 +77,7 @@
   });
 
 
-  document.getElementById('menu-about').addEventListener('click', () => {
+  document.getElementById('menu-about_unc2741').addEventListener('click', () => {
     N.Functions.Dialogs.funcShow({ strDialogSlug: 'about' });
   });
   N.$AboutDialog.getElementsByClassName('app-folder-button')[0].addEventListener('click', () => {
@@ -78,6 +90,8 @@
     if (N.$Toolbar.dataset.view === 'tools-list') {
       N.$Toolbar.classList.remove('active');
     }
+
+    N.$ContextMenu.classList.remove('active');
 
     N.Functions.Dialogs.funcCloseCurrent();
   });

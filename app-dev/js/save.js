@@ -1,8 +1,8 @@
 (() => {
 
-  const $SaveAsDialog = document.getElementById('save-as-dialog');
+  const $SaveAsDialog = document.getElementById('save-as-dialog_unc2741');
 
-  const $PathField = document.getElementById('save-path-field');
+  const $PathField = document.getElementById('save-path-field_unc2741');
   let strPathFieldValue = '';
   const $PathFieldContainer = $PathField.parentNode;
   const $PathFieldTooltip = $SaveAsDialog.getElementsByClassName('mdl-tooltip')[0];

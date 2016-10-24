@@ -26,18 +26,27 @@
     <link rel="stylesheet" href="../css/dialogs.css">
     <!-- gulp-replace: css end -->
 
-    <link rel="stylesheet" href="" id="ui-theme-sheet">
+    <link rel="stylesheet" href="" id="ui-theme-sheet_unc2741">
 
   </head>
-  <body class="" data-dialog="">
+  <body class="" data-dialog="" data-linuxcontrolsside="left">
 
     <!-- Fixed header -->
     <section class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header ">
-
         <div class="tab-bar">
-          <ul hidden>
-            <li class="tab " id="tab-model" data-id="">
+
+          <div class="window-controls">
+            <ul class="remove-list-style">
+              <li class="close"><i class="material-icons">close</i></li>
+              <li class="minimize"><i class="material-icons">remove</i></li>
+              <li class="toggle-maximize"><i class="material-icons">crop_square</i></li>
+              <li class="toggle-fullscreen"><i class="material-icons">fullscreen</i></li>
+            </ul>
+          </div>
+
+          <ul id="tab-model-container_unc2741" hidden>
+            <li class="tab " data-id="">
               <span class="file-name">Document-</span>
               <i class="material-icons close-tab">close</i>
               <i class="material-icons close-tab-cancel">reply</i>
@@ -49,109 +58,115 @@
 
           </ul>
 
-          <div class="tab-bar-button hover-effects" id="button-add-tab">
+          <span class="tab-bar-button tab-bar-secondary-button hover-effects add-tab-button">
             <i class="material-icons">add</i>
-          </div>
+          </span>
         </div>
 
         <div class="main-menu">
           <ul class="remove-list-style">
-            <li class="hover-effects" id="menu-new-doc">
+            <li class="hover-effects protected-id" id="menu-new-doc_unc2741">
               <i class="material-icons">add</i>
             </li>
-            <li class="hover-effects" id="menu-open-doc">
+            <li class="hover-effects protected-id" id="menu-open-doc_unc2741">
               <i class="material-icons">folder_open</i>
             </li>
-            <li class="hover-effects " id="menu-open-doc-folder">
+            <li class="hover-effects protected-id " id="menu-open-doc-folder_unc2741">
               <i class="material-icons">call_missed_outgoing</i>
             </li>
-            <li class="hover-effects" id="menu-save-as">
+            <li class="hover-effects protected-id" id="menu-save-as_unc2741">
               <i class="material-icons">archive</i>
             </li>
-            <li class="hover-effects " id="menu-save">
+            <li class="hover-effects protected-id " id="menu-save_unc2741">
               <i class="material-icons">file_download</i>
             </li>
-            <li class="hover-effects" id="menu-close-all-docs">
+            <li class="hover-effects protected-id" id="menu-close-all-docs_unc2741">
               <i class="material-icons">highlight_off</i>
             </li>
-            <li class="hover-effects" id="menu-search">
+            <li class="hover-effects protected-id" id="menu-search_unc2741">
               <i class="material-icons">search</i>
             </li>
-            <li class="hover-effects" id="menu-doc-info">
+            <li class="hover-effects protected-id" id="menu-table-content_unc2741">
+              <i class="material-icons">line_weight</i>
+            </li>
+            <li class="hover-effects protected-id" id="menu-doc-info_unc2741">
               <i class="material-icons">info_outline</i>
             </li>
-            <li class="hover-effects" id="menu-print">
+            <li class="hover-effects protected-id" id="menu-print_unc2741">
               <i class="material-icons">print</i>
             </li>
-            <li class="hover-effects" id="menu-settings">
+            <li class="hover-effects protected-id" id="menu-settings_unc2741">
               <i class="material-icons">settings</i>
             </li>
-            <li class="hover-effects" id="menu-shortcuts">
+            <li class="hover-effects protected-id" id="menu-shortcuts_unc2741">
               <i class="material-icons">swap_calls</i>
             </li>
-            <li class="hover-effects" id="menu-quick-guide">
+            <li class="hover-effects protected-id" id="menu-quick-guide_unc2741">
               <i class="material-icons">import_contacts</i>
             </li>
-            <li class="hover-effects" id="menu-about">
+            <li class="hover-effects protected-id" id="menu-about_unc2741">
               <i class="material-icons">favorite_border</i>
             </li>
           </ul>
 
-          <div class="mdl-tooltip" for="menu-new-doc">
+          <div class="mdl-tooltip" for="menu-new-doc_unc2741">
             <span class="main-menu-label">New Document</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+N / Ctrl+T</span>
             <span class="main-menu-shortcut osx-os">⌘N / ⌘T</span>
           </div>
-          <div class="mdl-tooltip" for="menu-open-doc">
+          <div class="mdl-tooltip" for="menu-open-doc_unc2741">
             <span class="main-menu-label">Open Document</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+O</span>
             <span class="main-menu-shortcut osx-os">⌘O</span>
           </div>
-          <div class="mdl-tooltip" for="menu-open-doc-folder">
+          <div class="mdl-tooltip" for="menu-open-doc-folder_unc2741">
             <span class="main-menu-label">Open Containing Folder</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+O</span>
             <span class="main-menu-shortcut osx-os">⌘⇧O</span>
           </div>
-          <div class="mdl-tooltip" for="menu-save-as">
+          <div class="mdl-tooltip" for="menu-save-as_unc2741">
             <span class="main-menu-label">Save As</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+S</span>
             <span class="main-menu-shortcut osx-os">⌘⇧S</span>
           </div>
-          <div class="mdl-tooltip" for="menu-save">
+          <div class="mdl-tooltip" for="menu-save_unc2741">
             <span class="main-menu-label">Save</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+S</span>
             <span class="main-menu-shortcut osx-os">⌘S</span>
           </div>
-          <div class="mdl-tooltip" for="menu-close-all-docs">
+          <div class="mdl-tooltip" for="menu-close-all-docs_unc2741">
             <span class="main-menu-label">Close All Documents</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+W</span>
             <span class="main-menu-shortcut osx-os">⌘⇧W</span>
           </div>
-          <div class="mdl-tooltip" for="menu-search">
+          <div class="mdl-tooltip" for="menu-search_unc2741">
             <span class="main-menu-label">Search / Replace</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+F</span>
             <span class="main-menu-shortcut osx-os">⌘F</span>
           </div>
-          <div class="mdl-tooltip" for="menu-doc-info">
+          <div class="mdl-tooltip" for="menu-table-content_unc2741">
+            <span class="main-menu-label">Table of Content</span>
+          </div>
+          <div class="mdl-tooltip" for="menu-doc-info_unc2741">
             <span class="main-menu-label">Document Info</span>
           </div>
-          <div class="mdl-tooltip" for="menu-print">
+          <div class="mdl-tooltip" for="menu-print_unc2741">
             <span class="main-menu-label">Print Document Info</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+P</span>
             <span class="main-menu-shortcut osx-os">⌘P</span>
           </div>
-          <div class="mdl-tooltip" for="menu-settings">
+          <div class="mdl-tooltip" for="menu-settings_unc2741">
             <span class="main-menu-label">Settings</span>
           </div>
-          <div class="mdl-tooltip" for="menu-shortcuts">
+          <div class="mdl-tooltip" for="menu-shortcuts_unc2741">
             <span class="main-menu-label">Keyboard Shortcuts</span> —
             <span class="main-menu-shortcut windows-os linux-os">Ctrl+Space</span>
             <span class="main-menu-shortcut osx-os">^Space</span>
           </div>
-          <div class="mdl-tooltip" for="menu-quick-guide">
+          <div class="mdl-tooltip" for="menu-quick-guide_unc2741">
             <span class="main-menu-label">Quick Guide</span>
           </div>
-          <div class="mdl-tooltip" for="menu-about">
+          <div class="mdl-tooltip" for="menu-about_unc2741">
             <span class="main-menu-label">About <span class="app-name"></span></span>
           </div>
         </div>
@@ -160,11 +175,12 @@
 
 
 
-      <!-- Tabs content -->
+      <!-- Tab contents -->
       <main class="mdl-layout__content">
+        <!-- Tab content container model -->
         <!-- <p><br></p> : Default innerHTML to force default tag to paragraph.
         Do not break HTML code lines here to preserve the strLastSavedContent system. -->
-        <section class="content-container" id="content-container-model">
+        <section class="content-container">
           <div class="wysiwyg-content" contenteditable="false"><p><br></p></div>
         </section>
       </main>
@@ -172,237 +188,312 @@
 
 
 
-    <div id="global-unsaved-mark" class=""></div>
+    <div id="global-unsaved-mark_unc2741" class="protected-id "></div>
 
 
 
-    <div id="minor-info-bar" class=""></div>
+    <div id="minor-info-bar_unc2741" class="protected-id "></div>
 
 
 
-    <section id="toolbar" class="" data-view="tools-list">
+    <section id="toolbar_unc2741" class="protected-id " data-view="tools-list">
       <div class="tools-list-view">
         <ul class="remove-list-style">
-          <li class="toolbar-button hover-effects " id="tool-h1" data-tag="h1"><i class="material-icons">title</i></li>
-          <li class="toolbar-button hover-effects " id="tool-h2" data-tag="h2"><i class="material-icons">title</i></li>
-          <li class="toolbar-button hover-effects " id="tool-h3" data-tag="h3"><i class="material-icons">title</i></li>
-          <li class="toolbar-button hover-effects " id="tool-h4" data-tag="h4"><i class="material-icons">title</i></li>
-          <li class="toolbar-button hover-effects " id="tool-h5" data-tag="h5"><i class="material-icons">title</i></li>
-          <li class="toolbar-button hover-effects " id="tool-h6" data-tag="h6"><i class="material-icons">title</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-h1_unc2741" data-tag="h1"><i class="material-icons">title</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-h2_unc2741" data-tag="h2"><i class="material-icons">title</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-h3_unc2741" data-tag="h3"><i class="material-icons">title</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-h4_unc2741" data-tag="h4"><i class="material-icons">title</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-h5_unc2741" data-tag="h5"><i class="material-icons">title</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-h6_unc2741" data-tag="h6"><i class="material-icons">title</i></li>
 
-          <li class="toolbar-button hover-effects " id="tool-paragraph" data-tag="p"><i class="material-icons">local_parking</i></li>
-          <li class="toolbar-button hover-effects " id="tool-quote" data-tag="blockquote"><i class="material-icons">format_quote</i></li>
-          <li class="toolbar-button hover-effects " id="tool-unordered-list" data-cmd="insertList" data-cmdcheck="insertUnorderedList"><i class="material-icons">format_list_bulleted</i></li>
-          <li class="toolbar-button hover-effects " id="tool-ordered-list" data-cmd="insertList" data-cmdparam="true" data-cmdcheck="insertOrderedList"><i class="material-icons">format_list_numbered</i></li>
-          <li class="toolbar-button hover-effects" id="tool-remote-image"><i class="material-icons">compare</i></li>
-          <li class="toolbar-button hover-effects" id="tool-remote-video"><i class="material-icons">play_circle_outline</i></li>
-          <li class="toolbar-button hover-effects" id="tool-remote-embed"><i class="material-icons">queue</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-paragraph_unc2741" data-tag="p"><i class="material-icons">local_parking</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-quote_unc2741" data-tag="blockquote"><i class="material-icons">format_quote</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-unordered-list_unc2741" data-cmd="insertList" data-cmdcheck="insertUnorderedList"><i class="material-icons">format_list_bulleted</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-ordered-list_unc2741" data-cmd="insertList" data-cmdparam="true" data-cmdcheck="insertOrderedList"><i class="material-icons">format_list_numbered</i></li>
+          <li class="toolbar-button hover-effects protected-id" id="tool-remote-image_unc2741"><i class="material-icons">compare</i></li>
+          <li class="toolbar-button hover-effects protected-id" id="tool-remote-video_unc2741"><i class="material-icons">play_circle_outline</i></li>
+          <li class="toolbar-button hover-effects protected-id" id="tool-remote-embed_unc2741"><i class="material-icons">queue</i></li>
 
-          <li class="toolbar-button hover-effects " id="tool-bold" data-cmd="bold"><i class="material-icons">format_bold</i></li>
-          <li class="toolbar-button hover-effects " id="tool-italic" data-cmd="italic"><i class="material-icons">format_italic</i></li>
-          <li class="toolbar-button hover-effects " id="tool-underline" data-cmd="underline"><i class="material-icons">format_underlined</i></li>
-          <li class="toolbar-button hover-effects " id="tool-strike" data-cmd="strikethrough" data-cmdcheck="strikeThrough"><i class="material-icons">strikethrough_s</i></li>
-          <li class="toolbar-button hover-effects" id="tool-apply-link"><i class="material-icons">link</i></li>
-          <li class="toolbar-button hover-effects " id="tool-superscript" data-cmd="superscript"><i class="material-icons">arrow_drop_up</i></li>
-          <li class="toolbar-button hover-effects " id="tool-subscript" data-cmd="subscript"><i class="material-icons">arrow_drop_down</i></li>
-          <li class="toolbar-button hover-effects" id="tool-clear" data-cmd="removeFormat"><i class="material-icons">format_clear</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-bold_unc2741" data-cmd="bold"><i class="material-icons">format_bold</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-italic_unc2741" data-cmd="italic"><i class="material-icons">format_italic</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-underline_unc2741" data-cmd="underline"><i class="material-icons">format_underlined</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-strike_unc2741" data-cmd="strikethrough" data-cmdcheck="strikeThrough"><i class="material-icons">strikethrough_s</i></li>
+          <li class="toolbar-button hover-effects protected-id" id="tool-apply-link_unc2741"><i class="material-icons">link</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-superscript_unc2741" data-cmd="superscript"><i class="material-icons">arrow_drop_up</i></li>
+          <li class="toolbar-button hover-effects protected-id " id="tool-subscript_unc2741" data-cmd="subscript"><i class="material-icons">arrow_drop_down</i></li>
+          <li class="toolbar-button hover-effects protected-id" id="tool-clear_unc2741" data-cmd="removeFormat"><i class="material-icons">format_clear</i></li>
+          <li class="toolbar-button hover-effects protected-id" id="tool-emojis_unc2741" hidden><i class="material-icons">tag_faces</i></li>
         </ul>
 
-        <div class="mdl-tooltip" for="tool-h1">
+        <div class="mdl-tooltip" for="tool-h1_unc2741">
           <span class="main-menu-label">Heading XL</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+1</span>
           <span class="main-menu-shortcut osx-os">⌘1</span>
         </div>
-        <div class="mdl-tooltip" for="tool-h2">
+        <div class="mdl-tooltip" for="tool-h2_unc2741">
           <span class="main-menu-label">Heading L</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+2</span>
           <span class="main-menu-shortcut osx-os">⌘2</span>
         </div>
-        <div class="mdl-tooltip" for="tool-h3">
+        <div class="mdl-tooltip" for="tool-h3_unc2741">
           <span class="main-menu-label">Heading M</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+3</span>
           <span class="main-menu-shortcut osx-os">⌘3</span>
         </div>
-        <div class="mdl-tooltip" for="tool-h4">
+        <div class="mdl-tooltip" for="tool-h4_unc2741">
           <span class="main-menu-label">Heading S</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+4</span>
           <span class="main-menu-shortcut osx-os">⌘4</span>
         </div>
-        <div class="mdl-tooltip" for="tool-h5">
+        <div class="mdl-tooltip" for="tool-h5_unc2741">
           <span class="main-menu-label">Heading XS</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+5</span>
           <span class="main-menu-shortcut osx-os">⌘5</span>
         </div>
-        <div class="mdl-tooltip" for="tool-h6">
+        <div class="mdl-tooltip" for="tool-h6_unc2741">
           <span class="main-menu-label">Heading XXS</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+6</span>
           <span class="main-menu-shortcut osx-os">⌘6</span>
         </div>
 
-        <div class="mdl-tooltip" for="tool-paragraph">
+        <div class="mdl-tooltip" for="tool-paragraph_unc2741">
           <span class="main-menu-label">Paragraph</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+P</span>
           <span class="main-menu-shortcut osx-os">⌘⇧P</span>
         </div>
-        <div class="mdl-tooltip" for="tool-quote">
+        <div class="mdl-tooltip" for="tool-quote_unc2741">
           <span class="main-menu-label">Quote</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+Q</span>
           <span class="main-menu-shortcut osx-os">⌘⇧Q</span>
         </div>
-        <div class="mdl-tooltip" for="tool-unordered-list">
+        <div class="mdl-tooltip" for="tool-unordered-list_unc2741">
           <span class="main-menu-label">Unordered List</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+L</span>
           <span class="main-menu-shortcut osx-os">⌘⇧L</span>
         </div>
-        <div class="mdl-tooltip" for="tool-ordered-list">
+        <div class="mdl-tooltip" for="tool-ordered-list_unc2741">
           <span class="main-menu-label">Ordered List</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Alt+L</span>
           <span class="main-menu-shortcut osx-os">⌘⌥L</span>
         </div>
-        <div class="mdl-tooltip" for="tool-remote-image">
+        <div class="mdl-tooltip" for="tool-remote-image_unc2741">
           <span class="main-menu-label">Image via URL</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Alt+I</span>
           <span class="main-menu-shortcut osx-os">⌘⌥I</span>
         </div>
-        <div class="mdl-tooltip" for="tool-remote-video">
+        <div class="mdl-tooltip" for="tool-remote-video_unc2741">
           <span class="main-menu-label">YouTube / Vimeo / Dailymotion / Twitch video via URL</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Alt+V</span>
           <span class="main-menu-shortcut osx-os">⌘⌥V</span>
         </div>
-        <div class="mdl-tooltip" for="tool-remote-embed">
+        <div class="mdl-tooltip" for="tool-remote-embed_unc2741">
           <span class="main-menu-label">Embed Content</span>
         </div>
 
-        <div class="mdl-tooltip" for="tool-bold">
+        <div class="mdl-tooltip" for="tool-bold_unc2741">
           <span class="main-menu-label">Bold</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+B</span>
           <span class="main-menu-shortcut osx-os">⌘B</span>
         </div>
-        <div class="mdl-tooltip" for="tool-italic">
+        <div class="mdl-tooltip" for="tool-italic_unc2741">
           <span class="main-menu-label">Italic</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+I</span>
           <span class="main-menu-shortcut osx-os">⌘I</span>
         </div>
-        <div class="mdl-tooltip" for="tool-underline">
+        <div class="mdl-tooltip" for="tool-underline_unc2741">
           <span class="main-menu-label">Underline</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+U</span>
           <span class="main-menu-shortcut osx-os">⌘U</span>
         </div>
-        <div class="mdl-tooltip" for="tool-strike">
+        <div class="mdl-tooltip" for="tool-strike_unc2741">
           <span class="main-menu-label">Strikethrough</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Alt+S</span>
           <span class="main-menu-shortcut osx-os">⌘⌥S</span>
         </div>
-        <div class="mdl-tooltip" for="tool-apply-link">
+        <div class="mdl-tooltip" for="tool-apply-link_unc2741">
           <span class="main-menu-label">Apply Link</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+L</span>
           <span class="main-menu-shortcut osx-os">⌘L</span>
         </div>
-        <div class="mdl-tooltip" for="tool-superscript">
+        <div class="mdl-tooltip" for="tool-superscript_unc2741">
           <span class="main-menu-label">Superscript</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+Up</span>
           <span class="main-menu-shortcut osx-os">⌘⇧Up</span>
         </div>
-        <div class="mdl-tooltip" for="tool-subscript">
+        <div class="mdl-tooltip" for="tool-subscript_unc2741">
           <span class="main-menu-label">Subscript</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+Down</span>
           <span class="main-menu-shortcut osx-os">⌘⇧Down</span>
         </div>
-        <div class="mdl-tooltip" for="tool-clear">
+        <div class="mdl-tooltip" for="tool-clear_unc2741">
           <span class="main-menu-label">Clear Format</span> —
           <span class="main-menu-shortcut windows-os linux-os">Ctrl+Shift+C</span>
           <span class="main-menu-shortcut osx-os">⌘⇧C</span>
         </div>
+        <div class="mdl-tooltip" for="tool-emojis_unc2741">
+          <span class="main-menu-label">Insert Emojis</span>
+        </div>
       </div>
 
-      <div class="form remote-image-view">
+      <div class="tool-view inline-form remote-image-view">
         <div class="toolbar-button icon"><i class="material-icons">compare</i></div>
         <input type="text" placeholder="Image URL">
         <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">close</i></div>
         <div class="toolbar-button hover-effects validate-tool"><i class="material-icons">check</i></div>
       </div>
 
-      <div class="form remote-video-view">
+      <div class="tool-view inline-form remote-video-view">
         <div class="toolbar-button icon"><i class="material-icons">play_circle_outline</i></div>
         <input type="text" placeholder="Video URL">
         <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">close</i></div>
         <div class="toolbar-button hover-effects validate-tool"><i class="material-icons">check</i></div>
       </div>
 
-      <div class="form remote-embed-view">
+      <div class="tool-view inline-form remote-embed-view">
         <div class="toolbar-button icon"><i class="material-icons">queue</i></div>
         <input type="text" placeholder="Embed code : <iframe...">
         <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">close</i></div>
         <div class="toolbar-button hover-effects validate-tool"><i class="material-icons">check</i></div>
       </div>
 
-      <div class="form apply-link-view">
+      <div class="tool-view inline-form apply-link-view">
         <div class="toolbar-button icon"><i class="material-icons">link</i></div>
         <input type="text" placeholder="URL">
         <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">close</i></div>
         <div class="toolbar-button hover-effects validate-tool"><i class="material-icons">check</i></div>
       </div>
+
+      <div class="tool-view emojis-view">
+        <div class="inline-form">
+          <div class="toolbar-button hover-effects cancel-tool"><i class="material-icons">keyboard_arrow_left</i></div>
+          <div class="toolbar-button icon"><i class="material-icons">tag_faces</i></div>
+          <input type="text" placeholder="Search emoji">
+          <div class="toolbar-button hover-effects search-button"><i class="material-icons">search</i></div>
+        </div>
+
+        <div class="category-buttons">
+          <ul class="remove-list-style">
+            <li class="toolbar-button hover-effects" id="emojis-category-link-people_unc2741" data-anchor="#emojis-category-title-people_unc2741"><i class="material-icons">face</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-nature_unc2741" data-anchor="#emojis-category-title-nature_unc2741"><i class="material-icons">filter_vintage</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-foods_unc2741" data-anchor="#emojis-category-title-foods_unc2741"><i class="material-icons">cake</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-activity_unc2741" data-anchor="#emojis-category-title-activity_unc2741"><i class="material-icons">directions_run</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-places_unc2741" data-anchor="#emojis-category-title-places_unc2741"><i class="material-icons">location_city</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-objects_unc2741" data-anchor="#emojis-category-title-objects_unc2741"><i class="material-icons">watch</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-symbols_unc2741" data-anchor="#emojis-category-title-symbols_unc2741"><i class="material-icons">lens</i></li>
+            <li class="toolbar-button hover-effects" id="emojis-category-link-flags_unc2741" data-anchor="#emojis-category-title-flags_unc2741"><i class="material-icons">flag</i></li>
+          </ul>
+          <div class="mdl-tooltip" for="emojis-category-link-people_unc2741">People</div>
+          <div class="mdl-tooltip" for="emojis-category-link-nature_unc2741">Nature</div>
+          <div class="mdl-tooltip" for="emojis-category-link-foods_unc2741">Foods</div>
+          <div class="mdl-tooltip" for="emojis-category-link-activity_unc2741">Activity</div>
+          <div class="mdl-tooltip" for="emojis-category-link-places_unc2741">Places</div>
+          <div class="mdl-tooltip" for="emojis-category-link-objects_unc2741">Objects</div>
+          <div class="mdl-tooltip" for="emojis-category-link-symbols_unc2741">Symbols</div>
+          <div class="mdl-tooltip" for="emojis-category-link-flags_unc2741">Flags</div>
+        </div>
+
+        <div class="emojis-list">
+          <div id="emoji-model-container_unc2741" hidden>
+            <div class="toolbar-button hover-effects emoji-button"></div>
+          </div>
+
+          <div class="category-title" id="emojis-category-title-people_unc2741">People</div>
+          <div class="category-title" id="emojis-category-title-nature_unc2741">Nature</div>
+          <div class="category-title" id="emojis-category-title-foods_unc2741">Foods</div>
+          <div class="category-title" id="emojis-category-title-activity_unc2741">Activity</div>
+          <div class="category-title" id="emojis-category-title-places_unc2741">Places</div>
+          <div class="category-title" id="emojis-category-title-objects_unc2741">Objects</div>
+          <div class="category-title" id="emojis-category-title-symbols_unc2741">Symbols</div>
+          <div class="category-title" id="emojis-category-title-flags_unc2741">Flags</div>
+        </div>
+      </div>
     </section>
 
 
 
 
-    <section id="context-menu" class="" data-target="">
-      <div class="tab-view options">
+    <section id="context-menu_unc2741" class="menu-list protected-id " data-target="">
+      <div class="options tab-view">
         <div class="label">Tab options</div>
         <ul class="remove-list-style">
-          <li class="copy hover-effects">
-            <div class="inner-container">
-              <span class="bold">Copy</span> document path
-            </div>
+          <li class="menu-list-item hover-effects copy">
+            <span class="hl">Copy</span> document path
           </li>
-          <li class="close-tabs hover-effects">
-            <div class="inner-container">
-              <span class="bold">Close all</span> documents
-            </div>
+          <li class="menu-list-item hover-effects close-tabs">
+            <span class="hl">Close all</span> documents
           </li>
         </ul>
       </div>
 
-      <div class="a-view options">
+      <div class="options text-view">
+        <div class="label">Text options</div>
+        <ul class="remove-list-style">
+          <li class="menu-list-item hover-effects select-all">
+            <span class="hl">Select</span> all
+          </li>
+          <li class="menu-list-item hover-effects copy-selection">
+            <span class="hl">Copy</span> selection
+          </li>
+          <li class="menu-list-item hover-effects paste">
+            <span class="hl">Paste</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="options a-view">
         <div class="label">Link options</div>
         <ul class="remove-list-style">
-          <li class="copy hover-effects">
-            <div class="inner-container">
-              <span class="bold">Copy</span> link address
-            </div>
+          <li class="menu-list-item hover-effects copy">
+            <span class="hl">Copy</span> link address
           </li>
-          <li class="open hover-effects">
-            <a class="inner-container no-context-menu" href="" target="_blank">
-              <span class="bold">Open</span> link
+          <li class="hover-effects open">
+            <a class="menu-list-item no-context-menu" href="" target="_blank">
+              <span class="hl">Open</span> link
             </a>
           </li>
         </ul>
       </div>
 
-      <div class="img-view options">
+      <div class="options anchor-link-view">
+        <div class="label">Anchor link options</div>
+        <ul class="remove-list-style">
+          <li class="menu-list-item hover-effects copy">
+            <span class="hl">Copy</span> anchor address
+          </li>
+          <li class="menu-list-item hover-effects go-to-anchor" data-anchor="">
+            <span class="hl">Go to</span> anchor
+          </li>
+        </ul>
+      </div>
+
+      <div class="options anchor-view">
+        <div class="label">Anchor options</div>
+        <ul class="remove-list-style">
+          <li class="menu-list-item hover-effects copy">
+            <span class="hl">Copy</span> anchor address
+          </li>
+        </ul>
+      </div>
+
+      <div class="options img-view">
         <div class="label">Image options</div>
         <ul class="remove-list-style">
-          <li class="copy hover-effects">
-            <div class="inner-container">
-              <span class="bold">Copy</span> image address
-            </div>
+          <li class="menu-list-item hover-effects copy">
+            <span class="hl">Copy</span> image address
           </li>
-          <li class="open hover-effects">
-            <a class="inner-container no-context-menu" href="" target="_blank">
-              <span class="bold">Open</span> image
+          <li class="hover-effects open">
+            <a class="menu-list-item no-context-menu" href="" target="_blank">
+              <span class="hl">Open</span> image
             </a>
           </li>
         </ul>
       </div>
 
-      <div class="emoji-view options">
+      <div class="options emoji-view">
         <div class="label">Emoji option</div>
         <ul class="remove-list-style">
-          <li class="copy hover-effects">
-            <div class="inner-container">
-              <span class="bold">Copy</span> emoji identifier
-            </div>
+          <li class="menu-list-item hover-effects copy">
+            <span class="hl">Copy</span> emoji identifier
           </li>
         </ul>
       </div>
@@ -411,20 +502,20 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="save-as-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="save-as-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">archive</i>
-        <h2 class="mdl-card__title-text">Save As</h2>
+        <h2 class="mdl-card__title-text no-context-info">Save As</h2>
       </div>
 
       <div class="overflow-y-section">
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            <span class="bold">HTML format</span> : Recommended for most users. All tools supported. Themes compatible. Document theme selection only available for this format.
+            <span class="hl">HTML format</span> : Recommended for most users. All tools supported. Themes compatible. Document theme selection only available for this format.
           </p>
           <p>
-            <span class="bold">Markdown format</span> : Outputs Markdown file. Not themes compatible.
+            <span class="hl">Markdown format</span> : Outputs Markdown file. Not themes compatible.
           </p>
           <p>
             <i class="material-icons">info</i> For final work, always verify that your document looks the way you want to.
@@ -437,22 +528,22 @@
 
               <!-- To set a field as invalid, use "is-invalid" CSS class -->
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="save-path-field">
-                <label class="mdl-textfield__label" for="save-path-field">Destination file path</label>
+                <input class="mdl-textfield__input protected-id" type="text" id="save-path-field_unc2741">
+                <label class="mdl-textfield__label" for="save-path-field_unc2741">Destination file path</label>
               </div>
-              <div class="mdl-tooltip" for="save-path-field"></div>
+              <div class="mdl-tooltip" for="save-path-field_unc2741"></div>
 
             </span>
           </li>
           <li class="mdl-list__item preview-list-label">
             <span class="mdl-list__item-primary-content">
-              Document theme ↴ (more soon)
+              Document theme ↴ (always more to come)
             </span>
           </li>
         </ul>
         <ul class="mdl-list preview-list">
 
-          <li class="mdl-list__item preview-list-item no-info-bar no-context-menu " data-slug="" hidden>
+          <li class="mdl-list__item preview-list-item no-context-info " data-slug="" hidden>
             <span class="mdl-list__item-primary-content"></span>
             <span class="mdl-list__item-secondary-action">
               <img src="" alt="Document theme preview image" hidden>
@@ -477,7 +568,7 @@
 
 
     <!-- http://stackoverflow.com/questions/16090487/find-a-string-of-text-in-an-element-and-wrap-some-span-tags-round-it -->
-    <section class="mdl-card mdl-shadow--6dp dialog-bottom" id="search-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-bottom dialog-h-center protected-id" id="search-dialog_unc2741">
 
       <div class="overflow-y-section">
 
@@ -486,16 +577,16 @@
             <span class="mdl-list__item-primary-content">
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label search-field-container">
-                <input class="mdl-textfield__input" type="text" id="search-field">
-                <label class="mdl-textfield__label" for="search-field">Search ...</label>
+                <input class="mdl-textfield__input protected-id" type="text" id="search-field_unc2741">
+                <label class="mdl-textfield__label" for="search-field_unc2741">Search ...</label>
               </div>
 
             </span>
             <span class="mdl-list__item-primary-content">
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label replace-field-container">
-                <input class="mdl-textfield__input" type="text" id="replace-field">
-                <label class="mdl-textfield__label" for="replace-field">Replace by ...</label>
+                <input class="mdl-textfield__input protected-id" type="text" id="replace-field_unc2741">
+                <label class="mdl-textfield__label" for="replace-field_unc2741">Replace by ...</label>
               </div>
 
             </span>
@@ -504,15 +595,15 @@
             <span class="mdl-list__item-primary-content">
               <span class="inline-label">Case sensitive</span>
               <span>
-                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-search-case-sensitive">
-                  <input type="checkbox" id="switch-search-case-sensitive" class="mdl-switch__input" checked>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-search-case-sensitive_unc2741">
+                  <input type="checkbox" id="switch-search-case-sensitive_unc2741" class="mdl-switch__input protected-id" checked>
                 </label>
               </span>
             </span>
             <span class="mdl-list__item-primary-content">
               <span class="inline-label">Results</span>
               <span>
-                <span class="search-results-total bold">0</span>
+                <span class="search-results-total">0</span>
               </span>
             </span>
           </li>
@@ -536,10 +627,54 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="doc-info-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-small dialog-top dialog-right protected-id" id="table-content-dialog_unc2741" data-view="">
+      <div class="mdl-card__title">
+        <i class="material-icons">line_weight</i>
+        <h2 class="mdl-card__title-text no-context-info">Table of Content</h2>
+      </div>
+
+      <div class="overflow-y-section">
+
+        <div class="no-headings-view">
+          <div class="mdl-card__supporting-text wysiwyg-content">
+            <p>
+              <span class="hl">Add some titles</span> to view the table of content.
+            </p>
+          </div>
+        </div>
+
+        <div class="headings-list-view">
+          <ul id="heading-item-model-container_unc2741" hidden>
+            <li class="mdl-list__item hover-effects ">
+              <span class="mdl-list__item-primary-content"></span>
+              <span class="mdl-list__item-secondary-action"></span>
+            </li>
+          </ul>
+
+          <ul class="mdl-list headings-list">
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="mdl-card__actions mdl-card--border">
+        <span class="mdl-button mdl-button--colored close-dialog-button">
+          Close
+        </span>
+        <span class="mdl-button mdl-button--colored refresh-button">
+          Refresh
+        </span>
+      </div>
+    </section>
+
+
+
+
+    <section class="mdl-card mdl-shadow--6dp dialog-small dialog-bottom dialog-right protected-id" id="doc-info-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">info</i>
-        <h2 class="mdl-card__title-text">Document Information</h2>
+        <h2 class="mdl-card__title-text no-context-info">Document Information</h2>
       </div>
 
       <div class="overflow-y-section">
@@ -547,28 +682,28 @@
         <ul class="mdl-list">
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Document Theme</span>
-            <span class="mdl-list__item-secondary-action bold doc-theme-name"></span>
+            <span class="mdl-list__item-secondary-action doc-theme-name"></span>
           </li>
 
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Paragraphs</span>
-            <span class="mdl-list__item-secondary-action bold paragraphs-number"></span>
+            <span class="mdl-list__item-secondary-action paragraphs-number"></span>
           </li>
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Sentences</span>
-            <span class="mdl-list__item-secondary-action bold sentences-number"></span>
+            <span class="mdl-list__item-secondary-action sentences-number"></span>
           </li>
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Words</span>
-            <span class="mdl-list__item-secondary-action bold words-number"></span>
+            <span class="mdl-list__item-secondary-action words-number"></span>
           </li>
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Characters</span>
-            <span class="mdl-list__item-secondary-action bold characters-number"></span>
+            <span class="mdl-list__item-secondary-action characters-number"></span>
           </li>
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Characters, with spaces</span>
-            <span class="mdl-list__item-secondary-action bold characters-spaces-number"></span>
+            <span class="mdl-list__item-secondary-action characters-spaces-number"></span>
           </li>
         </ul>
 
@@ -578,31 +713,40 @@
         <span class="mdl-button mdl-button--colored close-dialog-button">
           Close
         </span>
+        <span class="mdl-button mdl-button--colored recount-button">
+          Recount
+        </span>
       </div>
     </section>
 
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top " id="settings-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id " id="settings-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">settings</i>
-        <h2 class="mdl-card__title-text">Settings</h2>
+        <h2 class="mdl-card__title-text no-context-info">Settings</h2>
       </div>
 
       <div class="overflow-y-section">
+
+        <div class="mdl-card__supporting-text wysiwyg-content">
+          <p>
+            <span class="hl">*</span> : Settings with an asterisk <span class="hl">need <span class="app-name"></span> restart to be applied</span>.
+          </p>
+        </div>
 
         <ul class="mdl-list">
           <li class="mdl-list__item select-section">
             <span class="mdl-list__item-primary-content">
 
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                <input class="mdl-textfield__input" type="text" id="select-ui-lang" value="" readonly tabIndex="-1">
-                <label for="select-ui-lang">
+                <input class="mdl-textfield__input protected-id" type="text" id="select-ui-lang_unc2741" value="" readonly tabIndex="-1">
+                <label for="select-ui-lang_unc2741">
                   <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                 </label>
-                <label for="select-ui-lang" class="mdl-textfield__label">Interface language (more soon)</label>
-                <ul for="select-ui-lang" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                <label for="select-ui-lang_unc2741" class="mdl-textfield__label">Interface language (more soon)</label>
+                <ul for="select-ui-lang_unc2741" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                   <li class="mdl-menu__item" data-slug="" hidden></li>
                 </ul>
               </div>
@@ -612,8 +756,24 @@
           <li class="mdl-list__item">
             <span class="mdl-list__item-primary-content">Auto-update check at startup</span>
             <span class="mdl-list__item-secondary-action">
-              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-auto-update-check">
-                <input type="checkbox" id="switch-auto-update-check" class="mdl-switch__input">
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-auto-update-check_unc2741">
+                <input type="checkbox" id="switch-auto-update-check_unc2741" class="mdl-switch__input protected-id">
+              </label>
+            </span>
+          </li>
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">Native window frame*</span>
+            <span class="mdl-list__item-secondary-action">
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-window-frame_unc2741">
+                <input type="checkbox" id="switch-window-frame_unc2741" class="mdl-switch__input protected-id">
+              </label>
+            </span>
+          </li>
+          <li class="mdl-list__item linux-os">
+            <span class="mdl-list__item-primary-content">Window controls to the right (Linux only) (non-frame mode only)</span>
+            <span class="mdl-list__item-secondary-action">
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-linux-controls-right_unc2741">
+                <input type="checkbox" id="switch-linux-controls-right_unc2741" class="mdl-switch__input protected-id">
               </label>
             </span>
           </li>
@@ -628,7 +788,7 @@
         </ul>
         <ul class="mdl-list preview-list">
 
-          <li class="mdl-list__item preview-list-item no-info-bar no-context-menu " data-slug="" hidden>
+          <li class="mdl-list__item preview-list-item no-context-info " data-slug="" hidden>
             <span class="mdl-list__item-primary-content"></span>
             <span class="mdl-list__item-secondary-action">
               <img src="" alt="Interface theme preview image" hidden>
@@ -655,10 +815,10 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="shortcuts-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="shortcuts-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">swap_calls</i>
-        <h2 class="mdl-card__title-text">Keyboard Shortcuts</h2>
+        <h2 class="mdl-card__title-text no-context-info">Keyboard Shortcuts</h2>
       </div>
 
       <div class="overflow-y-section">
@@ -666,7 +826,7 @@
         <ul class="shortcuts-lists remove-list-style">
 
           <li class="shortcuts-list">
-            <h6>Window</h6>
+            <h6 class="no-context-info">Window</h6>
             <ul class="mdl-list">
               <li class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">Toggle Fullscreen</span>
@@ -679,7 +839,7 @@
           </li>
 
           <li class="shortcuts-list">
-            <h6>Dialogs</h6>
+            <h6 class="no-context-info">Dialogs</h6>
             <ul class="mdl-list">
               <li class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">Switch to Next Text Field</span>
@@ -717,14 +877,14 @@
               <li class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">Context Menu</span>
                 <span class="mdl-list__item-secondary-action">
-                  Mouse Right Button
+                  Mouse Right Click
                 </span>
               </li>
             </ul>
           </li>
 
           <li class="shortcuts-list">
-            <h6>Documents</h6>
+            <h6 class="no-context-info">Documents</h6>
             <ul class="mdl-list">
               <li class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">New Document</span>
@@ -768,7 +928,7 @@
               <li class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">Close Documents</span>
                 <span class="mdl-list__item-secondary-action">
-                  <span class="italic">(on a document tab)</span> Mouse Center Button
+                  <span class="italic">(on a document tab)</span> Mouse Middle Click
                 </span>
               </li>
               <li class="mdl-list__item">
@@ -817,7 +977,7 @@
           </li>
 
           <li class="shortcuts-list">
-            <h6>Editor</h6>
+            <h6 class="no-context-info">Editor</h6>
             <ul class="mdl-list">
 
               <li class="mdl-list__item">
@@ -987,18 +1147,18 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="about-dialog" data-state="">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="about-dialog_unc2741" data-state="">
       <div class="mdl-card__title">
         <i class="material-icons">favorite</i>
-        <h2 class="mdl-card__title-text">About</h2>
+        <h2 class="mdl-card__title-text no-context-info">About</h2>
       </div>
 
       <div class="overflow-y-section">
 
-        <img src="../img/uncolored-logo.svg" class="logo no-info-bar" alt="(Un)colored logo">
+        <img src="../img/uncolored-logo.svg" class="logo no-context-info" alt="(Un)colored logo">
 
         <div class="mdl-card__supporting-text update-check">
-          version <span class="app-version bold"></span> — <span class="bold">Beta</span>
+          version <span class="app-version hl"></span> — <span class="hl">Beta</span>
           <div class="loading-text">Checking for update...</div>
           <i class="material-icons loading-icon">timelapse</i>
           <div class="up-to-date">Update checked. <span class="app-name"></span> is up to date.</div>
@@ -1028,11 +1188,12 @@
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            <span class="bold">Special thanks to :</span>
-            Thomas Guilleminot (OS X packages creation)
+            <span class="hl">Special thanks to :</span>
+            Thomas Guilleminot (OS X packages & document theme creation) •
+            Antoine Boquet (document theme creation)
           </p>
 
-          <p class="bold">Thanks to creators and contributors of these projects that (Un)colored uses :</p>
+          <p class="hl">Thanks to creators and contributors of these projects that (Un)colored uses :</p>
           <p>
             <a class="no-context-menu" href="https://sacha.me/Countable/" target="_blank">Countable.js</a> •
             <a class="no-context-menu" href="https://cure53.de/purify" target="_blank">DOMPurify</a> •
@@ -1054,13 +1215,14 @@
             <a class="no-context-menu" href="http://rubaxa.github.io/Sortable/" target="_blank">Sortable</a> •
             <a class="no-context-menu" href="http://domchristie.github.io/to-markdown/" target="_blank">to-markdown</a> •
             <a class="no-context-menu" href="https://gist.github.com/alexey-bass/1115557" target="_blank">versions-compare</a> •
-            <a class="no-context-menu" href="http://wysiwygjs.github.io/" target="_blank">wysiwyg.js</a>
+            <a class="no-context-menu" href="http://wysiwygjs.github.io/" target="_blank">wysiwyg.js</a> •
+            <a class="no-context-menu" href="https://zengabor.github.io/zenscroll/" target="_blank">Zenscroll</a>
           </p>
         </div>
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            <span class="bold"><span class="app-name"></span> is free and open source</span>. Making applications like this <span class="bold">takes time</span>. If you like this app, please consider to donate to <span class="bold">support my work</span> ;)<br>
+            <span class="hl"><span class="app-name"></span> is free and open source</span>. Making applications like this <span class="hl">takes time</span>. If you like this app, please consider to donate to <span class="hl">support my work</span> ;)<br>
             If you don't know how much to give, 6 € is a reasonnable amount (will be automatically converted into your currency). Have a nice day !
           </p>
         </div>
@@ -1072,7 +1234,7 @@
           Close
         </span>
         <a target="_blank" class="mdl-button mdl-button--colored no-context-menu donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=n457%2econtact%40gmail%2ecom&lc=FR&item_name=n457%20%2f%20Bertrand%20Vignaud%2dLerouge&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">
-          Donate via PayPal
+          Support (Un)colored
         </a>
         <span class="mdl-button mdl-button--colored recheck">
           Update recheck
@@ -1086,17 +1248,17 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="print-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="print-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">print</i>
-        <h2 class="mdl-card__title-text">Print a Document</h2>
+        <h2 class="mdl-card__title-text no-context-info">Print a Document</h2>
       </div>
 
       <div class="overflow-y-section">
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            To print your document, save it as a <span class="bold">HTML document</span>, open it <span class="bold">in your Web browser</span> and use the <kbd class="windows-os linux-os">Ctrl+P</kbd><kbd class="osx-os">⌘P</kbd> keyboard shortcut.
+            To print your document, save it as a <span class="hl">HTML document</span>, open it <span class="hl">in your Web browser</span> and use the <kbd class="windows-os linux-os">Ctrl+P</kbd><kbd class="osx-os">⌘P</kbd> keyboard shortcut.
           </p>
         </div>
 
@@ -1112,18 +1274,18 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="unsaved-docs-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="unsaved-docs-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">warning</i>
-        <h2 class="mdl-card__title-text">Unsaved Documents</h2>
+        <h2 class="mdl-card__title-text no-context-info">Unsaved Documents</h2>
       </div>
 
       <div class="overflow-y-section">
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            One or several documents are still <span class="bold">unsaved</span>.<br>
-            You can close all documents <span class="bold">all by once</span> without saving their changes or <span class="bold">one by one</span>.
+            One or several documents are still <span class="hl">unsaved</span>.<br>
+            You can close all documents <span class="hl">all by once</span> without saving their changes or <span class="hl">one by one</span>.
           </p>
         </div>
 
@@ -1150,17 +1312,17 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="new-update-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="new-update-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">change_history</i>
-        <h2 class="mdl-card__title-text">New Update Available</h2>
+        <h2 class="mdl-card__title-text no-context-info">New Update Available</h2>
       </div>
 
       <div class="overflow-y-section">
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            <span class="bold">A new version of <span class="app-name"></span> is released (version <span class="last-version"></span>)</span><br>
+            <span class="hl">A new version of <span class="app-name"></span> is released (version <span class="last-version"></span>)</span><br>
             <a class="no-context-menu" target="_blank" href="https://n457.github.io/Uncolored/">Download the latest version here</a>
           </p>
         </div>
@@ -1179,10 +1341,10 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="priority-info-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="priority-info-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">whatshot</i>
-        <h2 class="mdl-card__title-text">Priority Information</h2>
+        <h2 class="mdl-card__title-text no-context-info">Priority Information</h2>
       </div>
 
       <div class="mdl-card__supporting-text wysiwyg-content overflow-y-section"></div>
@@ -1197,45 +1359,42 @@
 
 
 
-    <section class="mdl-card mdl-shadow--6dp dialog-top" id="io-error-dialog">
+    <section class="mdl-card mdl-shadow--6dp dialog-large dialog-top dialog-h-center protected-id" id="io-error-dialog_unc2741">
       <div class="mdl-card__title">
         <i class="material-icons">report</i>
-        <h2 class="mdl-card__title-text">Oops !</h2>
+        <h2 class="mdl-card__title-text no-context-info">Oops !</h2>
       </div>
 
       <div class="overflow-y-section">
 
         <div class="mdl-card__supporting-text wysiwyg-content">
           <p>
-            <span class="bold">Don't panic ;)</span>
+            <span class="hl">Don't panic ;)</span>
           </p>
           <p>
-            There has been a <span class="bold">file reading or writing error</span>.<br>
-            It means that <span class="app-name"></span> <span class="bold">can't read</span> the content of one or several of its files, <span class="bold">edit them</span> or <span class="bold">create them</span>.<br>
+            There has been a <span class="hl">file reading or writing error</span>.<br>
+            It means that <span class="app-name"></span> <span class="hl">can't read</span> the content of one or several of its files, <span class="hl">edit them</span> or <span class="hl">create them</span>.<br>
             Don't worry we will find a solution.
           </p>
 
           <p>
-            This error can appear at the application <span class="bold">startup</span>, when you try to <span class="bold">modify a setting</span>, or <span class="bold">save a document</span> with a <span class="bold">theme</span>.
+            This error can appear when you try to <span class="hl">open</span>, or <span class="hl">save a document</span>, <span class="hl">with or without a theme</span>.
           </p>
           <p>
-            In these cases, encountering this error means that <span class="app-name"></span> is probably installed in a <span class="bold">restricted location</span> on your computer.<br>
-            <span class="bold">The easy and recommended way to solve this error is to uninstall the application and reinstall it into a more common location.</span>
+            In these cases, encountering this error means that the documents you're trying to save or open, are probably located in a <span class="hl">restricted location</span> on your computer.<br>
+            <span class="hl">The easy and recommended way to solve this error is to choose another saving location or move the documents you're trying to open and retry opening them.</span>
+          </p>
+
+          <p>
+            Else, encountering this error means that <span class="app-name"></span> is probably installed in a <span class="hl">restricted location</span> on your computer.<br>
+            <span class="hl">The easy and recommended way to solve this error is to uninstall the application and reinstall it into a more common location.</span>
           </p>
           <div class="windows-os">
             <p>
-              On windows, you can <span class="bold">ALTERNATIVELY</span> run <span class="app-name"></span> as administrator if the user account you are using allows you to do so.
+              On windows, you can <span class="hl">ALTERNATIVELY</span> run <span class="app-name"></span> as administrator if the user account you are using allows you to do so.
             </p>
-            <img class="no-info-bar" src="../img/windows-run-admin.png" alt="Right click, run as administrator">
+            <img class="no-context-info" src="../img/windows-run-admin.png" alt="Right click, run as administrator">
           </div>
-
-          <p>
-            This error <span class="bold">can also appear</span> when you try to <span class="bold">open</span>, or <span class="bold">save a document</span>, <span class="bold">with or without a theme</span>.
-          </p>
-          <p>
-            In these cases, encountering this error means that the documents you're trying to save or open, are probably located in a <span class="bold">restricted location</span> on your computer.<br>
-            <span class="bold">The easy and recommended way to solve this error is to choose another saving location or move the documents you're trying to open and retry opening them.</span>
-          </p>
         </div>
 
       </div>
@@ -1249,7 +1408,7 @@
 
 
 
-    <div id="preview-large" class="">
+    <div id="preview-large_unc2741" class="protected-id ">
       <div class="label">Theme preview</div>
       <img src="" alt="Large preview image">
     </div>
@@ -1268,15 +1427,16 @@
     <script src="../lib/foreach.min.js"></script>
     <script src="../lib/LightRange.ES6.js"></script>
     <script src="../lib/wysiwyg.min.js"></script>
-    <script src="../lib/Sortable.no-loader.js"></script>
+    <script src="../lib/Sortable.no-loader.min.js"></script>
     <script src="../lib/mousetrap.min.js"></script>
     <script src="../lib/mousetrap-global-bind.min.js"></script>
-    <script src="../lib/purify.no-loader.js"></script>
+    <script src="../lib/purify.no-loader.min.js"></script>
     <script src="../lib/Countable.js"></script>
     <script src="../lib/findAndReplaceDOMText.no-loader.js"></script>
     <script src="../lib/emojify.min.js"></script>
-    <script src="../lib/reqwest.no-loader.js"></script>
-    <script src="../lib/to-markdown.js"></script>
+    <script src="../lib/zenscroll.no-loader.min.js"></script>
+    <script src="../lib/reqwest.no-loader.min.js"></script>
+    <script src="../lib/to-markdown.custom.js"></script>
     <script src="../lib/marked.min.js"></script>
     <script src="../lib/jsVideoUrlParser.min.js"></script>
 
@@ -1295,6 +1455,7 @@
 
     <!-- Scripts -->
     <script src="../js/init.js"></script>
+    <script src="../js/window.js"></script>
     <script src="../js/tabs.js"></script>
     <script src="../js/toolbar.js"></script>
     <script src="../js/context-info.js"></script>

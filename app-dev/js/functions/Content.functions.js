@@ -23,6 +23,7 @@ N.Functions.Content.funcPurifyHTML = (Parameters) => {
     ];
     arrAllowedAttr = [
       'src', 'href',
+      'id',
       // For iframe only :
       'width', 'height', 'allowfullscreen'
     ];
@@ -37,6 +38,15 @@ N.Functions.Content.funcPurifyHTML = (Parameters) => {
   const PurifyParameters = { ALLOWED_TAGS: arrAllowedTags, ALLOWED_ATTR: arrAllowedAttr };
 
   return DOMPurify.sanitize(Parameters.strHTML, PurifyParameters);
+};
+
+
+
+N.Functions.Content.funcSetHeadingsIDs = (Parameter) => {
+  forEach(Parameter.Document.$ContentEditable.querySelectorAll('h1, h2, h3, h4, h5, h6'), ($H) => {
+    // From https://github.com/chjj/marked/blob/master/lib/marked.js#L800
+    $H.id = $H.textContent.toLowerCase().replace(/[^\w]+/g, '-');
+  });
 };
 
 
@@ -66,14 +76,14 @@ N.Functions.Content.funcDisplayEmojis = (Parameter) => {
 
 
 N.Functions.Content.funcClearHTMLForHTMLExport = (Parameter) => {
-  forEach(Parameter.$ContentEditable.querySelectorAll('a, .emoji'), ($Element) => {
-    if ($Element.tagName === 'A') {
-      $Element.target = '_blank';
-    }
-    if ($Element.classList.contains('emoji')) {
-      $Element.removeAttribute('contenteditable');
-      $Element.title = $Element.getElementsByClassName('emoji-text')[0].textContent;
-    }
+  // Selecting all links exept those with [href] starting with "#" (anchor links)
+  forEach(Parameter.$ContentEditable.querySelectorAll('a:not([href^="#"])'), ($A) => {
+    $A.target = '_blank';
+  });
+
+  forEach(Parameter.$ContentEditable.getElementsByClassName('emoji'), ($Emoji) => {
+    $Emoji.removeAttribute('contenteditable');
+    $Emoji.title = $Emoji.getElementsByClassName('emoji-text')[0].textContent;
   });
   // Not deleting &nbsp; because user may write some in <pre> elements in a future release of the app.
 };
@@ -111,10 +121,8 @@ N.Functions.Content.funcClearHTML = (Parameter) => {
     });
   }
 
-  // The to-markdown lib returns id attributes for titles, which is good for markdown docs, but we don't want that for this version. Full support in next releases.
   // It happens that the editor outputs some element with [style], we don't want this attribute.
-  forEach(Parameter.Document.$ContentEditable.querySelectorAll('[id], [style]'), ($Element) => {
-    $Element.removeAttribute('id');
+  forEach(Parameter.Document.$ContentEditable.querySelectorAll('[style]'), ($Element) => {
     $Element.removeAttribute('style');
   });
 

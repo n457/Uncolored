@@ -1,7 +1,13 @@
-![](project/docs/assets/uncolored-logo.png)
+<p align="center">
+  <img alt="(Un)colored logo" height="62" src="project/docs/assets/uncolored-logo.png">
+</p>
 
-Next generation **desktop rich content editor** that saves documents with **themes**. **HTML & Markdown** compatible. For **Windows, OS X & Linux**.
-#### version 0.8.1 — Beta
+<p align="center">
+  Next generation <strong>desktop rich content editor</strong> that saves documents with <strong>themes</strong>.<br>
+  <strong>HTML & Markdown</strong> compatible. For <strong>Windows, OS X & Linux</strong>.
+</p>
+
+#### version 0.9.1 — Beta
 
 ![](project/docs/assets/uncolored-large-screenshot.png)
 
@@ -34,34 +40,33 @@ With (Un)colored, the user focuses on the **text** & **content types** (titles, 
 ### :checkered_flag: Roadmap
 Here is what **is planed** for future releases of (Un)colored. These lists **can change** at any time and tasks can be added, moved, modified or deleted for several reasons, including **feasibility** and **performance impact**.
 
-This **public repository** contains released versions of (Un)colored and their source code, **the latest development/test** version of the (Un)colored source code **is on a private repository**, **checked checkboxes are only for your information** but concerned features **are not testable** with the source code of this public repository.
+This **public repository** contains released versions of (Un)colored and their source code, **the latest development/test** version of the (Un)colored source code **is on a private repository**.
 
 If you want more details about what was done, see [the Changelog](CHANGELOG.md).
 
-##### version 0.9.0
-- [ ] Additional ***Tweet*** tool : **insert a tweet** from Twitter in documents
-- [ ] **Anchor links** (links starting with "#") full support (fixing issue ***KI001M***)
-- [ ] **GitHub Flavored Markdown** documents import/export full support (tools will come progressively) (fixing issue ***KI002M***)
-- [ ] Additional ***Insert Image from File*** tool (fixing issue ***KI003M*** at the same time)
-- [ ] Additional **document themes**
-- [ ] **Code highlighting** in saved themed document (supported languages : CSS, JavaScript, Ruby, CoffeeScript, PHP, SQL, C#, Diff, JSON, Markdown, C++, HTML, XML, Java, Python)
+##### version 0.10.0
+- Additional ***Incorporate image from file*** tool
+- Additional **document themes**
+- **Code highlighting** in saved themed document (supported languages : CSS, JavaScript, Ruby, CoffeeScript, PHP, SQL, C#, Diff, JSON, Markdown, C++, HTML, XML, Java, Python)
 - **Other potential issue fixes**
 
-##### version 0.10.0
-- [ ] Additional **table tools** : insert table & add, remove, move row & column
-- [ ] Additional ***Incorporate image from file*** tool
+##### version 0.11.0
+- Additional ***Insert Image from File*** tool
+- Additional **table tools** : insert table & add, remove, move row & column
+- **GitHub Flavored Markdown** documents import/export full support
 - **Potential issue fixes**
 
 ##### version 1.0.0
-- [ ] **Emojis** insertion **via the toolbar**
-- [ ] Additional **text tools** : selection to lower / upper / title case
-- [ ] **Multi-Language** Support & **French** language implementation
+- Additional ***Tweet*** tool : **insert a tweet** from Twitter in documents
+- **Emojis** insertion **via the toolbar**
+- Additional **text tools** : selection to lower / upper / title case
+- **Multi-Language** Support & **French** language implementation
 - **Potential issue fixes**
 
 ##### :page_facing_up: Writing Time
-- [ ] Documentation about how to **create a document theme**
-- [ ] Documentation about how to **create a UI theme**
-- [ ] **Proper code comments** with links to :us: English documentations (and :fr: French if possible)
+- Documentation about how to **create a document theme**
+- Documentation about how to **create a UI theme**
+- **Proper code comments** with links to :us: English documentations
 
 
 ### :nut_and_bolt: Technical Details
@@ -74,9 +79,8 @@ For the complete list of used projects, see below the [Related Projects section]
 
 
 ### :warning: Known Issues
-- *[Major issue]* Anchor links (links starting with "#") doesn't work. ***(id : KI001M)***
-- *[Major issue]* GitHub Flavored Markdown documents import/export not fully supported (and missing tools for it). ***(id : KI002M)***
-- *[Major issue]* When entering a local image relative path in the *Image via URL* tool field, the image in the exported document is not visible in-browser. ***(id : KI003M)***
+- *[Major issue]* GitHub Flavored Markdown documents import/export not fully supported (and missing tools for it).
+- *[Major issue]* When entering a local image relative path in the *Image via URL* tool field, the image in the exported document is not visible in-browser.
 
 
 ### :busts_in_silhouette: Contribute
@@ -123,9 +127,10 @@ If you don't know how much to give, 6 € is a reasonnable amount (will be autom
 [Sortable](http://rubaxa.github.io/Sortable/) •
 [to-markdown](http://domchristie.github.io/to-markdown/) •
 [versions-compare](https://gist.github.com/alexey-bass/1115557) •
-[wysiwyg.js](http://wysiwygjs.github.io/)
+[wysiwyg.js](http://wysiwygjs.github.io/) •
+[Zenscroll](https://zengabor.github.io/zenscroll/)
 
 
 Proudly powered by [Electron](http://electron.atom.io/)
 
-[<img alt="Electron Logo" height="50" src="http://electron.atom.io/images/electron-logo.svg">](http://electron.atom.io/)
+[<img alt="Electron logo" height="50" src="http://electron.atom.io/images/electron-logo.svg">](http://electron.atom.io/)

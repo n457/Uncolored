@@ -3,10 +3,14 @@ body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-user-select: none; }
-  body.osx-os .windows-os:not(.osx-os),
-  body.osx-os .linux-os:not(.osx-os),
+  body.no-frame {
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid; }
   body.windows-os .osx-os:not(.windows-os),
   body.windows-os .linux-os:not(.windows-os),
+  body.osx-os .windows-os:not(.osx-os),
+  body.osx-os .linux-os:not(.osx-os),
   body.linux-os .osx-os:not(.linux-os),
   body.linux-os .windows-os:not(.linux-os) {
     display: none; }
@@ -38,6 +42,7 @@ body {
   .hover-effects:active {}
 
   .disabled {
+    opacity: 0.3;
     pointer-events: none; }
 
   .remove-list-style {
@@ -46,10 +51,10 @@ body {
     margin: 0; }
 
 
-  .bold {
-    font-weight: bold; }
   .italic {
     font-style: italic; }
+  /* highlight */
+  .hl {}
 
   .fake-link {
     color: inherit;

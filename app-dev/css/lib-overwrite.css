@@ -5,6 +5,8 @@ body {
 
   .mdl-layout {
     overflow-y: hidden; }
+    body.no-frame .mdl-layout {
+      width: calc(100% - 2px); }
     .mdl-layout__header {
       position: absolute;
       /* By default, the header has an min-height of 64px (cancelled when the window becomes small).  */
@@ -71,6 +73,7 @@ body {
             .mdl-button--raised.mdl-button--colored {}
 
   .mdl-tooltip {
+    font-size: 12px;
     word-wrap: break-word; }
     .mdl-tooltip:empty {
       display: none; }

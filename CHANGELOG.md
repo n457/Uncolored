@@ -1,6 +1,24 @@
 ## Release Notes
 <!-- (for in-app update check) -->
-<!-- currentversion: 0.8.1 -->
+<!-- currentversion: 0.9.1 -->
+
+##### 0.9.1 : New Features + Major & minor issue fixes
+- Added (Un)colored **multiplatform UI-integrated window controls**, with related settings ([topic #3](https://github.com/n457/Uncolored/issues/3))
+- Added text selection basic commands : **select all, copy, paste** ([topic #14](https://github.com/n457/Uncolored/issues/14))
+- Added **Table of Content** visualization & **navigation** system
+- Added **anchors & anchor links full support** for both HTML & Markdown document formats, with smooth auto-scroll
+- Moved Document Information dialog to the bottom right of (Un)colored window, and reduced its dimensions
+- Added a **Recount button** in the Document Information dialog
+- Added **2 new document themes : Attitude & Horizon**
+- Increased in-app documents & White Room documents **font size a bit, for more lisibility**
+- Replaced `Uncolored` in-app URL-friendly name by `(Un)colored` **real application name**
+- *On OS X*, closing (Un)colored via window controls do the same as `⌘Q` ([topic #8](https://github.com/n457/Uncolored/issues/8))
+- *On Linux*, shortened launcher application description
+- Improved (Un)colored **speed performance**
+- Fixed a content clearing issue
+- minor UI text changes & improvements
+- minor UI styles changes & improvements
+- *Work in Progress* : Emojis insertion via the toolbar
 
 ##### 0.8.1 : New Features + Major & minor bug fixes
 - Additional ***Embed Content*** tool : insert SoundCloud tracks, Vine videos, and **any kind of other embed content**

@@ -13,13 +13,13 @@
 
 
 
-  document.getElementById('menu-new-doc').addEventListener('click', () => {
+  document.getElementById('menu-new-doc_unc2741').addEventListener('click', () => {
     new Document();
   });
   N.$TabsList.addEventListener('dblclick', () => {
     new Document();
   });
-  document.getElementById('button-add-tab').addEventListener('click', () => {
+  N.$Header.getElementsByClassName('add-tab-button')[0].addEventListener('click', () => {
     new Document();
   });
   // bind() doesn't work in any text fields. An official plugin 'global bind' allows that.
@@ -33,7 +33,7 @@
 
 
 
-  document.getElementById('menu-open-doc').addEventListener('click', () => {
+  document.getElementById('menu-open-doc_unc2741').addEventListener('click', () => {
     N.Functions.Documents.funcOpenDialog();
   });
   Mousetrap.bindGlobal('mod+o', () => {
@@ -46,7 +46,7 @@
   });
 
 
-  document.getElementById('menu-close-all-docs').addEventListener('click', () => {
+  document.getElementById('menu-close-all-docs_unc2741').addEventListener('click', () => {
     N.Functions.Documents.funcCloseAll();
   });
   Mousetrap.bindGlobal('mod+shift+w', () => {

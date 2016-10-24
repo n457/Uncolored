@@ -119,3 +119,24 @@ N.Functions.Documents.funcCloseAll = (Option) => {
 
   return { boolUnsavedDocs: false };
 };
+
+
+
+N.Functions.Documents.funcMenuAvailabilityCheck = () => {
+  if (N.DocActive.strPath) {
+    N.$MenuOpenDocFolder.classList.remove('disabled');
+
+    if (N.DocActive.$Tab.classList.contains('doc-unsaved')) {
+      N.$MenuSave.classList.remove('disabled');
+    } else {
+      N.$MenuSave.classList.add('disabled');
+    }
+  } else {
+    N.$MenuOpenDocFolder.classList.add('disabled');
+    N.$MenuSave.classList.add('disabled');
+  }
+
+  if (N.DocActive.boolLocked) {
+    N.$MenuSave.classList.add('disabled');
+  }
+};
