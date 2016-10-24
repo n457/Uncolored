@@ -26,17 +26,20 @@
   position: absolute;
   top: 28px;
   right: 28px; }
-  .right-info-col a {
-    display: block;
-    max-width: 78px; }
 
-  .github-button {
-    margin-left: 27px; }
-    .github-button .mega-octicon {
-      color: #464646;
-      transition: color 0.6s; }
-    .github-button:hover .mega-octicon {
-      color: black; }
+  .right-info-col a {
+    display: block; }
+    .right-info-col .featured-logo {
+      width: 45px;
+      margin: 6px auto; }
+
+    .github-button {
+      text-align: center; }
+      .github-button .mega-octicon {
+        color: #464646;
+        transition: color 0.6s; }
+      .github-button:hover .mega-octicon {
+        color: black; }
 
   .stars-count {
     width: 78px;
@@ -44,7 +47,7 @@
     margin-top: 4px; }
 
   .softpedia-certificate {
-    margin-top: 14px; }
+    width: 56px !important; }
 
 
 .app-logo {
@@ -58,9 +61,12 @@
 
 
 .app-large-img {
+  display: none;
   max-width: 1030px;
   margin-top: 106px;
   margin-bottom: 54px; }
+  .app-large-img.visible {
+    display: inline-block; }
 
 
 .not-signed-warning {
@@ -136,7 +142,7 @@
     overflow: hidden;
     transition: height 0.8s, padding 0.8s, background-color 0.3s; }
     .multi-download-button.opened .list-more {
-      height: 222px;
+      height: 228px;
       padding: 8px 0; }
     .list-more .file-label-container {
       padding: 6px 16px;
