@@ -1,8 +1,8 @@
 ## Release Notes
 <!-- (for in-app update check) -->
-<!-- currentversion: 0.8.1 -->
+<!-- currentversion: 0.9.1 -->
 
-##### 0.9.1 : New Features + Major & minor issue fixes
+##### 0.9.1 : New Features + New Document Themes + Major & minor issue fixes
 - Added (Un)colored **multiplatform UI-integrated window controls**, with related settings ([topic #3](https://github.com/n457/Uncolored/issues/3))
 - Added text selection basic commands : **select all, copy, paste** ([topic #14](https://github.com/n457/Uncolored/issues/14))
 - Added **Table of Content** visualization & **navigation** system
