@@ -15,10 +15,12 @@
 
 .italic {
   font-style: italic; }
-.highlighted {
+/* highlight */
+.hl {
   color: #3a3a3a; }
 
 .full-width {
+  display: block;
   width: 100%; }
 
 
@@ -52,8 +54,7 @@
 
 .app-logo {
   max-width: 355px;
-  margin-top: 140px;
-  margin-bottom: 30px }
+  margin: 140px auto 30px auto; }
 
 .app-desc {
   margin: 0; }
@@ -64,13 +65,15 @@
   display: none;
   max-width: 1030px;
   margin-top: 106px;
-  margin-bottom: 54px; }
+  margin-bottom: 84px; }
   .app-large-img.visible {
     display: inline-block; }
 
 
 .not-signed-warning {
-  margin: 0 0 24px 0; }
+  font-size: 13px;
+  line-height: normal;
+  margin: 0 0 38px 0; }
 
 
 .multi-download-button {
@@ -142,7 +145,7 @@
     overflow: hidden;
     transition: height 0.8s, padding 0.8s, background-color 0.3s; }
     .multi-download-button.opened .list-more {
-      height: 228px;
+      height: 266px;
       padding: 8px 0; }
     .list-more .file-label-container {
       padding: 6px 16px;
@@ -151,6 +154,8 @@
         background-color: #1947ac; }
       .list-more .file-label-container:active {
         background-color: #0c2458; }
+      .list-more .file-label-container.no-icon {
+        text-align: center; }
 
   .multi-download-button .toggle-buttons {
     font-size: 12px;
@@ -171,20 +176,24 @@
 
 
 .text-row {
+  text-align: justify;
   margin: 100px 0; }
 
 
-.focus-img {
+.text-focus img.full-width {
   max-width: 694px;
   margin-top: -22px; }
 
-.rich-content-img {
+.text-rich-content img.full-width {
   max-width: 582px; }
 
-.themes-img {
-  max-width: 846px; }
+.text-notes img.full-width {
+  max-width: 521px; }
 
-.markdown-img {
+.text-themes img.full-width {
+  max-width: 791px; }
+
+.text-markdown img.full-width {
   max-width: 922px; }
 
 
@@ -211,15 +220,19 @@ footer {
   text-align: center;
   padding: 34px 0 28px 0;
   margin-top: 80px;
-  background-color: #dcdcdc; }
+  background-color: #f5f5f5; }
   footer .author-avatar img {
     width: 50px;
     height: 50px;
     border-radius: 50%; }
   footer p {
+    font-size: 14px;
+    color: #565656;
     margin: 10px 0 0 0; }
     footer .heart {
       color: #d00633; }
+  footer a {
+    color: inherit; }
 
 
 
@@ -246,12 +259,22 @@ footer {
 
   .text-row {
     margin: 80px 0; }
-    .text-row.center-xs {
-      text-align: left; }
+    .text-row img.full-width {
+      margin-left: auto;
+      margin-right: auto; }
 
-  .focus-img {
+  .text-focus img.full-width {
     margin-top: 0; }
 
-  .markdown-img {
-    margin-bottom: 52px; }
+  .text-rich-content img.full-width {
+    margin-bottom: 42px; }
+
+  .text-notes img.full-width {
+    margin-top: 30px; }
+
+  .text-themes img.full-width {
+    margin-bottom: 24px; }
+
+  .text-markdown img.full-width {
+    margin-top: 26px; }
 }

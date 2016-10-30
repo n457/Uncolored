@@ -28,8 +28,5 @@ body {
       cursor: default; }
 
 
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 19px; }
-}
+::selection {
+  background-color: #e2e2e2; }
