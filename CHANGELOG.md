@@ -1,6 +1,6 @@
 ## Release Notes
 <!-- (for in-app update check) -->
-<!-- currentversion: 0.9.1 -->
+<!-- currentversion: 0.10.1 -->
 
 ##### 0.10.1 : New Features + minor issue fixes
 - Added a **window control button** to toggle (Un)colored window **always on top**
