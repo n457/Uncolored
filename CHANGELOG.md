@@ -2,6 +2,12 @@
 <!-- (for in-app update check) -->
 <!-- currentversion: 0.9.1 -->
 
+##### 0.10.1 : New Features + minor issue fixes
+- Added a **window control button** to toggle (Un)colored window **always on top**
+- Insert a **new line in a paragraph** with `Shift + Enter` / `⇧Enter` keyboard shortcut
+- Fixed **background gradient** in document theme **Horizon** in case of short content.
+- minor UI improvements
+
 ##### 0.9.1 : New Features + New Document Themes + Major & minor issue fixes
 - Added (Un)colored **multiplatform UI-integrated window controls**, with related settings ([topic #3](https://github.com/n457/Uncolored/issues/3))
 - Added text selection basic commands : **select all, copy, paste** ([topic #14](https://github.com/n457/Uncolored/issues/14))

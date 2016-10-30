@@ -73,6 +73,7 @@ body {
             .mdl-button--raised.mdl-button--colored {}
 
   .mdl-tooltip {
+    max-width: 80%;
     font-size: 12px;
     word-wrap: break-word; }
     .mdl-tooltip:empty {

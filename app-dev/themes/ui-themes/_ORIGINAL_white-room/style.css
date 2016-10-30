@@ -88,6 +88,9 @@ body {
     body.windows-os .window-controls .close:active {
       color: white;
       background-color: #f1707a; }
+    body.windows-os.fullscreen .window-controls .toggle-fullscreen,
+    body.windows-os.always-on-top .window-controls .toggle-always-on-top {
+      color: black; }
 
 
   body.osx-os .window-controls .close {
@@ -110,6 +113,15 @@ body {
     background-color: #5689ff; }
     body.osx-os .window-controls .toggle-fullscreen:active {
       background-color: #4573de; }
+    body.osx-os.fullscreen .window-controls .toggle-fullscreen {
+      box-shadow: 0 0 14px 0 #0043ff; }
+  body.osx-os .window-controls .toggle-always-on-top {
+    color: #0092a9;
+    background-color: #2ee2ff; }
+    body.osx-os .window-controls .toggle-always-on-top:active {
+      background-color: #29bed6; }
+    body.osx-os.always-on-top .window-controls .toggle-always-on-top {
+      box-shadow: 0 0 14px 0 #00adff; }
 
 
   body.linux-os .window-controls li {
@@ -125,6 +137,9 @@ body {
     body.linux-os .window-controls .close:active {
       color: white;
       background-color: #f1707a; }
+    body.linux-os.fullscreen .window-controls .toggle-fullscreen,
+    body.linux-os.always-on-top .window-controls .toggle-always-on-top {
+      box-shadow: 0 0 14px 0 #5a5a5a; }
 
 
 

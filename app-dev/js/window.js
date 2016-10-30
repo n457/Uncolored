@@ -21,4 +21,8 @@
     N.Functions.Window.funcToggleFullscreen();
   });
 
+  N.$WindowControls.getElementsByClassName('toggle-always-on-top')[0].addEventListener('click', () => {
+    N.Functions.Window.funcToggleAlwaysOnTop();
+  });
+
 })();

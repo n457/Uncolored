@@ -7,9 +7,9 @@
   <strong>HTML & Markdown</strong> compatible. For <strong>Windows, OS X & Linux</strong>.
 </p>
 
-#### version 0.9.1 — Beta
+#### version 0.10.1 — Beta
 
-![](project/docs/assets/uncolored-large-screenshot.png)
+![](project/docs/assets/uncolored-large-screenshot-win.png)
 
 
 With (Un)colored, the user focuses on the **text** & **content types** (titles, lists, etc.), then selects the document **saving format**. If the selected format is **HTML**, the user can choose an export **document theme** which defines the appearance of the saved document, that can be viewed directly in a web browser. If the selected format is **Markdown**, the document is saved as raw Markdown file, without theme. A saved HTML / Markdown document can be re-imported in the editor and re-exported, with theme or not, **endlessly**.
@@ -24,12 +24,14 @@ With (Un)colored, the user focuses on the **text** & **content types** (titles, 
 - Standard word processor **inline tools** (bold, italic, underline, strikethrough, add link to selection, superscript, subscript, clear format)
 - 6 levels **title tools**
 - **Block tools** (paragraph, quote, unordered & ordered list, image insertion via URL)
-- **Web-oriented tools** (**YouTube / Vimeo / Dailymotion / Twitch video** insertion via URL, or **ANY embedded content** (SoundCloud tracks, Vines, ...))
-- Real-time **emojis** *(from http://www.emoji-cheat-sheet.com/ for now)*
-- Export to **HTML documents** with 2 **themes** : GitHub Style & White Room *(more to come)*
+- **Web-oriented tools** (**YouTube / Vimeo / Dailymotion / Twitch video** insertion via URL, or **ANY embedded content** (SoundCloud tracks, Facebook posts, ...))
+- Export to **HTML documents** with 4 **themes** *(always more to come)*
 - Export to **Markdown documents**
+- **Table of Content** visualization & **navigation** system
+- **Always on Top** window control button
+- Real-time **emojis** *(from http://www.emoji-cheat-sheet.com/ for now)*
 - **Interface themes** system *(1 interface theme for now, but more to come)*
-- 41 **mouse & keyboard shortcuts**
+- More than **40 mouse & keyboard shortcuts**
 - Basic **search / replace** system *(needs improvements)*
 - Document information display (number of paragraphs, words, etc.)
 - Minimalist interface that let you focus on what matters : **the content**
@@ -44,13 +46,13 @@ This **public repository** contains released versions of (Un)colored and their s
 
 If you want more details about what was done, see [the Changelog](CHANGELOG.md).
 
-##### version 0.10.0
+##### version 0.11.0
 - Additional ***Incorporate image from file*** tool
 - Additional **document themes**
 - **Code highlighting** in saved themed document (supported languages : CSS, JavaScript, Ruby, CoffeeScript, PHP, SQL, C#, Diff, JSON, Markdown, C++, HTML, XML, Java, Python)
 - **Other potential issue fixes**
 
-##### version 0.11.0
+##### version 0.12.0
 - Additional ***Insert Image from File*** tool
 - Additional **table tools** : insert table & add, remove, move row & column
 - **GitHub Flavored Markdown** documents import/export full support

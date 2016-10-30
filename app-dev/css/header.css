@@ -12,6 +12,7 @@
     .window-controls li {
       position: absolute;
       text-align: center;
+      outline: 0;
       -webkit-app-region: no-drag; }
       body.fullscreen .window-controls .toggle-maximize {
         opacity: 0.3;
@@ -20,7 +21,7 @@
 
     body.windows-os .window-controls {
       right: 0;
-      width: 190px; }
+      width: 235px; }
       body.windows-os .window-controls li {
         top: 0;
         width: 45px;
@@ -41,11 +42,15 @@
           right: 90px; }
         body.windows-os .window-controls .toggle-fullscreen {
           right: 145px; }
+          body.windows-os.fullscreen .window-controls .toggle-fullscreen {}
+        body.windows-os .window-controls .toggle-always-on-top {
+          right: 190px; }
+          body.windows-os.always-on-top .window-controls .toggle-always-on-top {}
 
 
     body.osx-os .window-controls {
       left: 0;
-      width: 116px; }
+      width: 140px; }
       body.osx-os .window-controls li {
         top: 0;
         bottom: 0;
@@ -72,10 +77,15 @@
         body.osx-os .window-controls .toggle-fullscreen {
           left: 90px; }
           body.osx-os .window-controls .toggle-fullscreen:active {}
+          body.osx-os.fullscreen .window-controls .toggle-fullscreen {}
+        body.osx-os .window-controls .toggle-always-on-top {
+          left: 114px; }
+          body.osx-os .window-controls .toggle-always-on-top:active {}
+          body.osx-os.always-on-top .window-controls .toggle-always-on-top {}
 
 
     body.linux-os .window-controls {
-      width: 116px; }
+      width: 140px; }
       body.linux-os[data-linuxcontrolsside="left"] .window-controls {
         left: 0; }
       body.linux-os[data-linuxcontrolsside="right"] .window-controls {
@@ -101,16 +111,22 @@
         body.linux-os .window-controls .close:active {}
         body.linux-os[data-linuxcontrolsside="left"] .window-controls .minimize {
           left: 34px; }
-        body.linux-os[data-linuxcontrolsside="left"] .window-controls .toggle-maximize {
-          left: 58px; }
-        body.linux-os[data-linuxcontrolsside="left"] .window-controls .toggle-fullscreen {
-          left: 90px; }
-        body.linux-os[data-linuxcontrolsside="right"] .window-controls .toggle-maximize {
-          right: 34px; }
         body.linux-os[data-linuxcontrolsside="right"] .window-controls .minimize {
           right: 58px; }
+        body.linux-os[data-linuxcontrolsside="left"] .window-controls .toggle-maximize {
+          left: 58px; }
+        body.linux-os[data-linuxcontrolsside="right"] .window-controls .toggle-maximize {
+          right: 34px; }
+        body.linux-os[data-linuxcontrolsside="left"] .window-controls .toggle-fullscreen {
+          left: 90px; }
         body.linux-os[data-linuxcontrolsside="right"] .window-controls .toggle-fullscreen {
           right: 90px; }
+        body.linux-os.fullscreen .window-controls .toggle-fullscreen {}
+        body.linux-os[data-linuxcontrolsside="left"] .window-controls .toggle-always-on-top {
+          left: 114px; }
+        body.linux-os[data-linuxcontrolsside="right"] .window-controls .toggle-always-on-top {
+          right: 114px; }
+        body.linux-os.always-on-top .window-controls .toggle-always-on-top {}
 
 
 
@@ -121,14 +137,14 @@
     white-space: nowrap;
     overflow-x: auto; }
     body.no-frame.windows-os .tabs-list {
-      max-width: calc(100% - 258px); }
+      max-width: calc(100% - 303px); }
     body.no-frame.osx-os .tabs-list {
-      max-width: calc(100% - 168px);
-      margin-left: 116px; }
+      max-width: calc(100% - 192px);
+      margin-left: 140px; }
     body.no-frame.linux-os .tabs-list {
-      max-width: calc(100% - 168px); }
+      max-width: calc(100% - 192px); }
       body.no-frame.linux-os[data-linuxcontrolsside="left"] .tabs-list {
-        margin-left: 116px; }
+        margin-left: 140px; }
     .tabs-list::-webkit-scrollbar {
       height: 2px; }
     .tabs-list::-webkit-scrollbar-thumb {}

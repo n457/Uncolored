@@ -43,7 +43,8 @@
   .wysiwyg-content h6 {
     font-size: 16px; }
 
-.wysiwyg-content p {
+.wysiwyg-content p,
+.wysiwyg-content li {
   font-size: 15px;
   line-height: 30px; }
 

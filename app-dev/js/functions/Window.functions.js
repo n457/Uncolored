@@ -27,6 +27,16 @@ N.Functions.Window.funcToggleFullscreen = () => {
   }
 };
 
+N.Functions.Window.funcToggleAlwaysOnTop = () => {
+  if (N.ElectronFramework.CurrentWindow.isAlwaysOnTop()) {
+    N.ElectronFramework.CurrentWindow.setAlwaysOnTop(false);
+    document.body.classList.remove('always-on-top');
+  } else {
+    N.ElectronFramework.CurrentWindow.setAlwaysOnTop(true);
+    document.body.classList.add('always-on-top');
+  }
+};
+
 
 N.Functions.Window.funcPlatformDetect = () => {
   if (process.platform === 'win32') {

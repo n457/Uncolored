@@ -9,7 +9,11 @@
   .content-container.active {
     display: block; }
 
+  /* display: inline-block; necessary for natively inserting <br> in <p> with shift + enter shortcut */
+  /* http://stackoverflow.com/questions/18552336/prevent-contenteditable-adding-div-on-enter-chrome/20533364#20533364 */
   .content-container .wysiwyg-content {
+    display: inline-block;
+    width: calc(100% - 140px);
     min-height: calc(100% - 336px);
     padding: 104px 70px 232px 70px;
     cursor: auto;

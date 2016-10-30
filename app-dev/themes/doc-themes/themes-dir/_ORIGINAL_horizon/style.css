@@ -2,7 +2,9 @@ body {
   max-width: 730px;
   font-family: 'Roboto', sans-serif;
   color: #175676;
-  background-image: linear-gradient(#dcedf3 0%, #eff4f5 100%); }
+  background-image: linear-gradient(#dcedf3 0%, #eff4f5 100%);
+  background-repeat: no-repeat;
+  background-color: #eff4f5; }
   main {
     padding: 45px; }
 

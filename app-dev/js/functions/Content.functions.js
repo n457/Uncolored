@@ -9,7 +9,7 @@ N.Functions.Content.funcPurifyHTML = (Parameters) => {
     arrAllowedTags = [
       'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
       'blockquote', 'ul', 'ol', 'li', 'img',
-      'b', 'i', 'u', 'strike', 'a', 'sup', 'sub'
+      'b', 'i', 'u', 'strike', 'a', 'sup', 'sub', 'br'
     ];
     arrAllowedAttr = [
       'src', 'href'
