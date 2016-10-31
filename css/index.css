@@ -57,6 +57,7 @@
   margin: 140px auto 30px auto; }
 
 .app-desc {
+  line-height: 1.4;
   margin: 0; }
 
 
@@ -72,7 +73,7 @@
 
 .not-signed-warning {
   font-size: 13px;
-  line-height: normal;
+  line-height: 1.3;
   margin: 0 0 38px 0; }
 
 
@@ -121,7 +122,7 @@
       left: 0;
       width: 100%;
       font-size: 11px;
-      line-height: 11px; }
+      line-height: 1; }
     .multi-download-button .main-button .file-label-container {
       position: absolute;
       top: 0;
