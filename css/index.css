@@ -176,7 +176,7 @@
 
 
 .text-row {
-  text-align: justify;
+  text-align: left;
   margin: 100px 0; }
 
 
@@ -236,7 +236,7 @@ footer {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   h1 {
     margin-top: 0; }
 
@@ -264,17 +264,17 @@ footer {
       margin-right: auto; }
 
   .text-focus img.full-width {
-    margin-top: 0; }
+    margin-top: 26px; }
 
   .text-rich-content img.full-width {
-    margin-bottom: 42px; }
+    margin-bottom: 68px; }
 
   .text-notes img.full-width {
-    margin-top: 30px; }
+    margin-top: 44px; }
 
   .text-themes img.full-width {
-    margin-bottom: 24px; }
+    margin-bottom: 50px; }
 
   .text-markdown img.full-width {
-    margin-top: 26px; }
+    margin-top: 40px; }
 }
