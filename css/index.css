@@ -148,15 +148,17 @@
     .multi-download-button.opened .list-more {
       height: 266px;
       padding: 8px 0; }
-    .list-more .file-label-container {
-      padding: 6px 16px;
-      transition: background-color 0.3s; }
-      .list-more .file-label-container:hover {
-        background-color: #1947ac; }
-      .list-more .file-label-container:active {
-        background-color: #0c2458; }
-      .list-more .file-label-container.no-icon {
-        text-align: center; }
+    .list-more li {
+      line-height: 24px; }
+      .list-more .file-label-container {
+        padding: 6px 16px;
+        transition: background-color 0.3s; }
+        .list-more .file-label-container:hover {
+          background-color: #1947ac; }
+        .list-more .file-label-container:active {
+          background-color: #0c2458; }
+        .list-more .file-label-container.no-icon {
+          text-align: center; }
 
   .multi-download-button .toggle-buttons {
     font-size: 12px;
