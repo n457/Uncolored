@@ -7,7 +7,7 @@
   <strong>HTML & Markdown</strong> compatible. For <strong>Windows, OS X & Linux</strong>.
 </p>
 
-#### version 0.10.1 — Beta
+#### version 0.10.2 — Beta
 
 ![](project/docs/assets/uncolored-large-screenshot-win.png)
 

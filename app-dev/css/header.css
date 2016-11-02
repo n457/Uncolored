@@ -135,7 +135,8 @@
     max-width: calc(100% - 52px);
     margin-right: 14px;
     white-space: nowrap;
-    overflow-x: auto; }
+    overflow-x: auto;
+    -webkit-app-region: no-drag; }
     body.no-frame.windows-os .tabs-list {
       max-width: calc(100% - 303px); }
     body.no-frame.osx-os .tabs-list {
@@ -155,8 +156,7 @@
       line-height: 38px;
       padding-left: 10px;
       opacity: 0.6;
-      transition: background-color 0.2s;
-      -webkit-app-region: no-drag; }
+      transition: background-color 0.2s; }
       .tab:after {
         content: '';
         position: absolute;
@@ -260,3 +260,80 @@
   transition: opacity 0.2s; }
   #global-unsaved-mark_unc2741.protected-id.active {
     opacity: 1; }
+
+
+
+
+
+
+/* Breakpoint common to all platforms */
+@media all and (max-width: 360px) {
+  .tabs-list {
+    max-width: 100%; }
+
+  .tab-bar-secondary-button {
+    display: none; }
+}
+
+
+/* Windows breakpoint */
+@media all and (max-width: 420px) {
+  body.windows-os .window-controls {
+    width: 135px; }
+    body.windows-os .window-controls .toggle-maximize,
+    body.windows-os .window-controls .toggle-fullscreen {
+      display: none; }
+    body.windows-os .window-controls .minimize {
+      right: 45px; }
+    body.windows-os .window-controls .toggle-always-on-top {
+      right: 90px; }
+
+  body.no-frame.windows-os .tabs-list {
+    max-width: calc(100% - 170px); }
+
+  body.no-frame.windows-os .tab-bar-secondary-button {
+    display: none; }
+}
+
+
+/* OS X breakpoint */
+@media all and (max-width: 420px) {
+  body.osx-os .window-controls {
+    width: 94px; }
+    body.osx-os .window-controls .toggle-maximize,
+    body.osx-os .window-controls .toggle-fullscreen {
+      display: none; }
+    body.osx-os .window-controls .toggle-always-on-top {
+      left: 70px; }
+
+  body.no-frame.osx-os .tabs-list {
+    max-width: calc(100% - 94px);
+    margin-left: 94px; }
+
+  body.no-frame.osx-os .tab-bar-secondary-button {
+    display: none; }
+}
+
+
+/* Linux breakpoint */
+@media all and (max-width: 420px) {
+  body.linux-os .window-controls {
+    width: 94px; }
+    body.linux-os .window-controls .toggle-maximize,
+    body.linux-os .window-controls .toggle-fullscreen {
+      display: none; }
+    body.linux-os[data-linuxcontrolsside="right"] .window-controls .minimize {
+      right: 34px; }
+    body.linux-os[data-linuxcontrolsside="left"] .window-controls .toggle-always-on-top {
+      left: 70px; }
+    body.linux-os[data-linuxcontrolsside="right"] .window-controls .toggle-always-on-top {
+      right: 70px; }
+
+  body.no-frame.linux-os .tabs-list {
+    max-width: calc(100% - 94px); }
+    body.no-frame.linux-os[data-linuxcontrolsside="left"] .tabs-list {
+      margin-left: 94px; }
+
+  body.no-frame.linux-os .tab-bar-secondary-button {
+    display: none; }
+}

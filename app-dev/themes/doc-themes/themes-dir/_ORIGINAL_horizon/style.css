@@ -48,7 +48,7 @@ body {
   .wysiwyg-content p,
   .wysiwyg-content li {
     font-size: 18px;
-    line-height: 28px; }
+    line-height: 1.56; }
 
   /* For the most part from material.min.css */
   .wysiwyg-content blockquote {

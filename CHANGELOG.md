@@ -2,6 +2,10 @@
 <!-- (for in-app update check) -->
 <!-- currentversion: 0.10.1 -->
 
+##### 0.10.2 : Major issue fix
+- Fixed **undraggable window title bar region** (Major issue) ([topic #17](https://github.com/n457/Uncolored/issues/17))
+- Updated window title bar with a **responsive behavior in case of small window**
+
 ##### 0.10.1 : New Features + minor issue fixes
 - Added a **window control button** to toggle (Un)colored window **always on top**
 - Insert a **new line in a paragraph** with `Shift + Enter` / `⇧Enter` keyboard shortcut

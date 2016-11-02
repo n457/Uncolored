@@ -4,8 +4,7 @@
   opacity: 0;
   pointer-events: none;
   z-index: 4;
-  transition: opacity 0.2s;
-  -webkit-app-region: no-drag; }
+  transition: opacity 0.2s; }
   #toolbar_unc2741.protected-id.active {
     opacity: 1;
     pointer-events: auto; }

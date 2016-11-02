@@ -6,7 +6,8 @@ N.Functions.Toolbar.funcAutoPosition = () => {
   const intToolsWidth = N.$Toolbar.offsetWidth;
 
   let intToolsTop = Range.yStart - N.$Toolbar.offsetHeight - 4;
-  if (intToolsTop < 0) {
+  // 38px : .tab-bar height
+  if (intToolsTop < 38) {
     intToolsTop = Range.yStart + Range.height + 5;
   }
   N.$Toolbar.style.top = intToolsTop + 'px';
@@ -31,7 +32,7 @@ N.Functions.Toolbar.funcAutoPosition = () => {
 
 
 N.Functions.Toolbar.funcResetPosition = () => {
-  N.$Toolbar.style.top = '7px';
+  N.$Toolbar.style.top = '134px';
   N.$Toolbar.style.left = '7px';
 };
 
