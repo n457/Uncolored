@@ -3,11 +3,13 @@
   left: 0;
   bottom: 0;
   max-width: calc(100% - 12px);
+  max-height: 30%;
   font-size: 12px;
   line-height: 15px;
   word-wrap: break-word;
   padding: 4px 6px;
   opacity: 0;
+  overflow-y: hidden;
   pointer-events: none;
   z-index: 2;
   transition: opacity 0.2s; }

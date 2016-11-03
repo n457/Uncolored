@@ -2,8 +2,9 @@
 <!-- (for in-app update check) -->
 <!-- currentversion: 0.10.1 -->
 
-##### 0.10.2 : Major issue fix
+##### 0.10.2 : Major issue fixes
 - Fixed **undraggable window title bar region** (Major issue) ([topic #17](https://github.com/n457/Uncolored/issues/17))
+- Fixed **minor information bar unlimited height** (Major issue) ([topic #18](https://github.com/n457/Uncolored/issues/18))
 - Updated window title bar with a **responsive behavior in case of small window**
 
 ##### 0.10.1 : New Features + minor issue fixes
