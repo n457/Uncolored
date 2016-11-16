@@ -75,7 +75,6 @@ If you want more details about what was done, see [the Changelog](CHANGELOG.md).
 (Un)colored is made to be **fast** & fully compatible with **WebKit** web browser engine and **V8** JavaScript engine (those implemented in Google Chrome). So the application is entirely written without any compatibility fallback code and allows using **latest** web technologies.
 
 - **ES6** : Object Oriented & more beautiful than classic JavaScript.
-- **No jQuery** or other JS framework, for maximum performance.
 
 For the complete list of used projects, see below the [Related Projects section](#related-projects).
 
