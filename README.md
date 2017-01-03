@@ -1,4 +1,4 @@
-**I'm currently working on React implementation for (Un) colored and I've also been busy with other things these last months. So, be reassured, the project is not dead, faaaar from that ;)**
+**I'm currently working on React implementation for (Un)colored and I've also been busy with other things these last months. So, be reassured, the project is not dead, faaaar from that ;)**
 
 ---
 
