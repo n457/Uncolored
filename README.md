@@ -1,3 +1,7 @@
+**I'm currently working on React implementation for (Un) colored and I've also been busy with other things these last months. So, be reassured, the project is not dead, faaaar from that ;)**
+
+---
+
 <p align="center">
   <img alt="(Un)colored logo" height="62" src="project/docs/assets/uncolored-logo.png">
 </p>
