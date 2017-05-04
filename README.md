@@ -1,3 +1,7 @@
+> [<img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg" width="32">](https://twitter.com/n457_media) Following [@n457_media](https://twitter.com/n457_media) on Twitter is **the best way** to keep you updated on my projects, including (Un)colored !
+
+<br><br>
+
 <p align="center">
   <img alt="(Un)colored logo" height="62" src="project/docs/assets/uncolored-logo.png">
 </p>
