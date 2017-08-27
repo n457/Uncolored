@@ -3,7 +3,7 @@
 <br><br>
 
 <p align="center">
-  <img alt="(Un)colored logo" height="62" src="project/docs/assets/uncolored-logo.png">
+  <img alt="(Un)colored logo" height="62" src="./project/docs/assets/uncolored-logo.png">
 </p>
 
 <p align="center">
@@ -11,12 +11,15 @@
   <strong>HTML & Markdown</strong> compatible. For <strong>Windows, OS X & Linux</strong>.
 </p>
 
-#### version 0.10.2 — Beta
+**version 0.10.2 — Beta** ~ (*version 1.0 in 4 releases*)
 
-![](project/docs/assets/uncolored-large-screenshot-win.png)
+![](./project/docs/assets/uncolored-large-screenshot-win.png)
 
 
-With (Un)colored, the user focuses on the **text** & **content types** (titles, lists, etc.), then selects the document **saving format**. If the selected format is **HTML**, the user can choose an export **document theme** which defines the appearance of the saved document, that can be viewed directly in a web browser. If the selected format is **Markdown**, the document is saved as raw Markdown file, without theme. A saved HTML / Markdown document can be re-imported in the editor and re-exported, with theme or not, **endlessly**.
+- (Un)colored is an editor that allows the user to focus on the **text** & **content types** (titles, lists, etc.), then selects the document **saving format**.
+- If the selected format is **HTML**, the user can choose an export **document theme** which defines the appearance of the saved document, that can be viewed directly in a web browser.
+- If the selected format is **Markdown**, the document is saved as raw Markdown file, without theme.
+- A saved HTML / Markdown document can be re-imported in the editor and re-exported, with theme or not, **endlessly**.
 
 
 ### Supported Platforms
@@ -48,15 +51,20 @@ Here is what **is planed** for future releases of (Un)colored. These lists **can
 
 This **public repository** contains released versions of (Un)colored and their source code, **the latest development/test** version of the (Un)colored source code **is on a private repository**.
 
-If you want more details about what was done, see [the Changelog](CHANGELOG.md).
+If you want more details about what was done, see [the Changelog](./CHANGELOG.md).
 
 ##### version 0.11.0
+- New User Interface built with web frameworks
+- New code structure : Core code separated from User Interface code, as a standalone external module
+
+##### version 0.12.0
+- Additional ***Incorporate image from clipboard*** tool
 - Additional ***Incorporate image from file*** tool
 - Additional **document themes**
 - **Code highlighting** in saved themed document (supported languages : CSS, JavaScript, Ruby, CoffeeScript, PHP, SQL, C#, Diff, JSON, Markdown, C++, HTML, XML, Java, Python)
 - **Other potential issue fixes**
 
-##### version 0.12.0
+##### version 0.13.0
 - Additional ***Insert Image from File*** tool
 - Additional **table tools** : insert table & add, remove, move row & column
 - **GitHub Flavored Markdown** documents import/export full support
@@ -95,7 +103,7 @@ Before creating a new issue topic, be careful to check if your question/issue is
 
 
 ### :wrench: Technical Documentation *(not ready yet)*
-To know how to **create a document theme** or a **interface theme**, how to **launch the development version** of (Un)colored, **how to build it** or **how it's made**, see [the Full Documentation](project/docs/README.md).
+To know how to **create a document theme** or a **interface theme**, how to **launch the development version** of (Un)colored, **how to build it** or **how it's made**, see [the Full Documentation](./project/docs/README.md).
 
 
 ### :gift: Donation
@@ -127,6 +135,7 @@ If you don't know how much to give, 6 € is a reasonnable amount (will be autom
 [Material Design Lite](https://getmdl.io/) •
 [Mousetrap](https://craig.is/killing/mice) •
 [Mousetrap Global Bind](https://github.com/ccampbell/mousetrap/tree/master/plugins/global-bind) •
+[Node.js](https://nodejs.org) •
 [Normalize.css](http://necolas.github.io/normalize.css/) •
 [reqwest](https://github.com/ded/reqwest) •
 [Sortable](http://rubaxa.github.io/Sortable/) •
