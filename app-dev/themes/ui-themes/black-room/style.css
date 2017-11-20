@@ -1,0 +1,309 @@
+/* - __themename: Black Room - */
+/* - __authorname: Eressea - */
+
+/* Libraries styles overwriting (Material Design Lite, etc.) */
+
+.mdl-menu__item {
+  /* By default, a menu item text is black. */
+  color: #757575; }
+
+.mdl-textfield {
+  color: #757575; }
+  .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+  .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    color: black; }
+    .mdl-textfield__label:after {
+      background-color: black; }
+
+.mdl-switch.is-checked .mdl-switch__track {
+  /* #4baf4f */
+  background-color: rgba(75, 175, 79, 0.5); }
+.mdl-switch.is-checked .mdl-switch__thumb {
+  background-color: #4baf4f; }
+.mdl-switch__ripple-container .mdl-ripple {
+  background-color: #4baf4f; }
+
+.mdl-button.mdl-button--colored {
+  color: black; }
+  .mdl-button--raised.mdl-button--colored {
+    color: black;
+    background-color: transparent; }
+
+
+.mdl-tooltip {
+  background: rgba(150, 150, 150, 0.9); }
+
+
+
+/* Global */
+
+body {
+  color: #757575;
+  background-color: #263238;}
+  body.no-frame {
+    border-color: #c7c7c7; }
+
+  a {
+    color: #757575; }
+
+  kbd {
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #f7f7f7;
+    border-color: #ccc;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset; }
+
+  /* highlight */
+  .hl {
+    color: #4a4a4a; }
+
+  .hover-effects:hover {
+    background-color: rgba(158, 158, 158, 0.2) !important; }
+  .hover-effects:active {
+    background-color: rgba(158, 158, 158, 0.4) !important; }
+
+  ::selection {
+    background-color: #e2e2e2; }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #c2c2c2; }
+
+
+
+/* Header */
+header{
+  opacity: 1!important;
+}
+
+.tab-bar {
+  background-color: transparent;
+  opacity: 1!important;}
+
+  body.windows-os .window-controls li {
+    color: #999999; }
+    body.windows-os .window-controls li:hover {
+      background-color: rgba(158, 158, 158, 0.2); }
+    body.windows-os .window-controls li:active {
+      background-color: rgba(158, 158, 158, 0.4); }
+    body.windows-os .window-controls .close:hover {
+      color: white;
+      background-color: #e81123; }
+    body.windows-os .window-controls .close:active {
+      color: white;
+      background-color: #f1707a; }
+    body.windows-os.fullscreen .window-controls .toggle-fullscreen,
+    body.windows-os.always-on-top .window-controls .toggle-always-on-top {
+      color: black; }
+
+
+  body.osx-os .window-controls .close {
+    color: #712b27;
+    background-color: #ff5f56; }
+    body.osx-os .window-controls .close:active {
+      background-color: #d04942; }
+  body.osx-os .window-controls .minimize {
+    color: #3a2a0a;
+    background-color: #ffbd2e; }
+    body.osx-os .window-controls .minimize:active {
+      background-color: #ce9314; }
+  body.osx-os .window-controls .toggle-maximize {
+    color: #147322;
+    background-color: #27c93f; }
+    body.osx-os .window-controls .toggle-maximize:active {
+      background-color: #20a934; }
+  body.osx-os .window-controls .toggle-fullscreen {
+    color: #3657a7;
+    background-color: #5689ff; }
+    body.osx-os .window-controls .toggle-fullscreen:active {
+      background-color: #4573de; }
+    body.osx-os.fullscreen .window-controls .toggle-fullscreen {
+      box-shadow: 0 0 14px 0 #0043ff; }
+  body.osx-os .window-controls .toggle-always-on-top {
+    color: #0092a9;
+    background-color: #2ee2ff; }
+    body.osx-os .window-controls .toggle-always-on-top:active {
+      background-color: #29bed6; }
+    body.osx-os.always-on-top .window-controls .toggle-always-on-top {
+      box-shadow: 0 0 14px 0 #00adff; }
+
+
+  body.linux-os .window-controls li {
+    color: #999999;
+    background-color: rgba(158, 158, 158, 0.2); }
+    body.linux-os .window-controls li:hover {
+      background-color: rgba(158, 158, 158, 0.4); }
+    body.linux-os .window-controls li:active {
+      background-color: rgba(158, 158, 158, 0.6); }
+    body.linux-os .window-controls .close:hover {
+      color: white;
+      background-color: #e81123; }
+    body.linux-os .window-controls .close:active {
+      color: white;
+      background-color: #f1707a; }
+    body.linux-os.fullscreen .window-controls .toggle-fullscreen,
+    body.linux-os.always-on-top .window-controls .toggle-always-on-top {
+      box-shadow: 0 0 14px 0 #5a5a5a; }
+
+
+
+  .tabs-list {
+    background-color: transparent; }
+    .tabs-list::-webkit-scrollbar-thumb {
+      background-color: #e2e2e2; }
+
+      .tab {
+        color: #d3ddd3 !important; }
+        .tab:after {
+          background-color: #0094d6; }
+        .tab.active {
+          background-color: rgba(158, 158, 158, 0.2); }
+        /*.sortable-chosen {
+          background-color: rgba(255, 255, 255, 0.20); }*/
+
+        .close-tab {
+          background-color: rgba(0, 0, 0, 0.04); }
+          .close-tab:hover {
+            background-color: rgba(0, 0, 0, 0.08); }
+          .close-tab:active {
+            background-color: rgba(0, 0, 0, 0.14); }
+
+        .close-tab-cancel {
+          background-color: rgba(0, 0, 0, 0.04); }
+          .close-tab-cancel:hover {
+            background-color: rgba(0, 0, 0, 0.08); }
+          .close-tab-cancel:active {
+            background-color: rgba(0, 0, 0, 0.14); }
+
+        .close-tab-confirm {
+          color: white;
+          background-color: #cc4d51; }
+          .close-tab-confirm:hover {
+            background-color: #e2565a; }
+          .close-tab-confirm:active {
+            background-color: #c1494d; }
+
+  .tab-bar-button {
+    color: #949494; }
+
+.main-menu {
+  background-color: transparent;
+  opacity: 1!important;}
+  .main-menu li {
+    color: #949494; }
+
+
+#global-unsaved-mark_unc2741.protected-id {
+  background-color: transparent; }
+
+
+
+/* Workspace */
+
+searchresult {
+  color: white;
+  background-color: #155fff; }
+
+
+
+/* WYSIWYG Content */
+.wysiwyg-content{
+  color: #d3ddd3;
+}
+
+.wysiwyg-content h1,
+.wysiwyg-content h2,
+.wysiwyg-content h3,
+.wysiwyg-content h4,
+.wysiwyg-content h5,
+.wysiwyg-content h6 {
+  /* Selected CSS properties from MDL .mdl-card__title & .mdl-card__title-text */
+  color: #d3ddd3; }
+
+.wysiwyg-content a {
+  color: #4078c0; }
+
+.wysiwyg-content table,
+.wysiwyg-content table td {
+  border-color: #e3e3e3; }
+
+.wysiwyg-content pre {
+  color: #657b83;
+  background-color: #f7f7f7; }
+
+
+
+/* Toolbar */
+
+#toolbar_unc2741.protected-id {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  #toolbar_unc2741.protected-id .toolbar-button.active {
+    background-color: rgba(158, 158, 158, 0.4); }
+  #toolbar_unc2741.protected-id input[type="text"].invalid {
+    color: white;
+    background-color: #ed6c63; }
+
+
+
+/* Context Info */
+
+#minor-info-bar_unc2741.protected-id {
+  color: white;
+  background-color: rgba(150, 150, 150, 0.9); }
+
+.menu-list {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  .menu-list .label {
+    color: black; }
+
+
+
+/* Dialogs */
+
+.mdl-card__supporting-text a {
+  color: inherit !important; }
+
+.preview-list .mdl-list__item:active,
+.preview-list .mdl-list__item.active {
+  background-color: #eee; }
+
+#table-content-dialog_unc2741.protected-id .mdl-list__item-secondary-action {
+  color: #a0a0a0; }
+
+#shortcuts-dialog_unc2741.protected-id h6 {
+  color: black; }
+#shortcuts-dialog_unc2741.protected-id .mdl-list__item:nth-child(even) {
+  background-color: #eee; }
+
+#about-dialog_unc2741.protected-id .new-update {
+  color: #f1c40f; }
+#about-dialog_unc2741.protected-id .ajax-error {
+  color: white;
+  background-color: #e27266; }
+  #about-dialog_unc2741.protected-id .ajax-error a {
+    color: white; }
+
+#about-dialog_unc2741.protected-id .author-info .material-icons {
+  color: #d00633; }
+
+#about-dialog_unc2741.protected-id .donate {
+  color: white;
+  background-color: #3a85d4; }
+  #about-dialog_unc2741.protected-id .donate:hover {
+    background-color: #0dd683; }
+  #about-dialog_unc2741.protected-id .donate:active {
+    background-color: #10a545; }
+
+
+
+/* Context Info */
+
+#preview-large_unc2741.protected-id {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+#preview-large_unc2741.protected-id .label {
+  color: black;
+  text-align: center;
+  background-color: #eee; }
