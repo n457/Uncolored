@@ -3,6 +3,9 @@
 **/._.DS_Store
 **/Thumbs.db
 
+# Exclude IDE files
+.idea
+
 # Exclude NPM packages and build files
 node_modules/**
 app/**

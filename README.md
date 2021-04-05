@@ -11,7 +11,7 @@
   <strong>HTML & Markdown</strong> compatible. For <strong>Windows, OS X & Linux</strong>.
 </p>
 
-**version 0.10.2 — Beta** ~ (*version 1.0 in 4 releases*)
+**version 0.10.2 — Beta** ~ (*Next release: version 1.0, ongoing development*)
 
 ![](./project/docs/assets/uncolored-large-screenshot-win.png)
 
@@ -44,43 +44,6 @@
 - Minimalist interface that let you focus on what matters : **the content**
 - Update auto-check system (enable / disable in settings)
 - Built-in english **quick guide** *(more languages to come)*
-
-
-### :checkered_flag: Roadmap
-Here is what **is planed** for future releases of (Un)colored. These lists **can change** at any time and tasks can be added, moved, modified or deleted for several reasons, including **feasibility** and **performance impact**.
-
-This **public repository** contains released versions of (Un)colored and their source code, **the latest development/test** version of the (Un)colored source code **is on a private repository**.
-
-If you want more details about what was done, see [the Changelog](./CHANGELOG.md).
-
-##### version 0.11.0
-- New User Interface built with web frameworks
-- New code structure : Core code separated from User Interface code, as a standalone external module
-
-##### version 0.12.0
-- Additional ***Incorporate image from clipboard*** tool
-- Additional ***Incorporate image from file*** tool
-- Additional **document themes**
-- **Code highlighting** in saved themed document (supported languages : CSS, JavaScript, Ruby, CoffeeScript, PHP, SQL, C#, Diff, JSON, Markdown, C++, HTML, XML, Java, Python)
-- **Other potential issue fixes**
-
-##### version 0.13.0
-- Additional ***Insert Image from File*** tool
-- Additional **table tools** : insert table & add, remove, move row & column
-- **GitHub Flavored Markdown** documents import/export full support
-- **Potential issue fixes**
-
-##### version 1.0.0
-- Additional ***Tweet*** tool : **insert a tweet** from Twitter in documents
-- **Emojis** insertion **via the toolbar**
-- Additional **text tools** : selection to lower / upper / title case
-- **Multi-Language** Support & **French** language implementation
-- **Potential issue fixes**
-
-##### :page_facing_up: Writing Time
-- Documentation about how to **create a document theme**
-- Documentation about how to **create a UI theme**
-- **Proper code comments** with links to :us: English documentations
 
 
 ### :nut_and_bolt: Technical Details

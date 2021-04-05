@@ -20,14 +20,13 @@
 - *(in the repo)* gulp dist
 
 #### Ubuntu
-- `sudo apt-get update && sudo apt-get upgrade`
-- `sudo apt-get install nodejs-legacy npm`
-- `sudo npm rm --global gulp` [if needed](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally)
-- `sudo npm install --global gulp-cli`
+- Install Ubuntu 16.04 LTS 64-bit (used exact v16.04.7) (from https://releases.ubuntu.com)
+- `sudo apt-get install git curl`
+- Install Node.js v7.x (used exact v7.10.1), NPM v4.x (used exact v4.2.0): `curl -fsSL https://deb.nodesource.com/setup_7.x | sudo -E bash -`, then `sudo apt-get install -y nodejs` (from https://github.com/nodesource/distributions/blob/master/README.md#deb)
+- Clone the repository.
 - *(in the repo)* `npm install`
-- *(in the repo)* `gulp`
 - *(in the repo)* in root `package.json`, remove incompatible & unnecessary output format in `linux.target` array
-- *(in the repo)* gulp dist
+- *(in the repo)* `npm run gulp`, then `npm run dist`
 
 
 if you modify the icon, don't forget to buid the .ico as a multi-layer version with GIMP.
